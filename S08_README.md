@@ -1,4 +1,4 @@
-# TTSSR : Projet 3 : Construction d’une infrastructure réseau
+# TSSR : Projet 3 : Construction d’une infrastructure réseau
 
 _(Date de documentation 08 Novembre 2023)_
 # Sommmaire
@@ -36,28 +36,7 @@ _(Date de documentation 08 Novembre 2023)_
 | Bilal | |  |
 | Michael |  | |
 
-### Semaine 2 
-| NOM | Roles | Taches éffectuées |
-| :-- |:----- | :---------- |
-|  | Scrum Master |  |
-|   |  Product Owner |  |
-|  | |  |
-|  |  | |
-
-### Semaine 3 
-| NOM | Roles | Taches éffectuées |
-| :-- |:----- | :---------- |
-|  | Scrum Master |  |
-|   |  Product Owner |  |
-|  | |  |
-|  |  | |
-
-## Objectif par semaines
-### Semaine 1
-
-### Semaine 2
- 
-### Semaine 3
+## Objectif semaine
   
 ##  Choix Techniques
 
