@@ -38,7 +38,7 @@ Pour permettre un bon fonctionnement et de réglementé l'accès au différents 
 
 Au vu des services non homogènes en nombres nous avons opter pour un découpage réseau asymetrique .
 
-        Site de Paris : 172.16.1.0/24
+   **Site de Paris : 172.16.1.0/24**
 
 |services|adresse réseau|1ère adresse hotes|dernière adresse hotes|adresse broadcast|
 |---|----|----|----|----|
@@ -53,7 +53,7 @@ Au vu des services non homogènes en nombres nous avons opter pour un découpage
 |Direction|172.16.1.248/29|172.16.1.249|172.16.1.254|172.16.1.255|
 
 
-        Site de Lyon : 10.10.5.0/24 
+   **Site de Lyon : 10.10.5.0/24** 
 
 |services|adresse réseau|1ère adresse hotes|dernière adresse hotes|adresse broadcast|
 |---|----|----|----|----|
