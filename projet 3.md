@@ -34,7 +34,7 @@ Le tout relié à nos differents serveur DCHCP - DNS - MESSAGERIE - AD - STOCKAG
 
 Pour permettre un bon fonctionnement et de réglementé l'accès au différents services nous mettrons en place un plan d'adressage pour les différents services afin de les séparer (exemple le service juridique n'aura pas accèes au services comptabilité).
 
-Au vu des services non homogènes en nombres nous avons opter pour un découpage réseau asymetrique .
+PLAN N°1 :: Au vu des services non homogènes en nombres nous avons opter pour un découpage réseau asymetrique .
 
    **Site de Paris : 172.16.1.0/24**
 
@@ -64,6 +64,45 @@ Au vu des services non homogènes en nombres nous avons opter pour un découpage
 |Recrutement|10.10.5.232/29|10.10.5.233|10.10.5.238|10.10.5.239|
 |QHSE|10.10.5.240/29|10.10.5.241|10.10.5.246|10.10.5.247|
 |Direction|10.10.5.248/29|10.10.5.249|10.10.5.254|10.10.5.255|
+
+
+PLAN N°2 ::
+
+Site paris 172.16.1.0/20
+
+|services|adresse réseau|1ère adresse hotes|dernière adresse hotes|adresse broadcast|
+|---|----|----|----|----|
+|plage serveur | 172.16.1.0/24 | 172.16.1.1 | 172.16.1.254 | 172.16.1.255|
+|Développement logiciel | 172.16.2.0/23 | 172.16.2.1 | 172.16.3.254 | 172.16.3.255|
+|Relation publique | 172.16.4.0/24 | 172.16.4.1  | 172.16.4.254 | 172.16.4.255|
+|Commerciale | 172.16.5.0/24 | 172.16.5.1 | 172.16.5.254 | 172.16.5.255|
+|DSI | 172.16.6.0/24 | 172.16.6.1 | 172.16.6.254 | 172.16.6.255|
+|Finance et comptabilité | 172.16.7.0/24 | 172.16.7.1 | 172.16.7.254 | 172.16.7.255|
+|Juridique | 172.16.8.0/24 | 172.16.8.1 | 172.16.8.254 | 172.16.8.255|
+|Recrutement  | 172.16.9.0/24 | 172.16.9.1 | 172.16.9.254 |172.16.9.255|
+|QHSE | 172.16.10.0/24 | 172.16.10.1 | 172.16.10.254 | 172.16.10.255|
+|Direction | 172.16.11.0/24 | 172.16.11.1 | 172.16.11.254 | 172.16.11.255|
+
+plage dispo			172.16.12.0 - 172.16.15.254
+
+
+Site Lyon 10.10.5.0/20
+
+|services|adresse réseau|1ère adresse hotes|dernière adresse hotes|adresse broadcast|
+|---|----|----|----|----|
+|plage serveur | 10.10.1.0/24 | 10.10.1.1 | 10.10.1.254 | 10.10.1.255|
+|Développement logiciel | 10.10.2.0/23 | 10.10.2.1 | 10.10.3.254 | 10.10.3.255|
+|Relation publique | 10.10.4.0/24 | 10.10.4.1  | 10.10.4.254 | 10.10.4.255|
+|Commerciale | 10.10.5.0/24 | 10.10.5.1 | 10.10.5.254 | 10.10.5.255|
+|DSI | 10.10.6.0/24 | 10.10.6.1 | 10.10.6.254 | 10.10.6.255|
+|Finance et comptabilité | 10.10.7.0/24 | 10.10.7.1 | 10.10.7.254 | 10.10.7.255|
+|Juridique | 10.10.8.0/24 | 10.10.8.1 | 10.10.8.254 | 10.10.8.255|
+|Recrutement  | 10.10.9.0/24 | 10.10.9.1 | 10.10.9.254 |10.10.9.255|
+|QHSE | 10.10.10.0/24 | 10.10.10.1 | 10.10.10.254 | 10.10.10.255|
+|Direction | 10.10.11.0/24 | 10.10.11.1 | 10.10.11.254 | 10.10.11.255|
+
+plage dispo			10.10.12.0 - 10.10.15.254
+
 
 
 ## Plan schématique du futur réseau :
