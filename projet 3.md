@@ -2,29 +2,27 @@
 
 ## Mise en place d'une infrastructure réseau sécurisée
 
-### __Propositions pour l'évolution des services__ 
+  ### __Propositions pour l'évolution des services__ 
 
+`nomadisme` : Mettre en place un system de connection securisé a distance pour les commerciaux.
 
-*nomadisme* : Mettre en place un system de connection securisé a distance pour les commerciaux.
+`utilisateur externe` : mise place d'un reseau securisé sans vision sur le reseau interne avec possibilite de connexion internet.
 
+`materiel client` : homogeneïte des OS (Linunx - Windows)
 
-*utilisateur externe* : mise place d'un reseau securisé sans vision sur le reseau interne avec possibilite de connexion internet.
+`Materiel Administration` : Pour l'administration du réseau nous préconisons la mise en place de Serveur DHCP - DNS - AD.
 
-*materiel client* : homogeneïte des OS (Linunx - Windows)
+`Evolution de la societe` : Mise en place d'un réseau communiquant entre paris et lyon ce qui permettra la communication avec x site si agrandissement.
 
-*Materiel Administration* :Pour l'administration du réseau nous préconisons la mise en place de Serveur DHCP - DNS - AD.
+`Reseau` : Mise en place d'un réseau interne filaire connécté à des switchs et des routeurs , on garde le FAI pour l'access NAT connécté en filaire au réseau permettant l'accès a l'exterieure , wifi possible FAI sans accès au réseau interne .
 
-*Evolution de la societe* : Mise en place d'un réseau communiquant entre paris et lyon ce qui permettra la communication avec x site si agrandissement.
+`Messagerie` : Installer un serveur de messagerie qui remplacera le stockage cloud actuel .
 
-*Reseau* : Mise en place d'un réseau interne filaire connécté à des switchs et des routeurs , on garde le FAI pour l'access NAT connécté en filaire au réseau permettant l'accès a l'exterieure , wifi possible FAI sans accès au réseau interne .
+`Securité` : Grace a la mise en place d'un Serveur AD nous activerons les domaines et le rajout d'identification par mot de passe afin de sécuriser les accès aux terminaux.
 
-*Messagerie* : Installer un serveur de messagerie qui remplacera le stockage cloud actuel .
+`Stockage` : Mise en place d'un serveur de Stockage de donnée avec redondance et savegarde.
 
-*Securité* :Grace a la mise en place d'un Serveur AD nous activerons les domaines et le rajout d'identification par mot de passe afin de sécuriser les accès aux terminaux.
-
-*Stockage* :Mise en place d'un serveur de Stockage de donnée avec redondance et savegarde.
-
-### __Propositions pour l'évolution du Reseaux__
+  ### __Propositions pour l'évolution du Reseaux__
 
 Mise en place d'une infractruture reseaux qui comprendra routeurs et switchs par site.
 
