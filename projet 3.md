@@ -107,4 +107,4 @@ plage dispo			10.10.12.0 - 10.10.15.254
 
 ## Plan schématique du futur réseau :
 
-![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/exemple.PNG?raw=true)
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/exemple2.PNG?raw=true)
