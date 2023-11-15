@@ -27,22 +27,23 @@ L'infrastructure réseaux doit être adapté aux besoins de l'entreprise et séc
 
 ##  Rôles par semaine
 
-### Semaine 1 
+### Semaine 2 
 | NOM | Roles | Taches éffectuées |
 | :-- |:----- | :---------- |
-| Valentin | Scrum Master | Organisation des Daily, mise en forme du plan d'adressage |
-| Jerome  |  Product Owner | En contact avec le DSI. Création du support de présentation |
-| Bilal | Crew | Plan d'adressage et renseigner les livrables de la semaine |
-| Michael | Crew | Réalisation de la schématisation du réseau proposé |
-| Equipe | Workflow |Prise de connaissance et réflexion de l'infrastructure réseau et système de l'entreprise. Proposition de solutions adaptées |
+| Valentin | Scrum Master | Recherche et script powershell pour enregistrer dans l'AD DS les salariés de l'entreprise. |
+| Jerome  |  Product Owner | Réalisation de la structure AD |
+| Bilal | Crew | Réalisation de la structure AD |
+| Michael | Crew |Recherche et script powershell pour enregistrer dans l'AD DS les salariés de l'entreprise.|
+| Equipe | Workflow | Prise en main de AD DS. Création d'un domaine AD DS. Renseigner base de données d'AD DS |
 
 ## Objectif semaine
-Comprendre les axes d'amélioration à apporter sur le réseaux. Faire une proposition Sur les évolutions des services fonctionnels et du réseau.  
-Fournir un plan d'adressage IP et un plan schématique du futur réseaux
-  
-##  Choix Techniques
-Suite à l'analyse du réseaux informatique de l'entreprise BillU, il a été relevé des risque de sécuritée. Recommandation d'installation de serveurs afin de sécuriser et organiser le réseaux dans l'intérêt de l'organisation de l'entreprise.
 
+Organiser une structure Active Directory et y intégrer les salariés de l'entreprise
+
+
+##  Choix Techniques
+
+Le Domaine AD aura pour nom BillU et sera structuré suivant les besoins de gestions.
 ##  Les difficultées rencontrées
 
 Manque de sécuritée sur le réseau tel que  connexions sans mot de passe, messagerie en Cloud sur le Web,
