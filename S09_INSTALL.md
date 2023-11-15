@@ -17,6 +17,10 @@ Suite à nos observations du réseaux informatique de l'entreprise BillU, il a �
 Active Directory sera sous le Domaine BillU et sera organisé avec les Organization Unit suivant l'organisation nécessaire à sa gestion.   
 
 
+## **Étapes d'installation et de configuration : instruction étape par étape**
+
+
+
  
 ## **Difficultés rencontrées : problèmes techniques rencontrés**
 
@@ -36,4 +40,14 @@ Un serveur de messagerie sécurisé sera installé afin de remplacer celui en cl
 Un serveur de stockage sera installé afin de sécuriser les données de l'entreprise et permettre une redondance de celles-ci et fiabiliser les sauvegardes.
 Afin que les deux sites puissent accéder aux serveurs suivant leur besoins, des routeurs et des VLAN seront installés sur le réseaux. 
 Les VLAN permettront de sécuriser les bases de données en limitant leurs accès par services (Droits des différents services à définir par la direction de BillU)
+
+
+## **Tests réalisés : description des tests de performance, de sécurité, etc.**
+
+
+## **Résultats obtenus : ce qui a fonctionné**
+
+
+## **Améliorations possibles : suggestions d’améliorations futures**
+
   
