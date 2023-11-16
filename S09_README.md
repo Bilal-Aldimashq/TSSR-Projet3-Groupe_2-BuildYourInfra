@@ -1,6 +1,7 @@
 # TSSR : Projet 3 : Construction d’une infrastructure réseau
 
-_(Date de documentation 08 Novembre 2023)_
+_Semaine2_  
+_(Date de documentation 13 Novembre 2023)_
 # Sommmaire
 
 [1 : Besoin Initiaux :]()
@@ -19,10 +20,7 @@ _(Date de documentation 08 Novembre 2023)_
 ## Besoins Initiaux
 
 BillU est une filiale du groupe international RemindMe, qui a plus de 10000 collaborateurs dans le monde.
-Elle est spécialisée dans le développement de logiciels, entre-autre de facturation.
-Le groupe prévoit un budget conséquent pour développer cette filiale. Elle a 2 sites, l'un à Paris (20èm) et l'autre à Lyon
-L'infrastructure réseaux doit être adapté aux besoins de l'entreprise et sécurisé.
-
+L'infrastructure réseaux doit être adapté aux besoins de l'entreprise et sécurisé. Pour la Semaine_09 l'installation d'un serveur Active Directory.
 
 
 ##  Rôles par semaine
@@ -31,8 +29,8 @@ L'infrastructure réseaux doit être adapté aux besoins de l'entreprise et séc
 | NOM | Roles | Taches éffectuées |
 | :-- |:----- | :---------- |
 | Valentin | Scrum Master | Recherche et script powershell pour enregistrer dans l'AD DS les salariés de l'entreprise. |
-| Jerome  |  Product Owner | Réalisation de la structure AD |
-| Bilal | Crew | Réalisation de la structure AD |
+| Jerome  |  Product Owner | Réalisation de la structure AD, Configuration de la machine Proxmox|
+| Bilal | Crew | Réalisation de la structure AD, rédaction des livrable de la semaine |
 | Michael | Crew |Recherche et script powershell pour enregistrer dans l'AD DS les salariés de l'entreprise.|
 | Equipe | Workflow | Prise en main de AD DS. Création d'un domaine AD DS. Renseigner base de données d'AD DS |
 
@@ -44,14 +42,14 @@ Organiser une structure Active Directory et y intégrer les salariés de l'entre
 ##  Choix Techniques
 
 Le Domaine AD aura pour nom BillU et sera structuré suivant les besoins de gestions.
+
 ##  Les difficultées rencontrées
 
-Manque de sécuritée sur le réseau tel que  connexions sans mot de passe, messagerie en Cloud sur le Web,
-pas de serveur d'administration et accès internet en wifi dans toute l'entreprise via des répétiteurs. Données sauvegardées sur un NAS grand public, sans rétention ni redondance. 
+- Le script d'enregistrement des utilisateurs n'a pas reconnu certains attribus de la liste
+- Le script d'enregistrement des utilisateurs n'interprète pas les noms avec des espaces ou des caractères spéciaux tel que les accents ou les tirets. 
 
 ##  Les solutions 
 
-Pour Sécuriser le réseaux des serveurs seront installés. Parmis ceux-là un serveur Active Directory pour la gestion sécurisée du domaine informatique. Une sécurité d'identité sera mise en place afin de péréniser les connexion au réseaux de l'entreprise. Le réseaux sera configuré afin d'apporter une connexion sécurisée, entre autre avec l'installation d'un Firewall. Un serveur DHCP et un serveur DNS, seront configurés afin de contrôler en interne la gestion du réseaux.
-Un serveur de messagerie sécurisé sera installé afin de remplacer celui en cloud sur le web. Un serveur de stockage sera installé afin de sécuriser les données de l'entreprise et permettre une redondance de celles-ci et fiabiliser les sauvegardes. Afin que les deux sites puissent accéder aux serveurs suivant leur besoins, des routeurs et des VLAN seront installés sur le réseaux. Les VLAN permettront de sécuriser les bases de données en limitant leurs accès par services (Droits des différents services à définir par la direction de BillU)
-
+- Adaptation du script d'enregistrement des utilisateurs afin d'utiliser la liste en csv avec les bons attributs
+- Adaptation du script d'enregistrement des utilisateurs pour remplacer les caractères spéciaux par des lettres sans accents et les mots sans espaces.
 
