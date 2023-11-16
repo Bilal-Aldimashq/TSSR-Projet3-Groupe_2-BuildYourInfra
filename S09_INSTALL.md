@@ -39,7 +39,7 @@ Active Directory sera sous le Domaine BillU et sera organisé avec les Organizat
 ## **Solutions trouvées : Solutions et alternatives trouvées**
 
 - Adaptation du script d'enregistrement des utilisateurs afin d'utiliser la liste en csv avec les bons attributs
-- Adaptation du script d'enregistrement des utilisateurs pour rmplacer les caractères spéciaux par des lettres sans accents et les mots sans espaces.
+- Adaptation du script d'enregistrement des utilisateurs pour remplacer les caractères spéciaux par des lettres sans accents et les mots sans espaces.
 
 ## **Tests réalisés : description des tests de performance, de sécurité, etc.**
 
@@ -50,7 +50,9 @@ Active Directory sera sous le Domaine BillU et sera organisé avec les Organizat
 
 - Le script enregistre bien les utilisateurs dans les OU correspondant à leur emplacement dans l’arborescence.
 - L'arborescence retenu pour BillU, correspond aux besoins d'ergonomie et de gestion de sécurité.
+- Les sous Organization Units sont créés par le script automatiquement
 
 ## **Améliorations possibles : suggestions d’améliorations futures**
-
+- Réaliation des Organization Unit principale par un script à tester
+- Réunir les différent script en un seul
   
