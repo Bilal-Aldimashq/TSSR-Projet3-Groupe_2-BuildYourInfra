@@ -55,4 +55,4 @@ Active Directory sera sous le Domaine BillU et sera organisé avec les Organizat
 ## **Améliorations possibles : suggestions d’améliorations futures**
 - Réaliation des Organization Unit principale par un script à tester
 - Réunir les différent script en un seul
-  
+- Intégrer la journalisation des créations des utilisateurs AD ou OU
