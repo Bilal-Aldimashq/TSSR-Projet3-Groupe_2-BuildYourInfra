@@ -19,34 +19,37 @@ Active Directory sera sous le Domaine BillU et sera organisé avec les Organizat
 
 ## **Étapes d'installation et de configuration : instruction étape par étape**
 
+- Nommer la machine qui servira au serveur Active Directory: G2-SRVWIN1 sera celui de BillU
+- Installer Active Directory
+- Création du domaine BillU
+- Création de l’arborescence
+- Implantation automatique des utilisateurs de l'entreprise suivant la liste fourni par le DSI. 
+
 
 
  
 ## **Difficultés rencontrées : problèmes techniques rencontrés**
 
-Il a été constaté le manque de sécuritée tel que les connexions sans mot de passe, la messagerie en Cloud sur le Web,  
-pas de serveur d'administration et l'accès internet en wifi dans toute l'entreprise via des répétiteurs. Toutes ces configurations rendent vulnérable le réseaux l'entreprise aux intrusions.  
-Les données sont sauvegardées sur un NAS grand public, sans rétention ni redondance. La perte de données seraient irrémédiablement perdus si ces NAS s’avère défectueux. 
+- Le script d'enregistrement des utilisateurs n'a pas reconnu certains attribus de la liste
+- Le script d'enregistrement des utilisateurs n'interprète pas les noms avec des espaces ou des caractères spéciaux tel que les accents ou les tirets.
+
 
 
 
 ## **Solutions trouvées : Solutions et alternatives trouvées**
 
-Pour Sécuriser le réseaux des serveurs seront installés. Parmis ceux-là un serveur Active Directory pour la gestion sécurisée du domaine informatique.
-Une sécurité d'identité sera mise en place afin de péréniser les connexion au réseaux de l'entreprise.
-Le réseaux sera configuré afin d'apporter une connexion sécurisée, entre autre avec l'installation d'un Firewall.
-Un serveur DHCP et un serveur DNS, seront configurés afin de contrôler en interne la gestion du réseaux.  
-Un serveur de messagerie sécurisé sera installé afin de remplacer celui en cloud sur le web.
-Un serveur de stockage sera installé afin de sécuriser les données de l'entreprise et permettre une redondance de celles-ci et fiabiliser les sauvegardes.
-Afin que les deux sites puissent accéder aux serveurs suivant leur besoins, des routeurs et des VLAN seront installés sur le réseaux. 
-Les VLAN permettront de sécuriser les bases de données en limitant leurs accès par services (Droits des différents services à définir par la direction de BillU)
-
+- Adaptation du script d'enregistrement des utilisateurs afin d'utiliser la liste en csv avec les bons attributs
+- Adaptation du script d'enregistrement des utilisateurs pour rmplacer les caractères spéciaux par des lettres sans accents et les mots sans espaces.
 
 ## **Tests réalisés : description des tests de performance, de sécurité, etc.**
 
+- Tests du script d'enregistrement des utilisateurs dans un domaine AD simulant celui de l'entreprise BillU. 
+- Tests de différentes arborescence Active Directory du domaine BillU
 
 ## **Résultats obtenus : ce qui a fonctionné**
 
+- Le script enregistre bien les utilisateurs dans les OU correspondant à leur emplacement dans l’arborescence.
+- L'arborescence retenu pour BillU, correspond aux besoins d'ergonomie et de gestion de sécurité.
 
 ## **Améliorations possibles : suggestions d’améliorations futures**
 
