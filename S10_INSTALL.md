@@ -13,8 +13,12 @@
 
 ## **Étapes d'installation et de configuration : instruction étape par étape**
 
-
-
+Installation Bitwarden :
+ressources pour installer à partir de proxmox sud Debian format LXC : Docker puis Bitwarden 
+installer d'abord Docker
+https://docs.docker.com/engine/install/debian/#install-from-a-package
+installer ensuite Bitwarden :
+https://bitwarden.com/help/install-on-premise-linux/
  
 ## **Difficultés rencontrées : problèmes techniques rencontrés**
 
