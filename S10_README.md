@@ -46,8 +46,15 @@ Les objestifs de la semaine sont:
 
 ##  Choix Techniques
 
+Utilisation de Windows Server 2022 pour le DC supplémentaire. 
+Utilisation de Bitwarden pour gérer les mots de passe. 
+
 
 ##  Les difficultées rencontrées
+
+Utilisation de Bitwarden, difficultées à se connecter au serveur en graphique.
+Difficultées à connecter le serveur Core au domaine en tant que DC
+Adapter le script 
 
 
 ##  Les solutions 
