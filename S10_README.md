@@ -25,7 +25,7 @@ avec réplication.
 
 ##  Rôles par semaine
 
-### Semaine 2 
+### Semaine 3 
 | NOM | Roles | Taches éffectuées |
 | :-- |:----- | :---------- |
 | Valentin | Crew | Configuration connexion SSH client-serveur. Configuration du serveur Core |
@@ -36,7 +36,7 @@ avec réplication.
 
 ## Objectif semaine
 
-Les objestifs de la semaine sont:
+Les objectifs de la semaine sont:
 - Création d'un server Windows Core 2022. Il sera intégrer au domaine BillU en tant que DC et la réplication devra être opérationnel.
 - Installer et configurer un serveur Bitwarden pour la gestion de mot de passe. Ce serveur aura un compte Utilisateur afin de se pouvoir se connecter en SSH depuis un poste client.
 - Un client devra être intégrer au domaine BillU et sera en mesure de se connecter au seerveur Bitwarden.
@@ -47,7 +47,7 @@ Les objestifs de la semaine sont:
 ##  Choix Techniques
 
 Utilisation de Windows Server 2022 pour le DC supplémentaire. 
-Utilisation de Bitwarden pour gérer les mots de passe. 
+Utilisation de Debian LXC pour l'application Bitwarden afin gérer les mots de passe. 
 
 
 ##  Les difficultées rencontrées
