@@ -13,7 +13,7 @@
 
 ## **Étapes d'installation et de configuration : instruction étape par étape**
 
-Installation Bitwarden :
+# Installation Bitwarden :
 ressources pour installer à partir de proxmox sud Debian format LXC : Docker puis Bitwarden
 
 installer d'abord Docker:
@@ -24,7 +24,7 @@ installer ensuite Bitwarden :
 
 https://bitwarden.com/help/install-on-premise-linux/
 
-Installation et configuration du serveur core :
+# Installation et configuration du serveur core :
 
 renommer, config réseau ip statique, peut se faire à partir de Sconfig
 
