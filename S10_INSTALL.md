@@ -23,10 +23,35 @@ https://docs.docker.com/engine/install/debian/#install-from-a-package
 installer ensuite Bitwarden :
 
 https://bitwarden.com/help/install-on-premise-linux/
+
+Installation et configuration du serveur core :
+
+renommer, config réseau ip statique, peut se faire à partir de Sconfig
+
+installer les rôles du serveur :
+
+
+```batch
+Install-WindowsFeature -Name RSAT-AD-Tools -IncludeManagementTools -IncludeAllSubFeature
+
+Install -WindowsFeature -Name AD-Domain-Services -IncludeManagementTools -IncludeAllSubFeature
+
+install-WindowsFeature -Name DNS -IncludeManagementTools -IncludeAllSubFeature
+```
+ajout du contrôleur de domaine :
+
+```batch
+Install-ADDSDomainController -DomainName "billu.lan" -Credential (Get-Credential)
+```
+
+test :
+Get-ADDomainController -Identity <server_name>
  
 ## **Difficultés rencontrées : problèmes techniques rencontrés**
 
-
+- installation de serveur windows core an tant que controlleur de domaine
+  
+- configuration de Debian LXC comme serveur Bitwarden
 
 ## **Solutions trouvées : Solutions et alternatives trouvées**
 
