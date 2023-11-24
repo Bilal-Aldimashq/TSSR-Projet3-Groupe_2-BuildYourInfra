@@ -28,6 +28,9 @@ installer ensuite Bitwarden :
 
 https://bitwarden.com/help/install-on-premise-linux/
 
+login : bitwarden
+password : Billu2023!
+
 # Installation et configuration du serveur core :
 
 renommer, config réseau ip statique, peut se faire à partir de Sconfig
