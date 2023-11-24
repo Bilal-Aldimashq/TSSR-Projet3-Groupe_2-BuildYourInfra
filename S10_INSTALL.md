@@ -45,7 +45,9 @@ Install-ADDSDomainController -DomainName "billu.lan" -Credential (Get-Credential
 ```
 
 test :
+```batch
 Get-ADDomainController -Identity <server_name>
+```
  
 ## **Difficultés rencontrées : problèmes techniques rencontrés**
 
