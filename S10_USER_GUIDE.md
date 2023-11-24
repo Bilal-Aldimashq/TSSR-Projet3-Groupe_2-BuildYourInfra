@@ -16,8 +16,8 @@ Les mise à jour des salariés rentrant et sortant sont aussi géré par le scri
 Pour le bon fonctionnement du script les fichiers csv du service DRH seront stockés sur C:\Users\Administrator\Desktop.
 
 ### _Utilisation:_ 
-Lancer le script depuis la console Powershell. Il traîtera les fichiers renseigner dans les variables **$path1** et **$path2**.  
-La variable **$path1** aura comme chemin le fichier csv en cours d'actualité, et la variable **$path2** aura le chemin du fichier csv de mise à jour.
+Lancer le script depuis la console Powershell. Il traîtera les fichiers renseigner dans les variables **\$path1** et **\$path2**.  
+La variable **\$path1** aura comme chemin le fichier csv en cours d'actualité, et la variable **$path2** aura le chemin du fichier csv de mise à jour.
 Le MAIN du script est composé des fonctions utiles au script:   
 - _Verif AD_: Contrôle l'activation du service AD.
 - _CreateADForest_: Créé la fôret du domaine.  
