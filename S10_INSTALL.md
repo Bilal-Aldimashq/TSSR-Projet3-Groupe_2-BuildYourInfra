@@ -84,24 +84,34 @@ Le MAIN du script est composé des fonctions utiles au script:
 - _CreateSousOUFunction_: Créé les OU les plus bas de l'organisation AD.  
 - _Creategrp1_: Créé les groupes 1 de la hiérarchie (Managers et direction).  
 - _Creategrp2_: Créé les groupes des différent services.  
-- _CreateUser_: Créé les utilisateurs dans AD.   
-
+- _CreateUser_: Créé les utilisateurs dans AD.     
+- _FormatCsv2_: Utilise les fonctions Normalize2 et RemplaceMot2, pour un traitement des fichiers csv nécessaires à la fonction ModifAD.  
+- _ModifAD_: Implémente les descriptions des utilisateurs dans la BDD suivant les fichiers csv du service DRH.  
+- _Rangement_: Compare les fichiers de mise à jour salariés et traîte les salariés arrivant et sortant de l'entreprise BillU.  
 
  
 ## **Difficultés rencontrées : problèmes techniques rencontrés**
 
-- installation de serveur windows core an tant que controlleur de domaine
+- Installation de serveur windows core an tant que controlleur de domaine  
   
-- configuration de Debian LXC comme serveur Bitwarden
+- Configuration de Debian LXC comme serveur Bitwarden  
+
+- Adapter les fichiers csv du service DRH au besoins du script gestionda.ps1  
 
 ## **Solutions trouvées : Solutions et alternatives trouvées**
 
 
 
+
 ## **Tests réalisés : description des tests de performance, de sécurité, etc.**
+ - Tests du script suivant les besoins.  
+ - Tests ssh entre client et serveur Bitwarden.  
 
 
 ## **Résultats obtenus : ce qui a fonctionné**
+- Connexion en ssh
+- Script gère les mise à jour salariés, OU et groupe.  
+- Server Core intégrer au domaine et la réplication fonctionne.  
 
 
 ## **Améliorations possibles : suggestions d’améliorations futures**
