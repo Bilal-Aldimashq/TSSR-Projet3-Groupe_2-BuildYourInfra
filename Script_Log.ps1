@@ -539,7 +539,7 @@ function rangement
                                           New-ADUser -Name $Name -DisplayName $DisplayName -SamAccountName $SamAccountName -UserPrincipalName $UserPrincipalName `
                                             -GivenName $GivenName -Surname $Surname `
                                             -Path $Path -AccountPassword (ConvertTo-SecureString -AsPlainText Azerty1* -Force) -Enabled $True `
-                                            -OtherAttributes @{Company = $Company;Department = $Department} -ChangePasswordAtLogon $True `
+                                            -OtherAttributes @{Company = $Company;Department = $Department} -ChangePasswordAtLogon $True 
                                             Write-Host "Activation de l'utilisateur $name SAM: $samaccountname" -ForegroundColor Green
                                             Log -FilePath $LogFile -Content "Activation de l'utilisateur $name SAM: $samaccountname"
                                     }
@@ -551,7 +551,7 @@ function rangement
                                          New-ADUser -Name $Name -DisplayName $DisplayName -SamAccountName $SamAccountName -UserPrincipalName $UserPrincipalName `
                                             -GivenName $GivenName -Surname $Surname `
                                             -Path $Path -AccountPassword (ConvertTo-SecureString -AsPlainText Azerty1* -Force) -Enabled $True `
-                                            -OtherAttributes @{Company = $Company;Department = $Department} -ChangePasswordAtLogon $True `
+                                            -OtherAttributes @{Company = $Company;Department = $Department} -ChangePasswordAtLogon $True 
                                          Write-Host "Activation de l'utilisateur $name SAM: $samaccountname" -ForegroundColor Green
                                           Log -FilePath $LogFile -Content "Activation de l'utilisateur $name SAM: $samaccountname"
                                     }
@@ -565,7 +565,7 @@ function rangement
                                         $info = Get-ADUser -Identity $samaccountname
                                         Disable-ADAccount -Identity $samAccountName
                                         Move-ADObject -Identity $info.distinguishedname -TargetPath $targetname -Confirm:$false
-                                        Write-Host "Désactivation de l'utilisateur $samAccountName" -ForegroundColor Green
+                                        Write-Host "Désactivation de l'utilisateur $samAccountName" -ForegroundColor DarkRed -BackgroundColor White
                                          Log -FilePath $LogFile -Content "Désactivation de l'utilisateur $samAccountName"
             
                                     }
