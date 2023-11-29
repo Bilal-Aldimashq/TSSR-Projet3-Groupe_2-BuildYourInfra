@@ -93,7 +93,9 @@ Les GPO installées sont:
   - session.use_trans_sid = 0
 - Redémarrer la machine
 - Se connecter depuis le serveur AD, qui est sur la même plage d'adresse, via une page web en rentrant http://172.18.1.50/glpi/glpi
-### **Synchroniser le serveur GLPI au serveur AD**
+### **Connexion du serveur GLPI au serveur AD**
+[Support](https://remiflandrois.fr/2022/09/12/glpi-connexion-active-directory/)
+
 
  
 ## **Difficultés rencontrées : problèmes techniques rencontrés**
