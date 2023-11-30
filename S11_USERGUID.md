@@ -1,20 +1,26 @@
-# TSSR-Projet3-Groupe_2-BuildYourInfra
-## _Semaine_S4_
+# User-guid BillU 
+### _Semaine_S4_
+### TSSR-Projet3-Groupe_2-BuildYourInfra
+
 
 # **GLPI**
 
-### **_Présentation_**
+### **_Présentation_**:
+______
+
 GLPI permet d'avoir un état du parc informatique de façon dynamique et automatique grâce à l'ajout de l'agent GLPI.  
 GLPI vous permet également de signaler un prblème avec un Utilisateur ou un appareil du parc.  
 Ce manuel renseigne la procédure afin de déclarer au service informatique un incident avec le système de ticketing, qui permet de prioritariser les dépannages, les référencer et les archiver.
 
-### **_Pré-requis_**
+### **_Pré-requis_**:
+________
 
 Connaitre votre login Active Directory du domaine BillU.  
 Le compte utilisateur doit faire partie du domaine BillU et avoir été connecter au minimum une fois.  
 Faire la demande depuis un ordinateur intégrer au domaine BillU avec un accès à une page web et une adresse IP bien configuré dans la plage de réseaux du domaine.  
 
-### **_Utilisation_**
+### **_Utilisation_**:
+________
 
 Pour déclarer un incident et générer un ticket d'intervention:
 - Ouvrir une page web et dans la barre de recherche rentrer: **http://172.18.1.50/glpi**  
@@ -26,7 +32,8 @@ Pour déclarer un incident et générer un ticket d'intervention:
 
 
 
-### _**FAQ**_
+### _**FAQ**_:
+________
 
 | **Problèmes** | **Solutions** |
 |-----|--------|
