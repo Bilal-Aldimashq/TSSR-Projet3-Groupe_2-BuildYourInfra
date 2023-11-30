@@ -108,6 +108,9 @@ cette mise à jour permet nottament d'activer l'inventaire
 prérequis su le serveur SRVWIN1 gérant l'AD DS:
 - création de l'OU "GLPI" dnas lequel nous mettons un groupe "user-GLPI"
 - le goupe "user-GLPI" aura l'ensemble des utilisateurs de l'AD.
+  
+  ![config AD](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/dc933138-c3db-4f36-841b-57bc7be32d99)
+
 - un script automatise cette action :
 
 ```batch
