@@ -136,11 +136,11 @@ puis cliquer sur sauvegarder en bas à droite de cette page.
  
 ## **Difficultés rencontrées : problèmes techniques rencontrés**
 
-
+1. Problèmes de connections de l'ordinateur au domaine.
 
 ## **Solutions trouvées : Solutions et alternatives trouvées**
 
-
+1. Sortir l'ordinateur du domaine et le réintégrer.
 
 ## **Tests réalisés : description des tests de performance, de sécurité, etc.**
 
