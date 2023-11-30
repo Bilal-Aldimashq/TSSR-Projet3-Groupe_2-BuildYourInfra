@@ -99,7 +99,7 @@ Les GPO installées sont:
 ```bash
   sudo wget https://github.com/glpi-project/glpi/releases/download/10.0.10/glpi-10.0.10.tgz
   sudo tar -xvzf glpi-10.0.2.tgz
-  sudo cp -R glpi/* /var/www/html
+  sudo cp -R glpi/* /var/www/html/glpi
   ```
 cette mise à jour permet nottament d'activer l'inventaire
 
