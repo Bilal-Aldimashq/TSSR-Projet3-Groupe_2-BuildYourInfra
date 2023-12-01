@@ -1,10 +1,10 @@
 ﻿<#
-Pour se Script nous sont parti sur un script a argument mais pour etre sur de ne pas en oublier leur du lancement du script nous les initiliseront avec un read-host
+Pour ce Script nous sommes partis sur un script avec arguments. Pour être sûr de ne pas en oublier lors du lancement du script nous les initiliserons avec un "read-host"
 
 
-le script se lance en demandant plusieurs renseignement qui serviront d'arguments, tel que le nom de serveur, @IP, @IP de la Gateway et le nom de domaine a rejoindre.
-dela il va renommer le Serveur, changer l'@IP en renseignant la gateway, elle défini l'adresse de serveur DNS 
-elle va installer tout différents rôles et fonctionnalités sur un serveur Windows à l'aide de la cmdlet Install-WindowsFeature.
+Le script se lance en demandant plusieurs renseignements qui serviront d'arguments, tels que le nom de serveur, @IP, @IP de la Gateway et le nom de domaine à rejoindre.
+Ensuite ce script va renommer le serveur, changer l'@IP en renseignant la gateway, elle défini l'adresse de serveur DNS 
+elle va installer les différents rôles et fonctionnalités sur un serveur Windows à l'aide de la cmdlet Install-WindowsFeature.
 elle installe un nouveau contrôleur de domaine Active Directory sur le serveur Windows,
 et récupère des informations sur un contrôleur de domaine spécifique dans Active Directory
 et redemarre le serveur afin d'appliquer les changements.
