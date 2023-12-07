@@ -133,6 +133,15 @@ capture d'écrans de notre configuration GLPI à partir de l'interface graphique
 ![config glpi2](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/84616bbe-f17c-4eb8-ba42-764a51ded0ff)
 
 puis cliquer sur sauvegarder en bas à droite de cette page.
+
+### **Installation de l'agent glpi sur les clients pour activer l'inventaire de GLPI**
+
+installer la version ci-dessous et choisi la version adéquate en fonction du client :
+!(https://glpi-project.org/fr/glpi-agent-1-6-1/)
+
+choisir une installation "complete"
+suivre pas à pas l'installation et renseigné 
+
  
 ## **Difficultés rencontrées : problèmes techniques rencontrés**
 
