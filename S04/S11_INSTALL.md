@@ -141,24 +141,36 @@ installer la version ci-dessous et choisi la version adéquate sur github en fon
 (https://glpi-project.org/fr/glpi-agent-1-6-1/)
 https://github.com/glpi-project/glpi-agent/releases/tag/1.6.1
 
-choisir une installation "complete"
 
 suivre pas à pas l'installation
+
 ![agent glpi 1](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/1a297381-21ee-4a82-8c89-97d09a21ddc1)
+
 next
+
 ![agent glpi 2](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/3a88bf50-6123-40d3-b413-f704b6ba6593)
+
 next
+
 ![agent glpi 3](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/d96778d4-5df2-4fb8-b810-0393dfb9aafd)
+
 next
+
 ![agent glpi 4](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/726f327a-811b-469a-b0c2-2abfcab7126b)
+
 next
+
 ![agent glpi 5](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/01e72c07-58ee-45c7-a30d-3bc30ad5e414)
 
 renseigné l'endoit d'installation de l'agent. laisser vide par défaut
 indiquer le nom de votre serveur GLPi dans le lan
+
 ![agent glpi 6](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/cb7f9bb7-7772-4df5-b658-6bafc8ee3f72)
+
 install
+
 ![agent glpi 7](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/9d2ca22d-b3b1-4efa-9391-200e7c40fb70)
+
 installation terminée
 
 vérifier votre installation en tapant dans un navigateur : 127.0.0.1:62354
@@ -168,6 +180,7 @@ vous pouvez forcer l'inventaire
 
 vérifier et modifier la base de registre si nécessaire pour un environnement différent :
 Ordinateur\HKEY_LOCAL_MACHINE\SOFTWARE\GLPI-Agent
+
 ![agent glpi 9](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/cd8707dd-f8b6-4c45-8727-e6f6496ac17a)
 
 
