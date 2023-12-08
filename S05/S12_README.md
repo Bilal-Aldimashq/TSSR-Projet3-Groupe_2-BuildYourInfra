@@ -14,6 +14,7 @@ Cette semaine un pare -feu PFSense a été installé sur chaque site, Paris et L
 
 ### Semaine 5:
 
+
 | NOM | Rôles | Taches effectuées |
 | :-- |:----- | :---------- |
 | Valentin | Product Owner | Tests GPO, Github, Recherche Télémétrie, Règles de pare-feu |
