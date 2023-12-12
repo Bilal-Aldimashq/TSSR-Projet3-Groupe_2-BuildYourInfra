@@ -6,6 +6,7 @@ _(Date de documentation 11 Décembre 2023)_
 
 ## **Besoins Initiaux:**
 
+Réalisation d'une infrastructure sécurisé pour l'entreprise BillU. Un domaine AD a été installé et complété par un serveur de gestion de mot de passe pas encore opérationnel ainsi qu'un deuxième serveur DC avec réplication. Gestion automatique des salariés de la société dans le répertoire AD. Un serveur GLPI est en place ainsi qu'une dizaine de GPO. Des pare-feu PFSense sont installés sur les deux sitesLa télémérie des postes clients à été traitée. Pour compléter cette infrastructure, il a été demandé de commencer la stratégie de sauvegarde de certains dossiers et espace de stockage.
 
 ## **Rôles par semaine:**
 
