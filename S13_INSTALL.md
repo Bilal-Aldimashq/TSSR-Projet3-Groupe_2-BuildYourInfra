@@ -15,7 +15,7 @@ Faire un clic droit sur le disque système et le mettre en mode dynamique. Faire
 
 Une fois les deux disques en mode dynamique, faire un clic droit sur le disque système et faire "_add mirror_" puis lui indiquer le deuxième disque pour le miroir.
 
-Les disques sont dorénanavant en mode : _mirrored volumed_ et se synchronisent.
+Les disques sont dorénavant en mode : _mirrored volumed_ et se synchronisent.
 
 ![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier/RAID.JPG?raw=true)
 
