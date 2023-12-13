@@ -86,9 +86,35 @@ Faire de même avec le dossier "ProtesctionDesDonneesEtConformite" en ajoutant l
 
 Tests réalisés en se connectant avec les utilisateurs de l'AD suivants : h.cault et y.boye. Chaque utilisateur de l'AD ne voit que le dossier de son service.
 
-![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier/DS8.JPG?raw=true)
+![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier%20(2)/Capture2.JPG?raw=true)
 
-![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier/DS9.JPG?raw=true)
+![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier%20(2)/Capture3.JPG?raw=true)
+
+### Preparation des GPO pour mapper les dossiers de service 
+
+Les GPO devront etre créé pour chaque Departement afin de structurer les access au droit des dossier.
+
+ouvrir Group Policy Manager créé une nouvelle GPO : dans notre cas on l'appelera USER_AcessFolder_DPT* (* = le departement choisi) on va faire les reglage de base ajoute le GRP_computer et le Groupe Utilisateur AD voulu, on va desactiver la parti computer de la GPO 
+
+![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier%20(2)/Capture10.JPG?raw=true)
+
+![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier%20(2)/Capture11.JPG?raw=true)
+
+Ceci fait, Editer la GPO afin de pouvoir Mapper le dossier voulu.
+
+Aller dans `User configuration / Preferences / Windows Settings / Drive Maps` et faite clique droit New 
+
+![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier%20(2)/Capture12.JPG?raw=true)
+
+ajouter la localisation, et un label afin de le Nommé selectionne la lettre de mappage et appliquer
+
+![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier%20(2)/Capture13.JPG?raw=true)
+
+appliquer la GPO sur l'OU voulu est faites un test avec un client connecter a l'AD est verifier que le dossier de Service est bien accessible.
+
+![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier%20(2)/Capture14.JPG?raw=true)
+ 
+![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier%20(2)/Capture15.JPG?raw=true)
 
 # RESTRICTION D'UTILISATION DES MACHINES - restriction horaire
 
@@ -101,7 +127,7 @@ Pour cet objectif deux actions à réaliser :
 Cette commande permet de modifier la plage horaire de connection de tous les utilisateurs AD du lundi au samedi de 7h a 20h. 
 Modification du tableau comme indiqué ci-dessous.
 
-![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier/RU.JPG?raw=true)
+![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier%20(2)/Capture4.JPG?raw=true)
 
 Pour tous les administrateurs AD modification manuelle afin qu'ils ne soient pas affectés par la GPO qui sera créé et qu'ils n'aient pas de restriction horaire.
 
@@ -120,6 +146,7 @@ Pour les tests, réglage de l'heure pour un utilisateur AD afin qu'il ne puisse 
 le premier utilisateur ne peut se connecter alors que le deuxieme le peut.
 
 ![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier/RU3.JPG?raw=true)
+
 
 
 
