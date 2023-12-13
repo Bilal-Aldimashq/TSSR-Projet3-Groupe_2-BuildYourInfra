@@ -5,24 +5,49 @@
 
 # **NomDuProduit**
 
-### **_Présentation_**:
+## **_Présentation_**:
 ________
 
+le dossier personnel est un dossier propre a chaque utilisateur il sera stocker sur le serveur et sauvegarde a la semaine. le dossier de service est un dossier accessible a tout les membres d'un service du departement concerner. le dossier personnel est un option activer sur le profile utilsateur de l'AD tandis que le dossier de service est un dossier stocker et partager via le serveur les droit et permissions seront mis en place pour que les service ne voyent que leur service.
 
-### **_Pré-requis_**:
+## **_Utilisation_**:
 ________
+### OU trouver mon dossier Personnel ?
+
+Une fois les dossiers personnels gerer sur le serveur via Active DIRECTORY pour chaque utilisateurs, 
+
+![img6](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier%20(2)/Capture6.JPG?raw=true)
+
+![img7](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier%20(2)/Capture7.JPG?raw=true)
 
 
-### **_Utilisation_**:
-________
+Se connecter via un client et utiliser un Utilisateur AD pour vous connecter
+
+![img5](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier%20(2)/Capture5.JPG?raw=true)
+
+Pour acceder a son dossier personnel aller sur explorateur de fichier / ce PC 
+
+![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier%20(2)/Capture.JPG?raw=true)
+
+le lecteur I: nommé par le nom de l'utilisateur est son dossier personnel stocker sur le serveur.
 
 
-### _**FAQ**_:
+### Ou trouver le Dossier de Service ?
+
+Une fois la GPO crée, vous trouverez le dossier de service au meme endroit que le dossier personnel c'est a dire 
+
+ouvrir un explorateur de fichier cliquer sur Ce PC est vous trouverez le Lecteur Logique M: nommé par un label correspondant au departement du service du client
+
+![img8](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier%20(2)/Capture8.JPG?raw=true)
+
+## _**FAQ**_:
 ________
 
 | **Problèmes** | **Solutions** |
 |-----|--------|
-
+| Pas d'acces a mon dossier partager et/ou de service | etre sur que l'utilisateur est un utilisateur AD |
+| Pas d'acces a mon dossier partager et/ou de service | etre sur que le server est allumer |
+| Pas d'acces a mon dossier partager et/ou de service | etre sur que le reseau fonctionne |
 ____________
 
 
