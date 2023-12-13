@@ -69,9 +69,9 @@ Exemple de traitement avec le département Juridique ci-dessous :
 
 Partage du dossier "DptJuridique" en ajoutant le groupe Dptjurique en mode lecture uniquement.
 
-![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier/DS3.JPG?raw=true)
+![dptjuridique1](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/d03bbc9a-23a9-4846-b5d4-867083710bdf)
 
-![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier/DS4.JPG?raw=true)
+![dptjuridique2](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/bb249e86-a73d-4f96-81e5-297766042c49)
 
 dans le dossier DPTJuridique se trouve 2 autre dossiers ProtectionIntellectuelle et ProtesctionDesDonneesEtConformite
 
