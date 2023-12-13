@@ -73,7 +73,7 @@ Partage du dossier "DptJuridique" en ajoutant le groupe Dptjurique en mode lectu
 
 ![dptjuridique2](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/bb249e86-a73d-4f96-81e5-297766042c49)
 
-Dans le dossier "DptJuridique" se trouve deux autre dossiers "ProtectionIntellectuelle" et "ProtesctionDesDonneesEtConformite"
+Dans le dossier "DptJuridique" se trouve deux autres dossiers "ProtectionIntellectuelle" et "ProtesctionDesDonneesEtConformite"
 
 ![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier/DS5.JPG?raw=true)
 
