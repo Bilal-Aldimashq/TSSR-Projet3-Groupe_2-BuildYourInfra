@@ -23,9 +23,9 @@ Les disques sont dorénavant en mode : _mirrored volumed_ et se synchronisent.
 
 ## Dossier individuel.
 
-Pré-requis: Les dossiers personnels sont stockés sur un nouveau disque dur ajouté à notre serveur AD dans lequel est créé un dossier partagé "PersonnalFolders".  
+Pré-requis: Les dossiers personnels sont stockés sur un nouveau disque dur ajouté à notre serveur AD dans lequel est créé un dossier partagé "PersonnalFolders" qui acceuillera l'ensemble des dossiers personnels.  
 
-Afin de créer et partager via le reseau le dossier personnel de chaque utilisateur, le profil utilisateur dans l'AD est modifié dans le champs : Home folder en faisant un clic droit sur l'utilisateur et aller sur propriétés :
+Afin de créer et partager via le reseau le dossier personnel de chaque utilisateur, le profil utilisateur dans l'AD est modifié dans le champs : "Home folder" en faisant un clic droit sur l'utilisateur et aller sur propriétés :
 
 connect I: to \\SRVWIN1\PersonnalFolders\%username%  
 
