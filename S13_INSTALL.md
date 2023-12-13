@@ -3,36 +3,38 @@
 _Date de documentation: 11/12/2023_
 
 # **Étapes d'installation et de configuration : instruction étape par étape:**
-# Mise en place du RAID1 sur le volume systeme de l'AD PARIS
 
-Ajouter un nouveau disque dur (taille minimal equivalente a celle du disque systeme) au serveur afin de mettre en place le systeme RAID.
 
-Ceci fait on va demarrer le serveur, aller sur computer manager le nouveau disque devrait etre visible.
+## Mise en place du RAID1 sur le volume systeme de l'AD PARIS
 
-on va faire un clique droit sur le disque systeme est le passer en dynamique. On va faire de meme sur le 2eme Disque. 
+Ajouter un nouveau disque dur **(taille minimal equivalente a celle du disque systeme)** au serveur afin de mettre en place le systeme RAID.
 
-une fois les 2 disque en dynamique on va faire un clique droit sur le disque systeme et faire "add mirror" et lui indiquer le 2eme disque pour le miroir.
+Ceci fait, démarrer le serveur, aller sur _computer manager_, le nouveau disque devrait être visible.
 
-les disques vont passer en mirrored volumed et se synchroniser.
+Faire un clique droit sur le disque systeme et le passer en dynamique. Faire de même sur le 2eme Disque. 
+
+Une fois les 2 disques en dynamique, faire un clique droit sur le disque systeme et faire "_add mirror_" puis lui indiquer le 2eme disque pour le miroir.
+
+Les disques vont passer en _mirrored volumed_ et se synchroniser.
 
 ![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier/RAID.JPG?raw=true)
 
-# Mettre en place des dossiers réseaux pour les utilisateurs
+## Mettre en place des dossiers réseaux pour les utilisateurs
 
 ## Dossier individuelle.
 
-Pre-requis : les dossier personnel devront etre stocker sur un autre disque, et avoir créé un dossier partager "PersonnalFolders" dedans
+Pré-requis: Les dossiers personnel devront être stockés sur un autre disque et avoir créé un dossier partager "PersonnalFolders" dedans.  
 
-Afin de créé et partager via le reseau le dossier personnel de chaque utilisateur on va modifier dans le profile utilisateur AD les champs suivants: Home folder connect I: to \\SRVWIN1\PersonnalFolders\%username%
+Afin de créer et partager via le reseau le dossier personnel de chaque utilisateur, modifier dans le profil utilisateur AD les champs suivants: Home folder connect I: to \\SRVWIN1\PersonnalFolders\%username%  
 
-%username% represente le nom de l utilisateur AD 
+_%username% represente le nom de l utilisateur AD_  
 
 ![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier/DP.JPG?raw=true)
 
 
-pour nous besoin nous avons plus 100 utilisateur AD nous passerons par un script qui modifira les donnees sur les utilisateur AD en ajoutant le chemin pour le dossier partagé. 
+Pour nos besoins nous avons plus de 100 utilisateurs AD, nous passerons par un script qui modifira les données sur les utilisateurs AD en ajoutant le chemin pour le dossier partagé. 
 
-en faisant ceci nous nous sommes apercu que le champs se remplisser bien mais ne créé pas le dossier partagé. donc nous avons rajouter au script la creation des dossier personnel manuellement.
+En faisant ceci, les tests ont révélés que le champs se remplissait bien mais ne crée pas le dossier partagé. Il a été rajouter au script la creation des dossier personnel manuellement.
 
     Commande utiliser :
 
@@ -46,7 +48,7 @@ en faisant ceci nous nous sommes apercu que le champs se remplisser bien mais ne
             Write-Host "le dossier personnel à été crée et à été ajouté au lecteur logique I:" -ForegroundColor Green 
         }
 
-pour les tests nous avons demarer differents clients afin de voir si notre dossier est bien un dossier nominatif et placer sur I:
+Pour les tests nous avons démarrés différents clients afin de voir si notre dossier est bien un dossier nominatif et placer sur I:
 
 ![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier/Dp2.JPG?raw=true)
 
