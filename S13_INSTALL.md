@@ -92,31 +92,32 @@ Tests réalisés en se connectant avec les utilisateurs de l'AD suivants : h.cau
 
 # RESTRICTION D'UTILISATION DES MACHINES - restriction horaire
 
-Pour cet objectif deux actions à rélaiser :
+Pour cet objectif deux actions à réaliser :
 
-**Premierement** : régler la plage horaire pour chaque utilisateur dans l'AD, réla pour cela nous avons trouver une commande powershell
+**Premierement** : régler la plage horaire pour chaque utilisateur dans l'AD, action effectuée par commande powershell :
 
 `Get-ADUser -SearchBase "OU=Utilisateurs,DC=billu,DC=lan" -Filter *| Set-LogonHours -TimeIn24Format @(7,8,9,10,11,12,13,14,15,16,17,18,19,20) -Monday -Tuesday -Wednesday -Thursday -Friday -Saturday -NonSelectedDaysare NonWorkingDays`
 
-cette commande permet modifier tout les utilisateurs AD en modifant la plage horaire de connection. du lundi au samedi de 7h a 20h du lundi au samedi et se traduit par une modification de se tableau.
-
-ceci fait faut penser a remodifier manuellement tout les administrateurs AD afin qui ne soit pas affecte par la GPO qui sera créé .
+Cette commande permet de modifier la plage horaire de connection de tous les utilisateurs AD du lundi au samedi de 7h a 20h. 
+Modification du tableau comme indiqué ci-dessous.
 
 ![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier/RU.JPG?raw=true)
 
-**Deuxiemement** : créé une GPO Ordinateur qui va deconnecter ou empecher la connection si vous n'etes pas dans la plage d'horaire voulu.
+Pour tous les administrateurs AD modification manuelle afin qu'ils ne soient pas affectés par la GPO qui sera créé et qu'ils n'aient pas de restriction horaire.
 
-pour créé cette GPO on va dans Group Policy Management on créé une nouvelle GPO pour nous nommé COMPUTER_Restriction. qui sera appliquer sur l'OU ordinateur, et on s'assure que "configuration setting disabled " est bien mis
+**Deuxiemement** : Créer une GPO Ordinateur qui va deconnecter et empecher la connection en dehors de la plage horaire attribuée.
 
-et on va editer la GPO :: 
+Création : dans Group Policy Management -> nouvelle GPO -> nommée "COMPUTER_Restriction" qui sera appliquée sur l'OU ordinateur, et on s'assure que GPO Staus soit bien "User configuration settings disabled".
+
+Edition de la GPO : 
 
 ![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier/RU2.JPG?raw=true)
 
-Dans Computer configuration / Policies / Windows Settings / Security Settings / Local Policies / Security Option on va chercher Microsoft network server: Disconnect Client when Logon Hours Expire et on va le mettre sur Enabled valider et appliquer la GPO
+Dans le chemin "Computer configuration / Policies / Windows Settings / Security Settings / Local Policies / Security Option" sélectionner "Microsoft network server: Disconnect Client when Logon Hours Expire" et l'activer "Enabled",valider puis appliquer la GPO.
 
-Pour les test nous avons regler l'heure pour un client afin qu'il ne puisse pas se connecter peu importe l'heure et un autre ou il peut acceder jusqu'a 20h comme voulu dans le projet
+Pour les tests, réglage de l'heure pour un utilisateur AD afin qu'il ne puisse pas se connecter peu importe l'heure et un autre utilistauer AD qui accède à sa cession jusqu'a 20h.
 
-le 1er ne peut pas se connecter alors que le deuxieme oui .
+le premier utilisateur ne peut se connecter alors que le deuxieme le peut.
 
 ![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier/RU3.JPG?raw=true)
 
