@@ -5,11 +5,11 @@ _Date de documentation: 11/12/2023_
 # **Étapes d'installation et de configuration : instruction étape par étape:**
 
 
-## Mise en place du RAID1 sur le volume systeme de l'AD PARIS
+## Mise en place du RAID 1 sur le volume systeme de l'AD PARIS
 
-Ajouter un nouveau disque dur **(taille minimal equivalente a celle du disque systeme)** au serveur afin de mettre en place le systeme RAID.
+Ajouter un nouveau disque dur **(taille minimal equivalente a celle du disque systeme)** au serveur afin de mettre en place le systeme RAID 1.
 
-Ceci fait, démarrer le serveur, aller sur _computer manager_, le nouveau disque devrait être visible.
+Puis démarrer le serveur, aller sur _computer manager_, le nouveau disque devrait être visible.
 
 Faire un clic droit sur le disque système et le mettre en mode dynamique. Faire de même sur le deuxième disque. 
 
