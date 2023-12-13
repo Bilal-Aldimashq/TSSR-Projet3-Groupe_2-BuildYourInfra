@@ -11,11 +11,11 @@ Ajouter un nouveau disque dur **(taille minimal equivalente a celle du disque sy
 
 Ceci fait, démarrer le serveur, aller sur _computer manager_, le nouveau disque devrait être visible.
 
-Faire un clic droit sur le disque système et le mettre en mode dynamique. Faire de même sur le 2eme Disque. 
+Faire un clic droit sur le disque système et le mettre en mode dynamique. Faire de même sur le deuxième disque. 
 
-Une fois les 2 disques en dynamique, faire un clic droit sur le disque système et faire "_add mirror_" puis lui indiquer le 2eme disque pour le miroir.
+Une fois les deux disques en mode dynamique, faire un clic droit sur le disque système et faire "_add mirror_" puis lui indiquer le deuxième disque pour le miroir.
 
-Les disques vont passer en _mirrored volumed_ et se synchroniser.
+Les disques sont dorénanavant en mode : _mirrored volumed_ et se synchronisent.
 
 ![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier/RAID.JPG?raw=true)
 
