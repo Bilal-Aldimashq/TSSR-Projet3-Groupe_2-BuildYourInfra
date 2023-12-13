@@ -55,9 +55,11 @@ Pour les tests nous avons démarrés différents clients afin de voir si notre d
 ## Dossier Service.
 
 Pré-requis : reprendre le disque dur des dossiers personnel et créé tout les dossier necessaire. Dans notre cas on va créé les dossiers de touts les departement et des ses dossiers on va 
-ajouter les dossier des services.
+ajouter les dossier des services. (voir exemple)
 
 ![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier/DS.JPG?raw=true)
+
+Dans le dossier DptCommercial vous trouverez ses dossier de services (voir exemple)
 
 ![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier/DS2.JPG?raw=true)
 
@@ -95,7 +97,7 @@ Pour cet objectif nous avons 2 chose a faire
 
 `Get-ADUser -SearchBase "OU=Utilisateurs,DC=billu,DC=lan" -Filter *| Set-LogonHours -TimeIn24Format @(7,8,9,10,11,12,13,14,15,16,17,18,19,20) -Monday -Tuesday -Wednesday -Thursday -Friday -Saturday -NonSelectedDaysare NonWorkingDays`
 
-cette commande permet modifier tout les utilisateurs AD en modifant la plage horaire de connection. du lundi au samedi de 7h a 20h et se traduit par une modification de se tableau.
+cette commande permet modifier tout les utilisateurs AD en modifant la plage horaire de connection. du lundi au samedi de 7h a 20h du lundi au samedi et se traduit par une modification de se tableau.
 
 ceci fait faut penser a remodifier manuellement tout les administrateurs AD afin qui ne soit pas affecte par la GPO qui sera créé .
 
