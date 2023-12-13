@@ -73,19 +73,18 @@ Partage du dossier "DptJuridique" en ajoutant le groupe Dptjurique en mode lectu
 
 ![dptjuridique2](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/bb249e86-a73d-4f96-81e5-297766042c49)
 
-dans le dossier DPTJuridique se trouve 2 autre dossiers ProtectionIntellectuelle et ProtesctionDesDonneesEtConformite
+Dans le dossier "DptJuridique" se trouve deux autre dossiers "ProtectionIntellectuelle" et "ProtesctionDesDonneesEtConformite"
 
 ![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier/DS5.JPG?raw=true)
 
-nous allons partager le dossier ProtectionIntellectuelle en ajoutant le groupe ProtectionIntellectuelle et en desactivant les droit hereditaire du dossier DPTjuridique. 
-et la meme avec le dossier ProtesctionDesDonneesEtConformite en ajoutant le bon groupe
+Partage du dossier "ProtectionIntellectuelle" en ajoutant le groupe ProtectionIntellectuelle et en désactivant les droits héréditaires du dossier "DPTjuridique". 
+Faire de même avec le dossier "ProtesctionDesDonneesEtConformite" en ajoutant le bon groupe.
 
 ![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier/DS6.JPG?raw=true)
 
 ![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier/DS7.JPG?raw=true)
 
-pour les test nous avons connecter h.cault et y.boyer qui sont 2 client des 2 services qui nous concerne et on vois bien que h.cault ne vois que le dossier ProtectionIntellectuelle
-et que y.boyer ne vois que le dossier ProtesctionDesDonneesEtConformite
+Tests réalisés en se connectant avec les utilisateurs de l'AD suivants : h.cault et y.boye. Chaque utilisateur de l'AD ne voit que le dossier de son service.
 
 ![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier/DS8.JPG?raw=true)
 
