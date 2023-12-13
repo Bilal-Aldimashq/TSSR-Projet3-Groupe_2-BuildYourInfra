@@ -25,7 +25,7 @@ Les disques sont dorénanavant en mode : _mirrored volumed_ et se synchronisent.
 
 Pré-requis: Les dossiers personnels sont stockés sur un autre disque dans lequel est créer un dossier partagé "PersonnalFolders".  
 
-Afin de créer et partager via le reseau le dossier personnel de chaque utilisateur, le profil utilisateur dans l'AD est modifié dans le champ : Home folder en faisant un clic droit sur l'utilisateur et aller sur propriété :
+Afin de créer et partager via le reseau le dossier personnel de chaque utilisateur, le profil utilisateur dans l'AD est modifié dans le champs : Home folder en faisant un clic droit sur l'utilisateur et aller sur propriétés :
 
 connect I: to \\SRVWIN1\PersonnalFolders\%username%  
 
@@ -34,9 +34,9 @@ _%username% represente le nom de l utilisateur AD_
 ![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier/DP.JPG?raw=true)
 
 
-Pour nos besoins nous avons plus de 100 utilisateurs AD, nous passerons par un script qui modifira les données sur les utilisateurs AD en ajoutant le chemin pour le dossier partagé. 
+Pour nos besoins nous avons plus de 100 utilisateurs AD, nous passerons par un script qui modifiera les données sur les utilisateurs AD en ajoutant le chemin pour le dossier partagé. 
 
-En faisant ceci, les tests ont révélés que le champs se remplissait bien mais ne crée pas le dossier partagé. Il a été rajouter au script la creation des dossier personnel manuellement.
+Les tests révèlent que le champs se rempli correctement mais ne crée pas le dossier partagé. Il a été rajouté au script à la création des dossiers personnels manuellement.
 
     Commande utiliser :
 
@@ -50,7 +50,7 @@ En faisant ceci, les tests ont révélés que le champs se remplissait bien mais
             Write-Host "le dossier personnel à été crée et à été ajouté au lecteur logique I:" -ForegroundColor Green 
         }
 
-Pour les tests nous avons démarrés différents clients afin de voir si notre dossier est bien un dossier nominatif et placer sur I:
+Après des tests sur différents clients windows 10 le dossier créé par le script est bien un dossier nominatif et placé sur I:
 
 ![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier/Dp2.JPG?raw=true)
 
