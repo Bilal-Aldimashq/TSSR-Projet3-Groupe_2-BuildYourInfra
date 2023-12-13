@@ -105,9 +105,9 @@ Modification du tableau comme indiqué ci-dessous.
 
 Pour tous les administrateurs AD modification manuelle afin qu'ils ne soient pas affectés par la GPO qui sera créé et qu'ils n'aient pas de restriction horaire.
 
-**Deuxiemement** : Créer une GPO Ordinateur qui va deconnecter et empecher la connection en dehors de la plage horaire attribuée.
+**Deuxiemement** : Créer une GPO Ordinateur qui va déconnecter et empecher la connection en dehors de la plage horaire attribuée.
 
-Création : dans Group Policy Management -> nouvelle GPO -> nommée "COMPUTER_Restriction" qui sera appliquée sur l'OU ordinateur, et on s'assure que GPO Staus soit bien "User configuration settings disabled".
+Création : dans Group Policy Management -> nouvelle GPO -> nommée "COMPUTER_Restriction" qui sera appliquée sur l'OU ordinateur, et on s'assure que GPO Status soit bien "User configuration settings disabled".
 
 Edition de la GPO : 
 
