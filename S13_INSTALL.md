@@ -92,9 +92,9 @@ Tests réalisés en se connectant avec les utilisateurs de l'AD suivants : h.cau
 
 # RESTRICTION D'UTILISATION DES MACHINES - restriction horaire
 
-Pour cet objectif nous avons 2 chose a faire
+Pour cet objectif deux actions à rélaiser :
 
-**Premierement** : regler la plage horaire sur chaque utilisateur dans l'AD pour cela nous avons trouver une commande powershell
+**Premierement** : régler la plage horaire pour chaque utilisateur dans l'AD, réla pour cela nous avons trouver une commande powershell
 
 `Get-ADUser -SearchBase "OU=Utilisateurs,DC=billu,DC=lan" -Filter *| Set-LogonHours -TimeIn24Format @(7,8,9,10,11,12,13,14,15,16,17,18,19,20) -Monday -Tuesday -Wednesday -Thursday -Friday -Saturday -NonSelectedDaysare NonWorkingDays`
 
