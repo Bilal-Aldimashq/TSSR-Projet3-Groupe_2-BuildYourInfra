@@ -11,9 +11,9 @@ Ajouter un nouveau disque dur **(taille minimal equivalente a celle du disque sy
 
 Ceci fait, démarrer le serveur, aller sur _computer manager_, le nouveau disque devrait être visible.
 
-Faire un clique droit sur le disque systeme et le passer en dynamique. Faire de même sur le 2eme Disque. 
+Faire un clic droit sur le disque système et le mettre en mode dynamique. Faire de même sur le 2eme Disque. 
 
-Une fois les 2 disques en dynamique, faire un clique droit sur le disque systeme et faire "_add mirror_" puis lui indiquer le 2eme disque pour le miroir.
+Une fois les 2 disques en dynamique, faire un clic droit sur le disque système et faire "_add mirror_" puis lui indiquer le 2eme disque pour le miroir.
 
 Les disques vont passer en _mirrored volumed_ et se synchroniser.
 
@@ -21,11 +21,13 @@ Les disques vont passer en _mirrored volumed_ et se synchroniser.
 
 ## Mettre en place des dossiers réseaux pour les utilisateurs
 
-## Dossier individuelle.
+## Dossier individuel.
 
-Pré-requis: Les dossiers personnel devront être stockés sur un autre disque et avoir créé un dossier partager "PersonnalFolders" dedans.  
+Pré-requis: Les dossiers personnels sont stockés sur un autre disque dans lequel est créer un dossier partagé "PersonnalFolders".  
 
-Afin de créer et partager via le reseau le dossier personnel de chaque utilisateur, modifier dans le profil utilisateur AD les champs suivants: Home folder connect I: to \\SRVWIN1\PersonnalFolders\%username%  
+Afin de créer et partager via le reseau le dossier personnel de chaque utilisateur, le profil utilisateur dans l'AD est modifié dans le champ : Home folder en faisant un clic droit sur l'utilisateur et aller sur propriété :
+
+connect I: to \\SRVWIN1\PersonnalFolders\%username%  
 
 _%username% represente le nom de l utilisateur AD_  
 
