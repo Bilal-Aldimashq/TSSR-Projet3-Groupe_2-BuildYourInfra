@@ -23,7 +23,7 @@ Les disques sont dorénanavant en mode : _mirrored volumed_ et se synchronisent.
 
 ## Dossier individuel.
 
-Pré-requis: Les dossiers personnels sont stockés sur un autre disque dans lequel est créer un dossier partagé "PersonnalFolders".  
+Pré-requis: Les dossiers personnels sont stockés sur un nouveau disque dur ajouté à notre servuer AD dans lequel est créé un dossier partagé "PersonnalFolders".  
 
 Afin de créer et partager via le reseau le dossier personnel de chaque utilisateur, le profil utilisateur dans l'AD est modifié dans le champs : Home folder en faisant un clic droit sur l'utilisateur et aller sur propriétés :
 
@@ -56,8 +56,7 @@ Après des tests sur différents clients windows 10 le dossier créé par le scr
 
 ## Dossier Service.
 
-Pré-requis : reprendre le disque dur des dossiers personnel et créé tout les dossier necessaire. Dans notre cas on va créé les dossiers de touts les departement et des ses dossiers on va 
-ajouter les dossier des services. (voir exemple)
+Pré-requis : création manuelle de l'ensemble des dossiers partagés de départements et services sur le nouveau disque dur implanté dans notre serveur AD dans lequel sont déjà stockés les dossiers personnels. (voir exemple)
 
 ![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier/DS.JPG?raw=true)
 
