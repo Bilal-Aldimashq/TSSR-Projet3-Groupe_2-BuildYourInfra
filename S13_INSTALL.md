@@ -23,7 +23,7 @@ Les disques sont dorénanavant en mode : _mirrored volumed_ et se synchronisent.
 
 ## Dossier individuel.
 
-Pré-requis: Les dossiers personnels sont stockés sur un nouveau disque dur ajouté à notre servuer AD dans lequel est créé un dossier partagé "PersonnalFolders".  
+Pré-requis: Les dossiers personnels sont stockés sur un nouveau disque dur ajouté à notre serveur AD dans lequel est créé un dossier partagé "PersonnalFolders".  
 
 Afin de créer et partager via le reseau le dossier personnel de chaque utilisateur, le profil utilisateur dans l'AD est modifié dans le champs : Home folder en faisant un clic droit sur l'utilisateur et aller sur propriétés :
 
@@ -56,17 +56,18 @@ Après des tests sur différents clients windows 10 le dossier créé par le scr
 
 ## Dossier Service.
 
-Pré-requis : création manuelle de l'ensemble des dossiers partagés de départements et services sur le nouveau disque dur implanté dans notre serveur AD dans lequel sont déjà stockés les dossiers personnels. (voir exemple)
+Pré-requis : création manuelle de l'ensemble des dossiers partagés de départements et services dans un dossier nommé "DptFolders" sur le nouveau disque dur implanté dans notre serveur AD dans lequel sont déjà stockés les dossiers personnels. (voir exemple)
 
 ![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier/DS.JPG?raw=true)
 
-Dans le dossier DptCommercial vous trouverez ses dossier de services (voir exemple)
+Le dossier DptCommercial contient les dossiers de chaque service (voir exemple)
 
 ![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier/DS2.JPG?raw=true)
 
-on fois ceci fait, on va commencer le partage des fichier et attribuer les droit au groupe AD voulu. pour la document je prendrais le cas du departement Juridique.
+A la suite de cette opération il est nécessaire d'attribuer les droits spécifiques au groupe AD pour accéder à son propre dossier de service et/ou département. 
+Exemple de traitement avec le département Juridique ci-dessous :
 
-on partage le dossier DPTJuridique en ajoutant le groupe DPTjurique a Read seulement le dossier.
+Partage du dossier "DptJuridique" en ajoutant le groupe Dptjurique en mode lecture uniquement.
 
 ![img](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier/DS3.JPG?raw=true)
 
