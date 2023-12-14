@@ -51,7 +51,7 @@ ________
 | Pas d'accès à mon dossier partager et/ou de service | être sur que le server est allumé |
 | Pas d'accès à mon dossier partager et/ou de service | être sur que le réseau fonctionne |
 ____________
-
+____________
 
 # **Restauration sauvegarde dossiers partagés**
 
