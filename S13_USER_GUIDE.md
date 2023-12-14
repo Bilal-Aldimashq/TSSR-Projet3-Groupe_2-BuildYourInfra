@@ -2,16 +2,18 @@
 ## User-guid BillU 
 ### _Semaine_S6_
 ### _(Date de documentation: 11 Décembre 2023)_
+______________
 
 # **Les dossiers partagés**
-
+___________
 ## **_Présentation_**:
-________
+
 
 le dossier personnel, est un dossier propre a chaque utilisateur. Il sera stocker sur le serveur et sauvegarder sur celui-ci. Le dossier de service, est un dossier accessible a tout les membres d'un service du departement concerné. Le dossier personnel, est une option activer sur le profil utilsateur de l'AD, tandis que le dossier de service est un dossier stocker et partager via le serveur. Les droit et permissions seront établis de façon à ce que les services voient seulement leurs dossiers respectifs.
+______________
 
 ## **_Utilisation_**:
-________
+
 ### OU trouver mon dossier Personnel ?
 
 Une fois les dossiers personnels gérés sur le serveur via Active DIRECTORY pour chaque utilisateurs, 
