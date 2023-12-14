@@ -3,18 +3,18 @@
 ### _Semaine_S6_
 ### _(Date de documentation: 11 Décembre 2023)_
 
-# **NomDuProduit**
+# **Les dossiers partagés**
 
 ## **_Présentation_**:
 ________
 
-le dossier personnel est un dossier propre a chaque utilisateur il sera stocker sur le serveur et sauvegarde a la semaine. le dossier de service est un dossier accessible a tout les membres d'un service du departement concerner. le dossier personnel est un option activer sur le profile utilsateur de l'AD tandis que le dossier de service est un dossier stocker et partager via le serveur les droit et permissions seront mis en place pour que les service ne voyent que leur service.
+le dossier personnel, est un dossier propre a chaque utilisateur. Il sera stocker sur le serveur et sauvegarder sur celui-ci. Le dossier de service, est un dossier accessible a tout les membres d'un service du departement concerné. Le dossier personnel, est une option activer sur le profil utilsateur de l'AD, tandis que le dossier de service est un dossier stocker et partager via le serveur. Les droit et permissions seront établis de façon à ce que les services voient seulement leurs dossiers respectifs.
 
 ## **_Utilisation_**:
 ________
 ### OU trouver mon dossier Personnel ?
 
-Une fois les dossiers personnels gerer sur le serveur via Active DIRECTORY pour chaque utilisateurs, 
+Une fois les dossiers personnels gérés sur le serveur via Active DIRECTORY pour chaque utilisateurs, 
 
 ![img6](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier%20(2)/Capture6.JPG?raw=true)
 
@@ -34,9 +34,9 @@ le lecteur I: nommé par le nom de l'utilisateur est son dossier personnel stock
 
 ### Ou trouver le Dossier de Service ?
 
-Une fois la GPO crée, vous trouverez le dossier de service au meme endroit que le dossier personnel c'est a dire 
+Une fois la GPO crée, vous trouverez le dossier de service au même endroit que le dossier personnel c'est à dire: 
 
-ouvrir un explorateur de fichier cliquer sur Ce PC est vous trouverez le Lecteur Logique M: nommé par un label correspondant au departement du service du client
+Ouvrir un explorateur de fichier, cliquer sur Ce PC et vous trouverez le Lecteur Logique M:, nommé par un label correspondant au departement du service du client.
 
 ![img8](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier%20(2)/Capture8.JPG?raw=true)
 
@@ -45,9 +45,9 @@ ________
 
 | **Problèmes** | **Solutions** |
 |-----|--------|
-| Pas d'acces a mon dossier partager et/ou de service | etre sur que l'utilisateur est un utilisateur AD |
-| Pas d'acces a mon dossier partager et/ou de service | etre sur que le server est allumer |
-| Pas d'acces a mon dossier partager et/ou de service | etre sur que le reseau fonctionne |
+| Pas d'accès à mon dossier partager et/ou de service | être sur que l'utilisateur est un utilisateur AD |
+| Pas d'accès à mon dossier partager et/ou de service | être sur que le server est allumé |
+| Pas d'accès à mon dossier partager et/ou de service | être sur que le réseau fonctionne |
 ____________
 
 
