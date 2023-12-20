@@ -12,7 +12,7 @@ ___________
 _______________
 # **Étapes d'installation et de configuration : 
 
-## Instruction d'installation serveur Zabbix :**
+## Installation serveur Zabbix :**
 
 
 
