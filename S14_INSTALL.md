@@ -12,6 +12,8 @@ ___________
 _______________
 # **Étapes d'installation et de configuration : instruction étape par étape:**
 
+
+
 ## Mise en place de l'agent Zabbix 2 sur les serveurs du Parc
 ### **Pré-requis**
 Avoir téléchargé l'agent Zabbix pour les serveurs Windows sur https://www.zabbix.com/fr/download_agents et selectionner le bon fichier en fonction de la version de Zabbix choisi pendant l'installation pour nous ca sera l'agent zabbix 2 v6.4.10
