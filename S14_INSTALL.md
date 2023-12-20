@@ -10,7 +10,9 @@ ___________
 ## **Choix techniques:**
 
 _______________
-# **Étapes d'installation et de configuration : instruction étape par étape:**
+# **Étapes d'installation et de configuration : 
+
+## Instruction d'installation serveur Zabbix :**
 
 
 
