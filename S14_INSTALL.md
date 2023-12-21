@@ -40,6 +40,7 @@ apt install php php-cli php-common php-mbstring php-gd php-xml php-bcmath php-ld
 
 Pour l'installation de Zabbix se rendre sur : 
 https://www.zabbix.com/download?zabbix=6.4&os_distribution=debian&os_version=11&components=server_frontend_agent&db=mysql&ws=apache
+
 Choisir la version Debian 11 (bullseye), Server, Mysql, Apache.
 ##### a. Installation du dépôt Zabbix
 ```bash
@@ -97,7 +98,7 @@ http://localhost/zabbix/ et entrer `Admin` comme nom d'utilisateur et `zabbix` c
 
 ![zabbix1](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/a0bf2fe7-acc3-4d88-95de-b642f1768fd5)
 
-Fenêtre de Zabbix une fois configuré
+Fenêtre de Zabbix une fois configuré. Se reporter à la section ci-dessous pour intégrer l'infrastructure actuelle de Billu à notre superviseur.
 
 ![zabbix2](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/59ad766d-a9b1-4425-82d6-d30724ba9868)
 
