@@ -10,9 +10,9 @@ ___________
 ## **Choix techniques:**
 
 _______________
-# **Étapes d'installation et de configuration : 
+# **Étapes d'installation et de configuration :**
 
-## Installation serveur Zabbix :**
+## Installation serveur Zabbix :
 
 Prérequis pour l'installation sur serveur Debian 11.8  version graphique : LAMP
 Zabbix nécessite un serveur web, une base de données MySQL/MariaDB et PHP.
