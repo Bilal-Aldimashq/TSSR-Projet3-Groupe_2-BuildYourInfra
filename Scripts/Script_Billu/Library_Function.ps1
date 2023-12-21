@@ -787,6 +787,100 @@ end{
 }
 }
 
+Function FormatCsv3
+{
+    NormalizeCsv3 ; RemplaceMot3
+}
+
+Function NormalizeCsv3 
+{
+    # Importer le fichier CSV initial
+    $Users = Import-Csv -Path $path3
+    # Parcourir chaque ligne et chaque colonne pour supprimer les accents et les espaces
+    foreach ($row in $Users) 
+    {
+        foreach ($property in $row.PSObject.Properties) 
+        {
+            # Supprimer les accents
+            $property.Value = $property.Value.Normalize('FormD') -replace '[^\p{IsBasicLatin}]', ''
+            # Supprimer les espaces
+            $property.Value = $property.Value.Replace(' ', '')
+        }
+    }
+
+    # Exporter les données dans un nouveau fichier CSV
+    $Users | Export-Csv -Path 'C:\Users\Administrator\Desktop\BillU3.csv' -NoTypeInformation
+}
+
+Function RemplaceMot3
+{
+    (Get-Content -Path 'C:\users\Administrator\Desktop\BillU3.csv') `
+                    -replace 'servicerecrutement','DptRecrutement' -replace 'servicecommercial','DptCommercial' `
+                    -replace 'FinanceetComptabilite','DptFinanceEtComptabilite' -replace 'QHSE','DptQHSE' `
+                    -replace 'ServiceJuridique','DptJuridique' -replace 'Direction','DptDirection' `
+                    -replace 'Developpementlogiciel','DptDeveloppementLogiciel' `
+                    -replace 'CommunicationetRelationspubliques','DptCommunicationEtRelationsPubliques' `
+                    -replace 'DSI','DptDSI' -replace 'Communicationinterne','CommunicationInterne' -replace 'Gestiondesmarques','GestionDesMarques' `
+                    -replace 'Testetqualite','TestEtQualite' `
+                    -replace 'analyseetconception','AnalyseEtConception' `
+                    -replace 'AdministrationSystemesetReseaux','AdministrationSystemesEtReseaux' `
+                    -replace 'DeveloppementetIntegration','DeveloppementEtIntegration' `
+                    -replace 'RechercheetPrototype','RechercheEtPrototype' `
+                    -replace 'Gestionenvironnementale','GestionEnvironnementale' `
+                    -replace 'Serviceachat','ServiceAchat' `
+                    -replace 'Protectiondesdonneesetconformite','ProtectionDesDonneesEtConformite' `
+                    -replace 'Proprieteintellectuelle','ProprieteIntellectuelle' | Set-Content -Path 'C:\users\Administrator\Desktop\BillU3.csv'
+
+}
+
+function CreateComputer
+{
+    $Users = Import-Csv -Path "C:\Users\Administrator\Desktop\BillU3.csv" 
+
+
+    $computers = Get-ADComputer -Filter * -Properties *
+    
+    Foreach ($User in $Users)
+        {
+        
+        Write-Progress -Activity "Création des Utilisateurs dans l'OU et Ajout au groupe correspondant" -Status "%effectué" -PercentComplete ($Count/$Users.Length*100)
+        if ($($user.pc) -ne "-")
+        {
+       
+            if ($($user.Service) -eq "")
+                {
+                    $path = "ou=$($user.Departement),OU=Ordinateurs,dc=BillU,dc=lan"
+                }
+            else
+                {
+                    $path = "ou=$($user.service),ou=$($user.Departement),OU=Ordinateurs,dc=BillU,dc=lan"
+                }
+        
+        $Department        = "$($User.Departement)"
+        $Service           = "$($User.Service)"
+        $computername   = "$($User.pc)"
+        $SamAccountName = $computername+"$"
+
+        If (($computers | Where {$_.SamAccountName -eq $SamAccountName}) )
+            {
+                
+                Write-Host "L'Ordinateur $computername existe déjà et est déjà affecté au groupe corespondant" -ForegroundColor Yellow -BackgroundColor Black
+                Log -FilePath $LogFile -Content "NoCréation- Utilisateur $SamAccountName déjà éxistant"
+                
+                               
+            }
+        Else
+            {
+               
+                 New-AdComputer -Name $computername -Path $Path 
+                
+                 Write-Host "Création de l'ordinateur $computername" -ForegroundColor Green
+            }
+            
+          }     
+         }
+}
+
 function modifAD_S14
 {
 #Get-ADUser -Filter * -Properties * | Select-Object GivenName, Surname, Company, Department, Title | Export-Csv -Path C:\Users\Administrator\Desktop\ADUsers.csv -NoTypeInformation -Encoding UTF8
