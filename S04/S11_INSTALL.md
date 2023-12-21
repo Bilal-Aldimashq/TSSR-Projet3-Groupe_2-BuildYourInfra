@@ -70,11 +70,11 @@ Les GPO installées sont:
   ```
 - Récupérer le dossier GLPI:  
   ```bash
-  wget https://github.com/glpi-project/glpi/releases/download/10.0.2/glpi-10.0.2.tgz
+  wget https://github.com/glpi-project/glpi/releases/download/10.0.10/glpi-10.0.10.tgz
   ```
 - Décompresser le dossier GLPI:  
   ```bash
-  sudo tar -xvzf glpi-10.0.2.tgz
+  sudo tar -xvzf glpi-10.0.10.tgz
   ```
 - Supprimer le index.php dans /var/www/html.
 - Copier le dossier GLPI:
@@ -95,23 +95,16 @@ Les GPO installées sont:
 - Redémarrer la machine
 - Se connecter depuis le serveur AD, qui est sur la même plage d'adresse, via une page web en rentrant http://172.18.1.50/glpi/glpi
 
-- mise à jour du serveur GLPI sous Ubuntu vers la version glpi-10.0.10 :
-```bash
-  sudo wget https://github.com/glpi-project/glpi/releases/download/10.0.10/glpi-10.0.10.tgz
-  sudo tar -xvzf glpi-10.0.2.tgz
-  sudo cp -R glpi/* /var/www/html/glpi
-  ```
-cette mise à jour permet nottament d'activer l'inventaire
 
 ### **Connexion du serveur GLPI au serveur AD**
 
-prérequis su le serveur SRVWIN1 gérant l'AD DS:
-- création de l'OU "GLPI" dnas lequel nous mettons un groupe "user-GLPI"
-- le goupe "user-GLPI" aura l'ensemble des utilisateurs de l'AD.
+Prérequis sur le serveur SRVWIN1 gérant l'AD DS:
+- Création de l'OU "GLPI" dans lequel nous mettons un groupe "user-GLPI"
+- Le goupe "user-GLPI" aura l'ensemble des utilisateurs de l'AD.
   
   ![config AD](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/dc933138-c3db-4f36-841b-57bc7be32d99)
 
-- un script automatise cette action :
+- Un script automatise cette action :
 
 ```batch
 Clear-Host
@@ -123,26 +116,26 @@ Write-Host "l'utilisateur $($userAD.Name) à été ajouté au groupe `"user-GLPI
 }
 ```
 
-- procédure pour configurer glpi ci-dessous :
+- Procédure pour configurer glpi ci-dessous :
   
 [Support](https://remiflandrois.fr/2022/09/12/glpi-connexion-active-directory/)
 
-capture d'écrans de notre configuration GLPI à partir de l'interface graphique :
+Capture d'écrans de notre configuration GLPI à partir de l'interface graphique :
 
 ![config glpi1](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/e64c2ce2-9a86-4497-af35-29bb36c6c744)
 ![config glpi2](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/84616bbe-f17c-4eb8-ba42-764a51ded0ff)
 
-puis cliquer sur sauvegarder en bas à droite de cette page.
+Puis cliquer sur sauvegarder en bas à droite de cette page.
 
 ### **Installation de l'agent glpi sur les clients pour activer l'inventaire de GLPI**
 
-installer la version ci-dessous et choisi la version adéquate sur github en fonction du client :
+Installer la version ci-dessous et choisi la version adéquate sur github en fonction du client :
 
 (https://glpi-project.org/fr/glpi-agent-1-6-1/)
 https://github.com/glpi-project/glpi-agent/releases/tag/1.6.1
 
 
-suivre pas à pas l'installation
+Suivre pas à pas l'installation
 
 ![agent glpi 1](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/1a297381-21ee-4a82-8c89-97d09a21ddc1)
 
