@@ -25,17 +25,17 @@ __________
 ## **Objectifs principaux de la semaine:**
 
 - Mettre en place une journalisation des scripts PowerShell
-	1. Utiliser le dossier `C:\Windows\logs`
-	2. Un seul log sera utilisé par script
-	3. On trouvera dans chaque fichier de log les informations sous la forme `YYYYMMDD-HHMMSS-<Utilisateur>-<Thématique>-<Information>
+	- Utiliser le dossier `C:\Windows\logs`
+	- Un seul log sera utilisé par script
+	- On trouvera dans chaque fichier de log les informations sous la forme `YYYYMMDD-HHMMSS-<Utilisateur>-<Thématique>-<Information>
  
 - Mise en place du logiciel de supervision ZABBIX
-	1. Installation sur un serveur
-	2. Supervision de l'ensemble des serveurs de l'infrastructure
+	- Installation sur un serveur
+	- Supervision de l'ensemble des serveurs de l'infrastructure
 
 - Intégration des ordinateurs
-	1. Intégration des PC du fichier XLSX dans l'AD
-	2. Faire les MAJ correspondantes aux modifications du fichier fourni en annexe
+	- Intégration des PC du fichier XLSX dans l'AD
+	- Faire les MAJ correspondantes aux modifications du fichier fourni en annexe
 ____________      
 
 
