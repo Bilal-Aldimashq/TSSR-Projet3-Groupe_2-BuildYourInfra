@@ -46,6 +46,8 @@ Ceci fait on va :
 
 ![img 5](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG5.JPG?raw=true)
 
+et vous trouverez le mot de passer crée par LAPS dans le gestion des utilisateur AD dans l'OU ordinateurs en cliquant sur les propriete du PC
+
 ![img 6](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG6.JPG?raw=true)
 
 ### Test :
