@@ -116,9 +116,9 @@ Dans la console administrateur de l'interface graphique de zimbra on va aller da
 
 ceci fait on va créer un nouveau compte dans gérer/comptes pour la création du compte on va récupérer les renseignement d'un utilisateur AD existant ex: Pierre David du Dpt commercial pour créer un compte sur zimbra on lui indiquera le nom du compte égal au compte AD et on validera sans ajouter de mot de passe afin de vérifier que l'on peut se connecter avec le mot de passe de session utilisateurs.
 
-ex: pierre david sera :
-    nom de compte : pdavid@srvzimbra.billu.lan
-    nom de famille : pdavid
+        ex: pierre david sera :
+            nom de compte : pdavid@srvzimbra.billu.lan
+            nom de famille : pdavid
 
 afin de tester que Pierre david puisse se connecter on va aller sur internet adresse https://172.20.0.100:8443 et on va se connecter avec le nom de compte pdavid mot de passe Azerty2* (mdp pour se connecter à un client win)
 
