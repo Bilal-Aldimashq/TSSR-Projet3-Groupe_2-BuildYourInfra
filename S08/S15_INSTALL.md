@@ -120,7 +120,7 @@ ceci fait on va créer un nouveau compte dans gérer/comptes pour la création d
             nom de compte : pdavid@srvzimbra.billu.lan
             nom de famille : pdavid
 
-afin de tester que Pierre david puisse se connecter on va aller sur internet adresse https://172.20.0.100:8443 et on va se connecter avec le nom de compte pdavid mot de passe Azerty2* (mdp pour se connecter à un client win)
+afin de tester que Pierre david puisse se connecter on va aller sur internet adresse https://172.20.0.100:8443 et on va se connecter avec le nom de compte pdavid mot de passe Azerty2* (mdp pour se connecter à un PC client)
 
 A l'heure actuel, les comptes seront créés manuellement afin d'être sur des informations
 
