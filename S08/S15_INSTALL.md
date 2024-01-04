@@ -11,6 +11,51 @@ __________
 
 # **Étapes d'installation et de configuration : instruction étape par étape:**
 
+# Installation de LAPS (Local Administrator Password Solution) :
+
+## Pré-requis :
+
+afin d'être sûr d'utiliser LAPS et non LAPS legacy nos machines doivent au minimum avoir les mise a jour de sécurité suivantes :
+
+        Win10 : KB5025221
+        Win11 : KB5025224
+        Winsrv22 : KB5025230
+
+### installation et configuration de LAPS :
+
+Pour installer et configurer LAPS on va passer par powershell en mode administrateur et lancer les commandes suivantes :
+
+    - import-module LAPS : importer le module LAPS ds le serveur
+    - get-command -module LAPS : vérifie que le module LAPS est bien installer
+
+![img 1]()
+
+    - update-LapsADSchema -verbose : MAJ de LAPS
+    - set-lapsadcomputerselfpermission -identity "OU=Ordinateurs,DC=Billu;DC=lan" : Autorisation de données et/ou modifier le mot de passe pour les Ordinateur présent dans l'OU Ordinateurs
+
+![img 2]()
+
+Ceci fait on va :
+
+    - copier les fichier LAPS.admx et LAPS.adml dans le dossier sysvol/domain/policyDefinition.
+    - Créé la GPO nommé LAPS et configurer la GPO avec les paramètre voulu
+
+![img 3]()
+
+![img 4]()
+
+![img 5]()
+
+### Test :
+
+on va prendre un Ordinateur client qui est déjà présent dans l'AD, dans l'OU ordinateurs, ou la GPO est active, et on va tester de se connecter au compte Administrateur local de la machine avec le mot de passe d'origine, l'accès nous est refuser car le mot de passe n'est pas correcte.
+
+![img 6]()
+
+on va vérifier le mot de passe généré par lAPS et on va essayer de se connecter avec. connexion réussi, LAPS gère bien son mot de passe Administrateur Local.
+
+![img 7]()
+
 # Installation de Zimbra 8.8.15 :
 
 ## Préparation avant Installation de Zimbra :
