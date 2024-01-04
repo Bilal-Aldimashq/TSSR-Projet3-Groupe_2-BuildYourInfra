@@ -102,7 +102,7 @@ Ceci fait, on va vérifier et démarrer si nécessaire les services du serveur.
 
 commande : `zmcontrol status` : vérifier le status de tous les services de messagerie
 
-commande : `zmcontrol start` démarrera les service si nécessaire
+commande : `zmcontrol start` : démarrera les service si nécessaire
 
 Pour accéder à l'interface graphique se connecter a un client via l'adresse du serveur
 
