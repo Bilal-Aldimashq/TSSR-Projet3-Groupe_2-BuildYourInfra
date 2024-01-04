@@ -52,7 +52,7 @@ on va prendre un Ordinateur client qui est déjà présent dans l'AD, dans l'OU 
 
 ![img 6]()
 
-on va vérifier le mot de passe généré par lAPS et on va essayer de se connecter avec. connexion réussi, LAPS gère bien son mot de passe Administrateur Local.
+on va vérifier le mot de passe généré par lAPS et on va essayer de se connecter avec, "connexion réussi", LAPS gère bien son mot de passe Administrateur Local.
 
 ![img 7]()
 
