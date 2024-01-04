@@ -99,6 +99,8 @@ Faire une installation de Linux classique. une fois l'OS installé nous allons c
                 dns-nameserver 172.20.0.5
                 dns-search billu.lan
 
+![img 8]()
+
     - Configurer le fichier Hostname : commande `nano /etc/hostname` afin de modifier ou vérifier le nom du serveur "ex : Srvzimbra.billu.lan"
 
     - Configurer le fichier Hosts : commande `nano /etc/hosts` afin de modifier le fichier interfaces et entre les information adequate : "ex : 172.20.0.100    srvzimbra.billu.lan     srvzimbra"
@@ -109,9 +111,13 @@ Faire une installation de Linux classique. une fois l'OS installé nous allons c
                 nameserver 1.1.1.1
                 search billu.lan
 
+![img 9]()
+
 Pensez à rebooter le PC autant que nécessaire afin que les paramètres soient bien pris en compte.
 
 Ceci fait faire un ping en IPv4 et avec dns "ex : ping 172.20.0.5 ; ex : ping srvzimbra.billu.lan"
+
+![img 10]()
 
 ## Installation de Zimbra : Configuration et Utilisation
 
@@ -127,15 +133,23 @@ Commande : `service apparmor stop` ; `service apparmor teardown` ; `update-rc.d 
 
 On va telecharger le zip comprenant Zimbra commande `wget https://files.zimbra.com/downloads/8.8.15_GA/zcs-8.8.15_GA_3869.UBUNTU18_64.20190918004220.tgz`
 
+![img 11]()
+
 On va decompresser le fichier telecharger `tar xvzf zcs-8.8.15_GA_3869.UBUNTU18_64.20190918004220.tgz`
 
 Se déplacer dans le dossier "zcs-8.8.15_GA_3869.UBUNTU18_64.20190918004220" et lancer l'install commande `./install.sh`
 
 Répondre "OUI" à toutes les questions sauf install zimbra-dnscache ; install zimbra-proxy ; install zimbra-imapd
 
+![img 12]()
+
+![img 13]()
+
 Le logiciel installé, nous reste la dernière phase de configuration avant de pouvoir accéder à l'interface graphique de Zimbra. il faut régler le mot de passe admin de zimbra . option 6 et option 4 afin de changer le mot de passe.
 
 le mot de passe changé on peut appliquer et finir l'installation en revenant en arrière avec "r" et en appliquant les changement avec "a" répondre "Oui" à la 1ere question et "Non" à la dernière.
+
+![img 14]()
 
 La configuration est terminée, on va rebooter le serveur.
 
@@ -147,6 +161,8 @@ Ceci fait, on va vérifier et démarrer si nécessaire les services du serveur.
 
 commande : `zmcontrol status` : vérifier le status de tous les services de messagerie
 
+![img 15]()
+
 commande : `zmcontrol start` : démarrera les service si nécessaire
 
 Pour accéder à l'interface graphique se connecter a un client via l'adresse du serveur
@@ -154,6 +170,10 @@ Pour accéder à l'interface graphique se connecter a un client via l'adresse du
         - Pour la console administrateur ex: https://172.20.0.100:7071
 
         - Pour la boite mail ex: https://172.20.0.100:8443
+
+![img 16]()
+
+![img 17]()
 
 ### 3eme partie : créé une adresse mail pour un compte utilisateur de l'AD
 
@@ -166,6 +186,8 @@ ceci fait on va créer un nouveau compte dans gérer/comptes pour la création d
             nom de famille : pdavid
 
 afin de tester que Pierre david puisse se connecter on va aller sur internet adresse https://172.20.0.100:8443 et on va se connecter avec le nom de compte pdavid mot de passe Azerty2* (mdp pour se connecter à un PC client)
+
+![img 18]()
 
 A l'heure actuel, les comptes seront créés manuellement afin d'être sur des informations
 
