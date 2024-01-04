@@ -74,11 +74,11 @@ Ceci fait faire un ping en IPv4 et avec dns "ex : ping 172.20.0.5 ; ex : ping sr
 
 Le serveur Linux est maintenant prêt à accueillir Zimbra on va commencer par installer les apts nécessaires
 
-Commande `apt install netcat-traditional libidn11-dev libgmp10 sysstat sqlite3 libaio1 unzip pax -y`
+Commande : `apt install netcat-traditional libidn11-dev libgmp10 sysstat sqlite3 libaio1 unzip pax -y`
 
 On va arrêter le service apparmor et désactiver le redémarrage auto :
 
-Commande `service apparmor stop` ; `service apparmor teardown` ; `update-rc.d -f apprmor remove`
+Commande : `service apparmor stop` ; `service apparmor teardown` ; `update-rc.d -f apprmor remove`
 
 On va telecharger le zip comprenant Zimbra commande `wget https://files.zimbra.com/downloads/8.8.15_GA/zcs-8.8.15_GA_3869.UBUNTU18_64.20190918004220.tgz`
 
@@ -100,8 +100,9 @@ Zimbra est installée, le serveur est rebooté, on va se connecter a l'utilisate
 
 Ceci fait, on va vérifier et démarrer si nécessaire les services du serveur.
 
-commande `zmcontrol status` : vérifier le status de tous les services de messagerie
-commande `zmcontrol start` démarrera les service si nécessaire
+commande : `zmcontrol status` : vérifier le status de tous les services de messagerie
+
+commande : `zmcontrol start` démarrera les service si nécessaire
 
 Pour accéder à l'interface graphique se connecter a un client via l'adresse du serveur
 
