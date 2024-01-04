@@ -28,33 +28,35 @@ Pour installer et configurer LAPS on va passer par powershell en mode administra
     - import-module LAPS : importer le module LAPS ds le serveur
     - get-command -module LAPS : vérifie que le module LAPS est bien installer
 
-![img 1]()
+![img 1](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG1.JPG?raw=true)
 
     - update-LapsADSchema -verbose : MAJ de LAPS
     - set-lapsadcomputerselfpermission -identity "OU=Ordinateurs,DC=Billu;DC=lan" : Autorisation de données et/ou modifier le mot de passe pour les Ordinateur présent dans l'OU Ordinateurs
 
-![img 2]()
+![img 2](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG2.JPG?raw=true)
 
 Ceci fait on va :
 
     - copier les fichier LAPS.admx et LAPS.adml dans le dossier sysvol/domain/policyDefinition.
     - Créé la GPO nommé LAPS et configurer la GPO avec les paramètre voulu
 
-![img 3]()
+![img 3](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG3.JPG?raw=true)
 
-![img 4]()
+![img 4](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG4.JPG?raw=true)
 
-![img 5]()
+![img 5](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG5.JPG?raw=true)
+
+![img 6](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG6.JPG?raw=true)
 
 ### Test :
 
 on va prendre un Ordinateur client qui est déjà présent dans l'AD, dans l'OU ordinateurs, ou la GPO est active, et on va tester de se connecter au compte Administrateur local de la machine avec le mot de passe d'origine, l'accès nous est refuser car le mot de passe n'est pas correcte.
 
-![img 6]()
+![img 7](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG7.JPG?raw=true)
 
 on va vérifier le mot de passe généré par lAPS et on va essayer de se connecter avec, "connexion réussi", LAPS gère bien son mot de passe Administrateur Local.
 
-![img 7]()
+![img 8](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG8.JPG?raw=true)
 
 # Installation de Zimbra 8.8.15 :
 
@@ -99,7 +101,7 @@ Faire une installation de Linux classique. une fois l'OS installé nous allons c
                 dns-nameserver 172.20.0.5
                 dns-search billu.lan
 
-![img 8]()
+![img 9](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG9.JPG?raw=true)
 
     - Configurer le fichier Hostname : commande `nano /etc/hostname` afin de modifier ou vérifier le nom du serveur "ex : Srvzimbra.billu.lan"
 
@@ -111,13 +113,15 @@ Faire une installation de Linux classique. une fois l'OS installé nous allons c
                 nameserver 1.1.1.1
                 search billu.lan
 
-![img 9]()
+![img 10](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG10.JPG?raw=true)
 
 Pensez à rebooter le PC autant que nécessaire afin que les paramètres soient bien pris en compte.
 
 Ceci fait faire un ping en IPv4 et avec dns "ex : ping 172.20.0.5 ; ex : ping srvzimbra.billu.lan"
 
-![img 10]()
+![img 11](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG11.JPG?raw=true)
+
+![img 11'](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG11'.JPG?raw=true)
 
 ## Installation de Zimbra : Configuration et Utilisation
 
@@ -133,7 +137,7 @@ Commande : `service apparmor stop` ; `service apparmor teardown` ; `update-rc.d 
 
 On va telecharger le zip comprenant Zimbra commande `wget https://files.zimbra.com/downloads/8.8.15_GA/zcs-8.8.15_GA_3869.UBUNTU18_64.20190918004220.tgz`
 
-![img 11]()
+![img 12](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG12.JPG?raw=true)
 
 On va decompresser le fichier telecharger `tar xvzf zcs-8.8.15_GA_3869.UBUNTU18_64.20190918004220.tgz`
 
@@ -141,15 +145,13 @@ Se déplacer dans le dossier "zcs-8.8.15_GA_3869.UBUNTU18_64.20190918004220" et 
 
 Répondre "OUI" à toutes les questions sauf install zimbra-dnscache ; install zimbra-proxy ; install zimbra-imapd
 
-![img 12]()
+![img 13](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG13.JPG?raw=true)
 
-![img 13]()
+![img 14](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG14.JPG?raw=true)
 
 Le logiciel installé, nous reste la dernière phase de configuration avant de pouvoir accéder à l'interface graphique de Zimbra. il faut régler le mot de passe admin de zimbra . option 6 et option 4 afin de changer le mot de passe.
 
 le mot de passe changé on peut appliquer et finir l'installation en revenant en arrière avec "r" et en appliquant les changement avec "a" répondre "Oui" à la 1ere question et "Non" à la dernière.
-
-![img 14]()
 
 La configuration est terminée, on va rebooter le serveur.
 
@@ -161,7 +163,7 @@ Ceci fait, on va vérifier et démarrer si nécessaire les services du serveur.
 
 commande : `zmcontrol status` : vérifier le status de tous les services de messagerie
 
-![img 15]()
+![img 15](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG15.JPG?raw=true)
 
 commande : `zmcontrol start` : démarrera les service si nécessaire
 
@@ -171,9 +173,9 @@ Pour accéder à l'interface graphique se connecter a un client via l'adresse du
 
         - Pour la boite mail ex: https://172.20.0.100:8443
 
-![img 16]()
+![img 16](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG16.JPG?raw=true)
 
-![img 17]()
+![img 17](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG17.JPG?raw=true)
 
 ### 3eme partie : créé une adresse mail pour un compte utilisateur de l'AD
 
@@ -187,7 +189,7 @@ ceci fait on va créer un nouveau compte dans gérer/comptes pour la création d
 
 afin de tester que Pierre david puisse se connecter on va aller sur internet adresse https://172.20.0.100:8443 et on va se connecter avec le nom de compte pdavid mot de passe Azerty2* (mdp pour se connecter à un PC client)
 
-![img 18]()
+![img 18](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG18.JPG?raw=true)
 
 A l'heure actuel, les comptes seront créés manuellement afin d'être sur des informations
 
