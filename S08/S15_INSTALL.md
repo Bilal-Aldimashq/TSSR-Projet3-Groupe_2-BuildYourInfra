@@ -60,6 +60,9 @@ on va vérifier le mot de passe généré par lAPS et on va essayer de se connec
 
 ![img 8](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG8.JPG?raw=true)
 
+_______________________
+________________________
+
 # Installation de Zimbra 8.8.15 :
 
 ## Préparation avant Installation de Zimbra :
@@ -179,8 +182,7 @@ Pour accéder à l'interface graphique se connecter a un client via l'adresse du
 
 ![img 17](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG17.JPG?raw=true)
 
-### 3eme partie : créé une adresse mail pour un compte utilisateur de l'AD
-
+### 3eme partie : Créer une adresse mail pour un compte utilisateur de l'AD:
 Dans la console administrateur de l'interface graphique de zimbra on va aller dans configurer/domaines et on va ajouter un alias de domaines nommé par le nom de domaines du serveur AD et on va modifier le mode d'authentification du domaine du serveur zimbra et lui spécifiant un active directory externe. On va renseigner le domaine du serveur AD, son adresse IP, on va fournir l'utilisateur et le mot de passe permettant l'accès au domaine et tester voir si la liaison est réussie et on clique sur terminer.
 
 ceci fait on va créer un nouveau compte dans gérer/comptes pour la création du compte on va récupérer les renseignement d'un utilisateur AD existant ex: Pierre David du Dpt commercial pour créer un compte sur zimbra on lui indiquera le nom du compte égal au compte AD et on validera sans ajouter de mot de passe afin de vérifier que l'on peut se connecter avec le mot de passe de session utilisateurs.
@@ -195,6 +197,25 @@ afin de tester que Pierre david puisse se connecter on va aller sur internet adr
 
 A l'heure actuel, les comptes seront créés manuellement afin d'être sur des informations
 
+# **Difficultés rencontrées : problèmes techniques rencontrés:**
+
+# **Solutions trouvées : Solutions et alternatives trouvées:**
+_____________
+_____________
+
+# **Installation de Windows Server Update Services:**
+## **Pré-requis :**
+
+Le serveur WSUS est à installer sur un os SERVER windows. Dans ce tuto il s'agit d'un Windows Server 2022.  
+Ce serveur doit avoir un espace de stockage libre pour stocker les mises à jours.  
+Il doit être renommer, faire partie du réseau du domaine et intégrer à ce domaine.  
+Dans cette notice le serveur s'appelle **SRV-WSUS**, son adresse IP est **172.18.1.10** avec comme DNS le serveur AD du domaine **172.18.1.1**. Il est intégrer au domaine BillU.lan.
+
+## **Installation et configuration de WSUS :**
+### **Sur le serveur WSUS**:
+- Partitionner l'espace de stockage avec l'outil _Computer Management_.
+- Dans cette notice le volume est libellé _Save_Updates_ avec comme lettre de lecteur **E:\\**
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/1_Partition.png?raw=true)
 # **Difficultés rencontrées : problèmes techniques rencontrés:**
 
 # **Solutions trouvées : Solutions et alternatives trouvées:**
