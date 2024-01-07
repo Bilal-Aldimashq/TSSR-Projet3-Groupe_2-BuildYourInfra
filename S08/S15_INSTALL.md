@@ -138,7 +138,7 @@ Commande : `apt install netcat-traditional libidn11-dev libgmp10 sysstat sqlite3
 
 On va arrêter le service apparmor et désactiver le redémarrage auto :
 
-Commande : `service apparmor stop` ; `service apparmor teardown` ; `update-rc.d -f apprmor remove`
+Commande : `service apparmor stop` ; `service apparmor teardown` ; `update-rc.d -f apparmor remove`
 
 On va telecharger le zip comprenant Zimbra commande `wget https://files.zimbra.com/downloads/8.8.15_GA/zcs-8.8.15_GA_3869.UBUNTU18_64.20190918004220.tgz`
 
