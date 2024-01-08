@@ -216,6 +216,59 @@ Dans cette notice le serveur s'appelle **SRV-WSUS**, son adresse IP est **172.18
 - Partitionner l'espace de stockage avec l'outil _Computer Management_.
 - Dans cette notice le volume est libellé _Save_Updates_ avec comme lettre de lecteur **E:\\**
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/1_Partition.png?raw=true)
+
+________
+
+- Dans le menu _Local Server_, cliquer sur _Add roles and features_, cliquer _NEXT_ jusqu'a arriver sur la fenêtre _Server Roles_.
+- Cocher le service _Windows Server Update Services_ puis _Next_.
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/2_Roles.png?raw=true)
+- Cliquer _add features_ puis _Next_. Dans la fenêtre de fonctionnalitées cliquer _Next_.
+
+_________
+
+- Arriver à la fenêtre _Role Services_, cocher _WID Connectivity_ et _WSUS Services_ puis _Next_.  
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/3_WID.png?raw=true)
+
+_________
+
+- Renseigner le path de l'espace de stockage qui sera utilisé pour les mise à jour, E:\\ dans cette notice, puis _Next_
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/4_Path.png?raw=true)
+
+__________
+
+- Cliquer sur _Install_ sur la fenêtre de récapitulatifs.
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/5_INstall.png?raw=true)
+
+________
+
+- Une fois l'installation terminée, cliquer sur le flag en haut de la fenêtre _Local Server_.
+- Cliquer sur _Launch Post-Installation tasks_
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/6_Flag.png?raw=true)
+
+_______
+
+- Ouvrir la console Windows Server Update Services via le menu _Windows Administrative Tools_ ou TOOLS du _Local Server_.
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/7_Console%20WSUS.png?raw=true)
+
+________
+
+- A l'ouverture de la console, WSUS lance le menu de configuration. _Il sera possible de revenir à ces options après si nécessaire via le menu Options de la console WSUS_.
+- Cliquer sur _Next_ jusqu'a la fenêtre _Upstream Server_.  
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/8_ConfigWSUS.png?raw=true)
+
+_________
+
+- Dans cette fenêtre cocher _Synchronize from Microsoft Update_, afin que le serveur se synchronise aux serveur de Microsoft Update. L'autre option est à cocher si le serveur installer n'est pas le premier et qu'il se connecte à un serveur synchronisé à Microsoft Update.  
+- Cliquer sur _Next_.  
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/9_Synchronize.png?raw=true)
+
+___________
+
+- La prochaine fenêtre est la connection au serveur de mise à jour qui permet de télécharger les mise à jour. Cliquer sur _Start Connecting_. _Cette opération peut-être assez longue, elle peut être arrêtée pour faire le reste des configurations, mais devra être relancée manuellement dans le menu de la console WSUS.
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/10_StartConnecting.png?raw=true)
+
+____________
+
 # **Difficultés rencontrées : problèmes techniques rencontrés:**
 
 # **Solutions trouvées : Solutions et alternatives trouvées:**
