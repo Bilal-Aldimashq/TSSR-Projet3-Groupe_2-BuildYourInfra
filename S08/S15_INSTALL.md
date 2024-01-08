@@ -272,13 +272,13 @@ _________
 - Dans cette fenêtre cocher _Synchronize from Microsoft Update_, afin que le serveur se synchronise aux serveur de Microsoft Update. L'autre option est à cocher si le serveur installer n'est pas le premier et qu'il se connecte à un serveur synchronisé à Microsoft Update.  
 - Cliquer sur `Next`.  
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/9_Synchronize.png?raw=true)
+- Si nécessaire, renseigner le proxy puis cliquer `Next`.
 ___________
 
 - La prochaine fenêtre est la connection au serveur de mise à jour qui permet de télécharger les mises à jour. Cliquer sur `Start Connecting`. 
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/10_StartConnecting.png?raw=true)
 ____________
 
-- Si nécessaire, renseigner le proxy puis cliquer `Next`.
 - Dans la fenêtre _Choose Languages_, il y a deux choix, toutes les langues, ou celles sélectionner. Pour le domaine BillU, il y a des postes en Anglais et Français. Donc l'option _Download updates only in these languages:_ est coché avec les langues _English_ et _French_.
 - Cliquer `Next`.  
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/11_Language.png?raw=true)
