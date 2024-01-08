@@ -234,58 +234,190 @@ Dans cette notice le serveur s'appelle **SRV-WSUS**, son adresse IP est **172.18
 - Partitionner l'espace de stockage avec l'outil _Computer Management_.
 - Dans cette notice le volume est libellé _Save_Updates_ avec comme lettre de lecteur **E:\\**
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/1_Partition.png?raw=true)
-
 ________
 
-- Dans le menu _Local Server_, cliquer sur _Add roles and features_, cliquer _NEXT_ jusqu'a arriver sur la fenêtre _Server Roles_.
+- Dans le menu _Local Server_, cliquer sur _Add roles and features_, cliquer `NEXT` jusqu'a arriver sur la fenêtre _Server Roles_.
 - Cocher le service _Windows Server Update Services_ puis _Next_.
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/2_Roles.png?raw=true)
-- Cliquer _add features_ puis _Next_. Dans la fenêtre de fonctionnalitées cliquer _Next_.
-
+- Cliquer _add features_ puis `Next`. Dans la fenêtre de fonctionnalitées cliquer `Next`.
 _________
 
-- Arriver à la fenêtre _Role Services_, cocher _WID Connectivity_ et _WSUS Services_ puis _Next_.  
+- Arriver à la fenêtre _Role Services_, cocher _WID Connectivity_ et _WSUS Services_ puis `Next`.  
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/3_WID.png?raw=true)
-
 _________
 
-- Renseigner le path de l'espace de stockage qui sera utilisé pour les mise à jour, E:\\ dans cette notice, puis _Next_
+- Renseigner le path de l'espace de stockage qui sera utilisé pour les mise à jour, E:\\ dans cette notice, puis `Next`.  
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/4_Path.png?raw=true)
 
 __________
 
-- Cliquer sur _Install_ sur la fenêtre de récapitulatifs.
+- Cliquer sur `Install` sur la fenêtre de récapitulatifs.
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/5_INstall.png?raw=true)
-
 ________
 
 - Une fois l'installation terminée, cliquer sur le flag en haut de la fenêtre _Local Server_.
-- Cliquer sur _Launch Post-Installation tasks_
+- Cliquer sur `Launch Post-Installation tasks`
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/6_Flag.png?raw=true)
-
 _______
 
-- Ouvrir la console Windows Server Update Services via le menu _Windows Administrative Tools_ ou TOOLS du _Local Server_.
+- Ouvrir la console Windows Server Update Services via le menu _Windows Administrative Tools_ ou `TOOLS` du _Local Server_.
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/7_Console%20WSUS.png?raw=true)
-
 ________
 
 - A l'ouverture de la console, WSUS lance le menu de configuration. _Il sera possible de revenir à ces options après si nécessaire via le menu Options de la console WSUS_.
-- Cliquer sur _Next_ jusqu'a la fenêtre _Upstream Server_.  
+- Cliquer sur `Next` jusqu'a la fenêtre _Upstream Server_.  
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/8_ConfigWSUS.png?raw=true)
-
 _________
 
 - Dans cette fenêtre cocher _Synchronize from Microsoft Update_, afin que le serveur se synchronise aux serveur de Microsoft Update. L'autre option est à cocher si le serveur installer n'est pas le premier et qu'il se connecte à un serveur synchronisé à Microsoft Update.  
-- Cliquer sur _Next_.  
+- Cliquer sur `Next`.  
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/9_Synchronize.png?raw=true)
-
 ___________
 
-- La prochaine fenêtre est la connection au serveur de mise à jour qui permet de télécharger les mise à jour. Cliquer sur _Start Connecting_. _Cette opération peut-être assez longue, elle peut être arrêtée pour faire le reste des configurations, mais devra être relancée manuellement dans le menu de la console WSUS avant la synchronisation des machines du parc_.
+- La prochaine fenêtre est la connection au serveur de mise à jour qui permet de télécharger les mises à jour. Cliquer sur `Start Connecting`. 
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/10_StartConnecting.png?raw=true)
-
 ____________
+
+- Si nécessaire, renseigner le proxy puis cliquer `Next`.
+- Dans la fenêtre _Choose Languages_, il y a deux choix, toutes les langues, ou celles sélectionner. Pour le domaine BillU, il y a des postes en Anglais et Français. Donc l'option _Download updates only in these languages:_ est coché avec les langues _English_ et _French_.
+- Cliquer `Next`.  
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/11_Language.png?raw=true)
+______________
+
+- Cocher les produits qui seront à mettre à jour, pour le parc BillU il a été coché Windows10 et Windows Server 2022 par exemple.
+- Cliquer `Next`.
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/12_ChoixProduits.png?raw=true)
+_____________
+
+- Choisir la classification des mises à jour à synchroniser. _Critical Updates_ et _Security Updates_ sont le minimum recommandées pour la sécurité.
+- Cliquer `Next`.
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/13_Classfication.png?raw=true)
+______________
+
+- Configurer la fréquence de synchronisation du serveur avec Microsoft Update. Cocher _Synchronize automatically_, régler l'heure de la première synchronisation journalière (2h du matin dans l'exemple), puis le nombre de synchronisation journalières dans le menu déroulant _Synchronizations per day_, 1 étant très suffisant.
+- Cliquer `Next`.
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/14_Frequence.png?raw=true)
+_______________
+
+- Dans la fenêtre _Finished_, _Begin initial synchronization_ est coché, appuyé sur `Next`. _Cette opération peut-être assez longue, elle peut être arrêtée pour faire le reste des configurations, mais devra être relancée manuellement dans le menu de la console WSUS avant la synchronisation des machines du parc_.
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/15_Begin.png?raw=true)
+______________
+
+- Dans la dernière fenêtre se trouve des liens de topics pour une configuration plus complète. Cliquer sur `Finish`.
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/16_Finish.png?raw=true)
+_____________
+
+
+De retour sur la console WSUS: 
+- Aller dans _Options_, puis _Automatic Approvals_.
+- Dans l'onglet _Update Rules_ cocher _Default Automatic Approval Rule_.
+Cela permet d'approuver automatiquement les mises à jour suivant les règles de la section _Rule Properties_ se trouvant en dessous. Il y est réglé qu'une mise à jour Critique ou de Sécurité sont Approuvées sur tout les ordinateurs.
+- Cliquer sur `Apply` et `OK`
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/17_Approvals.png?raw=true)
+- Toujours dans le menu _Options_, aller sur _Computers_.
+- Cocher l'option _Use Group Policy...._ puis validé.
+_______
+
+Sur la console WSUS:
+- Cliquer sur le nom du serveur.
+- Cliquer sur _Computers_ puis clic droit sur _All Computers_.
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/18_AddGroup.png?raw=true)
+- Cliquer sur _Add Computer Group_ et le nommer. Pour cette notice, 2 sont créés. Ceci est à adapter suivant l’infrastructure du parc et la politique de gestion des mises à jour.
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/19_Group.png?raw=true)
+__________
+ 
+ Le serveur WSUS est prêt, il faut maintenant gérer le parc via le serveur Active Directory du parc.
+ **Sur le serveur AD:**
+ - Aller dans le gestionnaire _Group Policy Management_
+ - Créer 3 GPO nommer pour l'exemple:
+           - WSUS_Communs, qui sera utilisé pour tout les groupes du serveur WSUS.
+           - WSUS_PC, Utilisé pour les machines qui seront dans le groupe _PC_ du serveur WSUS.
+           - WSUS_Serveurs, Utilisé pour les machine qui seront dans le groupe _Serveurs_ du serveur WSUS.
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/20_GPOmanage.png?raw=true)
+____________
+
+- Editer la GPO WSUS_Communs
+- Aller dans _Computer Configuration_--> _Policies_--> _Administrative Templates_--> _Windows Components_--> _Windows update_
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/21_WinSett.png?raw=true)
+- Cliquer sur _Specify intranet Microsoft update service location_, qui indiquera ou est le serveur de mise à jour. 
+- Cocher _Enabled_
+- Dans la case Options, rentrer l'adresse du serveur WSUS avec le port 8530 dans les deux cases.  
+- Cliquer sur `Apply`puis `OK`.
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/23_GPO1C.png?raw=true)
+- Cliquer sur _Configure Automatic Updates_, qui configure les mises à jour des machines.
+- Cocher _Enabled_.
+- Dans la case Options:
+        - Dans _Configure automatic updating_ , sélectionner _4- Auto Download and schedule the install_ qui permet de télécharger automatiquement les mises à jour et de planifier l'installation.
+        - Sélectionner le jour de l'installation planifiée dans _Scheduled install day_
+        - Sélectionner l'heure de l'installation dans _Scheduled install time_
+        - Cocher quelle semaine faire les mises à jour, cocher _Third_ et _Fourth week of the month_. Cela est  suffisant pour les mises à jour Windows.
+        - Cocher la case _Install updates for other Microsoft products_
+- Cliquer sur `Apply`puis `OK`.
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/24_GPO2C.png?raw=true)
+- Cliquer sur _Do not connect to any Windows Update Internet locations_ qui permet de bloquer la connectiion des machines vers les serveurs de mise à jour Windows sur internet.
+- Cocher _Enabled_.
+- Cliquer sur `Apply`puis `OK`.
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/25_GPO3C.png?raw=true)
+_________________
+
+- Editer la GPO WSUS_Serveur
+- Aller dans _Computer Configuration_--> _Policies_--> _Administrative Templates_--> _Windows Components_--> _Windows update_
+- Cliquer sur _Enable client-side targeting_, qui permet d'envoyer les machines dans les bons groupes de WSUS.
+- Cocher _Enabled_.
+- Dans la case Options, rentrer le nom du groupe des machines de cette GPO dans l'espace _Target group name for this computer_, Serveurs pour cette exemple.
+- Cliquer sur `Apply`puis `OK`.
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/27_GPO2SRV.png?raw=true)
+- Cliquer _Turn off auto-restart for updates during active hours_ qui permet d'empêcher les machines de redémarrer après l'installation d'une mise à jour pendant leurs heures d'utilisations.
+- Cocher _Enabled_.
+- Dans la case Options, régler les heures d'activités pendant lesquelles la machine ne devra pas s'arrêter pour redémarrer.
+- Cliquer sur `Apply`puis `OK`.
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/28_GPO1SRV.png?raw=true)
+____________________
+
+-Editer la GPO WSUS_PC
+- Faire la même chose que la GPO WSUS_Serveurs en adaptant le nom du groupe cible par PC et non Serveurs ainsi que les heures d'activités qui sont différentes des serveurs.
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/26_GPO1PC.png?raw=true)
+
+Ne pas oublier de mettre les politique de filtrage et le scope correspondant à chaque GPO
+_______________
+
+Dans la console _Group Policy Management_:
+- Lier les GPO créés aux OU des machines adéquates. Dans cette exemple, WSUS_communs est liée à l'OU Ordinateur, WSUS_Serveurs au sous-OU Serveurs et WSUS_PC au sous-OU DptCommercial.
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/29_LinkGPO.png?raw=true)
+____________________
+
+Sur les machines client et serveurs:
+```bash
+gpudate /force
+```
+puis les redémarrer.
+___________
+
+**Sur le serveur WSUS**
+- Sur la console WSUS cliquer sur le nom du serveur.
+- Cliquer sur _Computers_, _All Commputers_ et les groupes des machines. Si elle ne s'affiche pas, appuyer sur _Refresh_.
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/30_PolitiqueGPO.png?raw=true)
+___________
+
+**Gérer les MAJ**
+- Dans la console WSUS, cliquer sur _Updates_.
+- Cliquer sur un des critères: _All Updates_, _Critical_, _Security_ ou _WSUS_ ce dernier étant pour le serveur WSUS.
+- Sélectiionner un filtre en haut du tableaux de droite.
+- Clic droit sur la mise à jour voulu puis choisir entre _Decline_ pour ne pas l'utilisée et elle sera supprimée ou _Approve_ pour qu'elle soit approuvée et installée en sélectionnant les groupes concernés 
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/31_Decline.png?raw=true)
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/32_Approve.png?raw=true)
+Il est possible de créer soi-même des filtres de recherches de mise à jour. Pour cela cliquer sur _New Update View_ à droite de la fenêtre.
+- Selectionner les propriétés de mise à jour voulus
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/34_Specific.png?raw=true)
+- Choisir les produits dans la case du dessous
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/35_Choose.png?raw=true)
+- Nommer le filtre et valider avec `OK`
+- Il apparaît dans la liste.
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/37_Filter.png?raw=true)
+
+
+
+
 
 # **Difficultés rencontrées : problèmes techniques rencontrés:**
 
