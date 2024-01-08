@@ -398,6 +398,7 @@ ___________
 - Sur la console WSUS cliquer sur le nom du serveur.
 - Cliquer sur _Computers_, _All Commputers_ et les groupes des machines. Si elle ne s'affiche pas, appuyer sur _Refresh_.
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/30_PolitiqueGPO.png?raw=true)
+Si les machines ne s'affiche pas, Aller dans le menu de gestion des mises à jour de la machine à remonter sur le serveur WSUS, puis lancer une mise à jour. Un message de gestion interne apparaît.
 ___________
 
 **Gérer les MAJ**
