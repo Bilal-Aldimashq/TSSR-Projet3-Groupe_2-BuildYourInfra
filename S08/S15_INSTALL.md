@@ -312,6 +312,7 @@ De retour sur la console WSUS:
 - Aller dans _Options_, puis _Automatic Approvals_.
 - Dans l'onglet _Update Rules_ cocher _Default Automatic Approval Rule_.
 Cela permet d'approuver automatiquement les mises à jour suivant les règles de la section _Rule Properties_ se trouvant en dessous. Il y est réglé qu'une mise à jour Critique ou de Sécurité sont Approuvées sur tout les ordinateurs.
+- Cliquer sur _Run Rules_
 - Cliquer sur `Apply` et `OK`
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/17_Approvals.png?raw=true)
 - Toujours dans le menu _Options_, aller sur _Computers_.
