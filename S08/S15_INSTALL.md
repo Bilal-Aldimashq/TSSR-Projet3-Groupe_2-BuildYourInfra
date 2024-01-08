@@ -264,7 +264,7 @@ _________
 
 ___________
 
-- La prochaine fenêtre est la connection au serveur de mise à jour qui permet de télécharger les mise à jour. Cliquer sur _Start Connecting_. _Cette opération peut-être assez longue, elle peut être arrêtée pour faire le reste des configurations, mais devra être relancée manuellement dans le menu de la console WSUS.
+- La prochaine fenêtre est la connection au serveur de mise à jour qui permet de télécharger les mise à jour. Cliquer sur _Start Connecting_. _Cette opération peut-être assez longue, elle peut être arrêtée pour faire le reste des configurations, mais devra être relancée manuellement dans le menu de la console WSUS avant la synchronisation des machines du parc_.
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/10_StartConnecting.png?raw=true)
 
 ____________
