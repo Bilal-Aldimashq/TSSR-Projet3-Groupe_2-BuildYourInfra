@@ -183,19 +183,37 @@ Pour accéder à l'interface graphique se connecter a un client via l'adresse du
 ![img 17](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG17.JPG?raw=true)
 
 ### 3eme partie : Créer une adresse mail pour un compte utilisateur de l'AD:
-Dans la console administrateur de l'interface graphique de zimbra on va aller dans configurer/domaines et on va ajouter un alias de domaines nommé par le nom de domaines du serveur AD et on va modifier le mode d'authentification du domaine du serveur zimbra et lui spécifiant un active directory externe. On va renseigner le domaine du serveur AD, son adresse IP, on va fournir l'utilisateur et le mot de passe permettant l'accès au domaine et tester voir si la liaison est réussie et on clique sur terminer.
+Dans la console administrateur de l'interface graphique de zimbra on va aller dans configurer/domaines, aller sur la roue de paramètre puis cliquer _Add a Domain Alias_.  
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/TutoZimbra/1_AddAlias.png?raw=true)
 
-ceci fait on va créer un nouveau compte dans gérer/comptes pour la création du compte on va récupérer les renseignement d'un utilisateur AD existant ex: Pierre David du Dpt commercial pour créer un compte sur zimbra on lui indiquera le nom du compte égal au compte AD et on validera sans ajouter de mot de passe afin de vérifier que l'on peut se connecter avec le mot de passe de session utilisateurs.
+Le nommé par le nom de domaines du serveur AD.  
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/TutoZimbra/2_Cible.png?raw=true)
+
+On va modifier le mode d'authentification du domaine du serveur zimbra. Faire un clic droit sur le nom du serveur et cliquer sur _Configure Authentication_.  
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/TutoZimbra/3_Authentication.png?raw=true)
+
+Lui spécifier un active directory externe.  
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/TutoZimbra/4_Authtication.png?raw=true)
+
+On va renseigner le domaine du serveur AD, son adresse IP, on va fournir l'utilisateur et le mot de passe permettant l'accès au domaine et tester voir si la liaison est réussie et on clique sur terminer.
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/TutoZimbra/4bis_Authentication.png?raw=true)
+
+ceci fait on va créer un nouveau compte dans _Manage_/_Accounts. Cliquer sur la roue de paramètrage puis _New_.  
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/TutoZimbra/5_CreateUser.png?raw=true)
+
+Pour la création du compte on va récupérer les renseignement d'un utilisateur AD existant ex: Pierre David du Dpt commercial pour créer un compte sur zimbra on lui indiquera le nom du compte égal au compte AD et on validera sans ajouter de mot de passe afin de vérifier que l'on peut se connecter avec le mot de passe de session utilisateurs.
 
         ex: pierre david sera :
             nom de compte : pdavid@srvzimbra.billu.lan
             nom de famille : pdavid
 
-afin de tester que Pierre david puisse se connecter on va aller sur internet adresse https://172.20.0.100:8443 et on va se connecter avec le nom de compte pdavid mot de passe Azerty2* (mdp pour se connecter à un PC client)
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/TutoZimbra/6_CreateUser.png?raw=true)
+
+Afin de tester que Pierre david puisse se connecter on va aller sur internet adresse https://172.20.0.100:8443 et on va se connecter avec le nom de compte pdavid mot de passe Azerty2* (mdp pour se connecter à un PC client)
 
 ![img 18](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG18.JPG?raw=true)
 
-A l'heure actuel, les comptes seront créés manuellement afin d'être sur des informations
+A l'heure actuel, les comptes seront créés manuellement afin d'être sûr des informations.
 
 # **Difficultés rencontrées : problèmes techniques rencontrés:**
 
