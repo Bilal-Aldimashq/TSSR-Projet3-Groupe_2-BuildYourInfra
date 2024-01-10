@@ -15,7 +15,7 @@ __________
 
 ## Pré-requis :
 
-afin d'être sûr d'utiliser LAPS et non LAPS legacy nos machines doivent au minimum avoir les mise a jour de sécurité suivantes :
+Afin d'être sûr d'utiliser LAPS et non LAPS legacy nos machines doivent au minimum avoir les mises à jour de sécurité suivantes :
 
         Win10 : KB5025221
         Win11 : KB5025224
@@ -35,7 +35,7 @@ Pour installer et configurer LAPS on va passer par powershell en mode administra
 
 ![img 2](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG2.JPG?raw=true)
 
-Ceci fait on va :
+Suite :
 
     - copier les fichier LAPS.admx et LAPS.adml dans le dossier sysvol/domain/policyDefinition.
     - Créé la GPO nommé LAPS et configurer la GPO avec les paramètre voulu
@@ -46,17 +46,18 @@ Ceci fait on va :
 
 ![img 5](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG5.JPG?raw=true)
 
-et vous trouverez le mot de passer crée par LAPS dans le gestion des utilisateur AD dans l'OU ordinateurs en cliquant sur les propriete du PC
+Le mot de passe créé par LAPS se trouve dans le gestion des utilisateurs AD dans l'OU ordinateurs en cliquant sur les proprietés du PC
 
 ![img 6](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG6.JPG?raw=true)
 
 ### Test :
 
-on va prendre un Ordinateur client qui est déjà présent dans l'AD, dans l'OU ordinateurs, ou la GPO est active, et on va tester de se connecter au compte Administrateur local de la machine avec le mot de passe d'origine, l'accès nous est refuser car le mot de passe n'est pas correcte.
+Sélection d'un ordinateur client déjà présent dans l'AD, dans l'OU ordinateurs sur lequel la GPO est active.
+Test de connexion au compte Administrateur local de la machine avec le mot de passe d'origine, l'accès est refusé car le mot de passe est incorrect.
 
 ![img 7](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG7.JPG?raw=true)
 
-on va vérifier le mot de passe généré par lAPS et on va essayer de se connecter avec, "connexion réussi", LAPS gère bien son mot de passe Administrateur Local.
+Vérification du mot de passe généré par LAPS en se connectant : "connexion réussi", LAPS gère bien le mot de passe Administrateur Local.
 
 ![img 8](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG8.JPG?raw=true)
 
@@ -65,25 +66,26 @@ ________________________
 
 # Installation de Zimbra 8.8.15 :
 
-## Préparation avant Installation de Zimbra :
+## Préparation avant installation de Zimbra :
 
 ### Préparation du Serveur AD pour le DNS :
 
-Ouvrir le gestionnaire de dns afin de créer un nouvelle Hôte (A ou AAAA) et nouveau serveur de messagerie (MX) :
+Ouvrir le gestionnaire de DNS afin de créer un nouvel Hôte (A ou AAAA) et un nouveau serveur de messagerie (MX) :
 
-    - clique droit nouvel hôte (A ou AAAA) : pour le nom mettre le nom du serveur Zimbra "ex : srvzimbra" et indiquer son adresse IP "ex : 172.20.0.100"
+    - clic droit -> nouvel hôte (A ou AAAA) : mettre le nom du serveur Zimbra "ex : srvzimbra" et indiquer son adresse IP "ex : 172.20.0.100"
 
-    - clique droit nouveau serveur de messagerie (MX) : nommé le pareil que l'hôte créé précédemment et pour le FQDN faite un clique droit sur parcourir et rechercher l'hôte créé précédemment
+    - clic droit -> nouveau serveur de messagerie (MX) : nomme identiquement l'hôte créé précédemment et pour le FQDN faire un clic droit sur parcourir et rechercher l'hôte créé précédemment
 
-Testé avec la commande `nslookup srvzimbra.billu.lan`
+Test avec la commande `nslookup srvzimbra.billu.lan`
 
 ### Préparation du serveur Linux :
 
-Zimbra 8.8.15 est compatible avec UBUNTU 18.04 LTS du coup nous allons récupérer un ISO de LINUX UBUNTU 18.04 LTS via ce lien :
+Zimbra 8.8.15 étant compatible avec UBUNTU 18.04 LTS nous récupérons un ISO de cette édition via ce lien :
 
 https://releases.ubuntu.com/18.04/
 
-Faire une installation de Linux classique. une fois l'OS installé nous allons configurer le serveur afin qu'il soit prêt à installer Zimbra pour cela nous allons :
+Faire une installation de Linux standard.
+Etapes de configuration du serveur pour installer Zimbra une fois l'installation de l'OS terminé :
 
     - Faire un Update/Upgrade du système : commande `apt update && apt upgrade -y`
 
@@ -108,9 +110,10 @@ Faire une installation de Linux classique. une fois l'OS installé nous allons c
 
 ![img 9](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG9.JPG?raw=true)
 
-    - Configurer le fichier Hostname : commande `nano /etc/hostname` afin de modifier ou vérifier le nom du serveur "ex : Srvzimbra.billu.lan"
+    - Configurer le fichier Hostname : commande `nano /etc/hostname` afin de modifier ou vérifier le nom du serveur "ex : srvzimbra.billu.lan"
 
     - Configurer le fichier Hosts : commande `nano /etc/hosts` afin de modifier le fichier interfaces et entre les information adequate : "ex : 172.20.0.100    srvzimbra.billu.lan     srvzimbra"
+    ligne à placer en premier pour éviter toutes erreurs
 
     - Configurer le fichier resolv.conf : commande `nano /etc/resolv.conf`
 
@@ -120,9 +123,9 @@ Faire une installation de Linux classique. une fois l'OS installé nous allons c
 
 ![img 10](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG10.JPG?raw=true)
 
-Pensez à rebooter le PC autant que nécessaire afin que les paramètres soient bien pris en compte.
+Penser à rebooter le PC autant que nécessaire afin que les paramètres soient bien pris en compte.
 
-Ceci fait faire un ping en IPv4 et avec dns "ex : ping 172.20.0.5 ; ex : ping srvzimbra.billu.lan"
+Faire un ping en IPv4 et avec dns "ex : ping 172.20.0.5 ; ex : ping srvzimbra.billu.lan"
 
 ![img 11](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG11.JPG?raw=true)
 
@@ -132,21 +135,22 @@ Ceci fait faire un ping en IPv4 et avec dns "ex : ping 172.20.0.5 ; ex : ping sr
 
 ### 1ere partie : configuration
 
-Le serveur Linux est maintenant prêt à accueillir Zimbra on va commencer par installer les apts nécessaires
+Le serveur Linux est maintenant prêt à accueillir Zimbra. 
+INstallation des apts nécessaires
 
 Commande : `apt install netcat-traditional libidn11-dev libgmp10 sysstat sqlite3 libaio1 unzip pax -y`
 
-On va arrêter le service apparmor et désactiver le redémarrage auto :
+Arrêter le service "apparmor" et désactiver le redémarrage auto :
 
-Commande : `service apparmor stop` ; `service apparmor teardown` ; `update-rc.d -f apprmor remove`
+Commande : `service apparmor stop` ; `service apparmor teardown` ; `update-rc.d -f apprmor remove` (bien respecter les caractères pour ce dernier)
 
-On va telecharger le zip comprenant Zimbra commande `wget https://files.zimbra.com/downloads/8.8.15_GA/zcs-8.8.15_GA_3869.UBUNTU18_64.20190918004220.tgz`
+Télécharger le zip comprenant Zimbra, commande : `wget https://files.zimbra.com/downloads/8.8.15_GA/zcs-8.8.15_GA_3869.UBUNTU18_64.20190918004220.tgz`
 
 ![img 12](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG12.JPG?raw=true)
 
-On va decompresser le fichier telecharger `tar xvzf zcs-8.8.15_GA_3869.UBUNTU18_64.20190918004220.tgz`
+Décompresser le fichier telechargé, commande : `tar xvzf zcs-8.8.15_GA_3869.UBUNTU18_64.20190918004220.tgz`
 
-Se déplacer dans le dossier "zcs-8.8.15_GA_3869.UBUNTU18_64.20190918004220" et lancer l'install commande `./install.sh`
+Se déplacer dans le dossier "zcs-8.8.15_GA_3869.UBUNTU18_64.20190918004220" et lancer l'installation, commande : `./install.sh`
 
 Répondre "OUI" à toutes les questions sauf install zimbra-dnscache ; install zimbra-proxy ; install zimbra-imapd
 
@@ -154,25 +158,25 @@ Répondre "OUI" à toutes les questions sauf install zimbra-dnscache ; install z
 
 ![img 14](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG14.JPG?raw=true)
 
-Le logiciel installé, nous reste la dernière phase de configuration avant de pouvoir accéder à l'interface graphique de Zimbra. il faut régler le mot de passe admin de zimbra . option 6 et option 4 afin de changer le mot de passe.
+Afin de finlaiser l'insatllation il reste la dernière phase de configuration avant de pouvoir accéder à l'interface graphique de Zimbra. il faut régler le mot de passe admin de zimbra : option 6 et option 4 afin de changer le mot de passe.
 
-le mot de passe changé on peut appliquer et finir l'installation en revenant en arrière avec "r" et en appliquant les changement avec "a" répondre "Oui" à la 1ere question et "Non" à la dernière.
+Suite à cette modifictaion de mot de passe, finir l'installation en revenant en arrière avec "r" et en appliquant les changements avec "a" répondre "Oui" à la 1ere question et "Non" à la dernière.
 
 La configuration est terminée, on va rebooter le serveur.
 
 ### 2eme partie : Utilisation
 
-Zimbra est installée, le serveur est rebooté, on va se connecter a l'utilisateur zimbra sur le serveur. pour cela, se connecter avec l'utilisateur classique, passer en root, et après passer en zimbra. ex: connecter vous avec user, passer en root avec `sudo su` une fois en root passer en zimbra avec `su zimbra`
+Zimbra est installé, le serveur est rebooté, se connecter à l'utilisateur Zimbra sur le serveur : se connecter d'abord avec l'utilisateur classique, puis passer en root, et enfin passer en zimbra. ex: connecter vous avec user, passer en root avec `sudo su` une fois en root passer en zimbra avec `su zimbra`
 
-Ceci fait, on va vérifier et démarrer si nécessaire les services du serveur.
+Vérifier et/ou démarrer si nécessaire les services du serveur.
 
 commande : `zmcontrol status` : vérifier le status de tous les services de messagerie
 
 ![img 15](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG15.JPG?raw=true)
 
-commande : `zmcontrol start` : démarrera les service si nécessaire
+commande : `zmcontrol start` : démarrera les services si nécessaire
 
-Pour accéder à l'interface graphique se connecter a un client via l'adresse du serveur
+Pour accéder à l'interface graphique se connecter à un client via l'adresse du serveur
 
         - Pour la console administrateur ex: https://172.20.0.100:7071
 
@@ -183,25 +187,25 @@ Pour accéder à l'interface graphique se connecter a un client via l'adresse du
 ![img 17](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG17.JPG?raw=true)
 
 ### 3eme partie : Créer une adresse mail pour un compte utilisateur de l'AD:
-Dans la console administrateur de l'interface graphique de zimbra on va aller dans configurer/domaines, aller sur la roue de paramètre puis cliquer _Add a Domain Alias_.  
+Dans la console administrateur de l'interface graphique de zimbra, aller dans configurer/domaines, aller sur la roue de paramètre puis cliquer _Add a Domain Alias_.  
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/TutoZimbra/1_AddAlias.png?raw=true)
 
-Le nommé par le nom de domaines du serveur AD.  
+Le nommer par le nom de domaines du serveur AD.  
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/TutoZimbra/2_Cible.png?raw=true)
 
-On va modifier le mode d'authentification du domaine du serveur zimbra. Faire un clic droit sur le nom du serveur et cliquer sur _Configure Authentication_.  
+Modifier le mode d'authentification du domaine du serveur zimbra. Faire un clic droit sur le nom du serveur et cliquer sur _Configure Authentication_.  
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/TutoZimbra/3_Authentication.png?raw=true)
 
 Lui spécifier un active directory externe.  
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/TutoZimbra/4_Authtication.png?raw=true)
 
-On va renseigner le domaine du serveur AD, son adresse IP, on va fournir l'utilisateur et le mot de passe permettant l'accès au domaine et tester voir si la liaison est réussie et on clique sur terminer.
+Renseigner le domaine du serveur AD, son adresse IP, fournir l'utilisateur et le mot de passe permettant l'accès au domaine puis tester si la liaison est réussie et enfin cliquer sur terminé.
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/TutoZimbra/4bis_Authentication.png?raw=true)
 
-ceci fait on va créer un nouveau compte dans _Manage_/_Accounts. Cliquer sur la roue de paramètrage puis _New_.  
+Créer un nouveau compte dans _Manage_/_Accounts. Cliquer sur la roue de paramètrage puis _New_.  
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/TutoZimbra/5_CreateUser.png?raw=true)
 
-Pour la création du compte on va récupérer les renseignement d'un utilisateur AD existant ex: Pierre David du Dpt commercial pour créer un compte sur zimbra on lui indiquera le nom du compte égal au compte AD et on validera sans ajouter de mot de passe afin de vérifier que l'on peut se connecter avec le mot de passe de session utilisateurs.
+Pour la création du compte récupérer les renseignements d'un utilisateur AD existant ex: Pierre David du Dpt commercial. Pour créer un compte sur zimbra indiquer le nom du compte à l'indentique du compte AD. Valider sans ajouter de mot de passe afin de vérifier que l'on peut se connecter avec le mot de passe de session utilisateurs.
 
         ex: pierre david sera :
             nom de compte : pdavid@srvzimbra.billu.lan
