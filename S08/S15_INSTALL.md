@@ -213,11 +213,11 @@ Pour la création du compte récupérer les renseignements d'un utilisateur AD e
 
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/TutoZimbra/6_CreateUser.png?raw=true)
 
-Afin de tester que Pierre david puisse se connecter on va aller sur internet adresse https://172.20.0.100:8443 et on va se connecter avec le nom de compte pdavid mot de passe Azerty2* (mdp pour se connecter à un PC client)
+Afin de tester que Pierre david puisse se connecter aller sur internet adresse https://172.20.0.100:8443 et se connecter avec le nom de compte pdavid mot de passe Azerty2* (mdp pour se connecter à un PC client)
 
 ![img 18](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG18.JPG?raw=true)
 
-A l'heure actuel, les comptes seront créés manuellement afin d'être sûr des informations.
+A l'heure actuelle, les comptes seront créés manuellement afin d'être sûr des informations.
 
 # **Difficultés rencontrées : problèmes techniques rencontrés:**
 
