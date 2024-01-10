@@ -7,7 +7,7 @@ ________
 
 ## **Besoins Initiaux:**
 
-Réalisation d'une infrastructure sécurisé pour l'entreprise BillU. Un domaine AD a été installé et complété par un serveur de gestion de mot de passe pas encore opérationnel ainsi qu'un deuxième serveur DC avec réplication. Gestion automatique des salariés de la société dans le répertoire AD. Un serveur GLPI est en place ainsi qu'une dizaine de GPO. Des pare-feu PFSense sont installés sur les deux sitesLa télémérie des postes clients à été traitée. Pour compléter cette infrastructure, il a été demandé de journaliser les scripts Powershell, installer  le logicie de supervision Zabbix et d'intégrer les ordinateurs à l'Active Directory. Mise en Place d'un serveur de messagerie Zimbra qui pourra nous aidder a finir le serveur de gestionnaire de mot de passe et d'un serveur WSUS qui lui gérera le developpement des MAJ sur le Parc informatique. 
+Réalisation d'une infrastructure sécurisée pour l'entreprise BillU. Un domaine AD a été installé et complété par un serveur de gestion de mot de passe pas encore opérationnel ainsi qu'un deuxième serveur DC avec réplication. Gestion automatique des salariés de la société dans le répertoire AD. Un serveur GLPI est en place ainsi qu'une dizaine de GPO. Des pare-feu PFSense sont installés sur les deux sites. La télémérie des postes clients à été traitée. Pour compléter cette infrastructure, il a été demandé de journaliser les scripts Powershell, installer le logiciel de supervision Zabbix et d'intégrer les ordinateurs à l'Active Directory. Mise en Place d'un serveur de messagerie Zimbra qui pourra nous aider a finir le serveur de gestionnaire de mot de passe et d'un serveur WSUS qui lui gérera le développement des MAJ sur le Parc informatique. 
 _________
 ## **Rôles par semaine:**
 
@@ -30,26 +30,26 @@ __________
 
  
 - Mise en place d un serveur WSUS
-	- Gestion des mise a jour via le serveur 
-	- detection des machines du parc
+	- Gestion des mises à jour via le serveur 
+	- Détection des machines du parc
 
-- Création d'un schema de l'infrastructure du Parc
+- Création d'un schéma de l'infrastructure du Parc
 ____________      
 
 
 ## **Choix Techniques:**
 
-- Serveur de messagerie Zimbra imposer. installation de la version 8.8.15 car des la version 9 le logiciel est payant. le serveur sera installer sur la derniere version de ubuntu gerer soit la 18.04
-- installation d'un nouveau serveur win22 pour l'installation du role WSUS  
+- Serveur de messagerie Zimbra imposé. installation de la version 8.8.15 car à partir la version 9 le logiciel est payant. le serveur sera installé sur la dernière version de Ubuntu gérée soit la 18.04
+- Installation d'un nouveau serveur win22 pour l'installation du role WSUS  
 ________________
 
 
 ## **Les difficultées rencontrées:** 
 
-- la gestion du central pour les paquets admx ; adml car on arriver pas a avoir les parametre necessaire pour cree les GPO 
+- la mise en place des GPO a demandé d'importer les paramètres manquants des paquets admx et adml à placer dans le fichier SYSVOL 
 
 ## **Les solutions:** 
 
-- Crée notre propre Administrative Template afin d'avoir les option neccessaire a la création des GPO voulu
+- Créer notre propre Administrative Template afin d'avoir les options nécessaires à la création des GPO souhaitées.
 
 ## **FAQ:**
