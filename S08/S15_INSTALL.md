@@ -202,7 +202,7 @@ Lui spécifier un active directory externe.
 Renseigner le domaine du serveur AD, son adresse IP, fournir l'utilisateur et le mot de passe permettant l'accès au domaine puis tester si la liaison est réussie et enfin cliquer sur terminé.
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/TutoZimbra/4bis_Authentication.png?raw=true)
 
-Créer un nouveau compte dans _Manage_/_Accounts. Cliquer sur la roue de paramètrage puis _New_.  
+Créer un nouveau compte dans _Manage_/_Accounts_. Cliquer sur la roue de paramètrage puis _New_.  
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/TutoZimbra/5_CreateUser.png?raw=true)
 
 Pour la création du compte récupérer les renseignements d'un utilisateur AD existant ex: Pierre David du Dpt commercial. Pour créer un compte sur zimbra indiquer le nom du compte à l'indentique du compte AD. Valider sans ajouter de mot de passe afin de vérifier que l'on peut se connecter avec le mot de passe de session utilisateurs.
@@ -342,7 +342,11 @@ __________
 ____________
 
 - Editer la GPO WSUS_Communs
-- Aller dans _Computer Configuration_--> _Policies_--> _Administrative Templates_--> _Windows Components_--> _Windows update_
+- Aller dans _Computer Configuration_--> _Policies_--> _Administrative Templates_--> _Windows Components_--> _Windows update_  
+  - #### **Si le dossier _Administrative Templates_ est vide:**   
+    - Copier le dossier C:\Windows\PolicyDefinitions\en-US _(en-US pour les serveur en Anglais, il est possible de copier fr-FR pour un serveur en français par exemple)_  
+    - Coller le dossier dans Network\NomDuServeur\SYSVOL\NomDeDomaine\Policies\PolicyDefinitions _(Si le dossier PolicyDefinitions n'éxiste pas, il faut le créer)_
+                  ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/20.2_GpoManage.png?raw=true)
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto_WSUS/21_WinSett.png?raw=true)
 - Cliquer sur _Specify intranet Microsoft update service location_, qui indiquera ou est le serveur de mise à jour. 
 - Cocher _Enabled_
