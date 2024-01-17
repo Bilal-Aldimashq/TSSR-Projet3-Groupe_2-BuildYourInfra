@@ -14,7 +14,7 @@ Menu VPN -> IPsec
 cliquer sur bouton vert "addP1".
 
 Première étape : Edit Phase 1 : renseigner les éléments pour définir que l'interface WAN de Lyon a une passerelle correspondant au port WAN de PFsense Paris.
-Définir un clè dans le champs "Pre-Shared Key" que nous utiliserons pour la configuration du VPN Paris-Lyon.
+Définir une clè dans le champs "Pre-Shared Key" que nous utiliserons pour la configuration du VPN Paris-Lyon.
 
 ![pfsense vpn 2](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/0ef7b691-ce35-4ad5-bdd2-e17cd881fb08)
 
@@ -26,7 +26,7 @@ Passer à la phase 2 : donner une description, puis renseigner que l'adresse IP 
 
 sauvegarder
 
-Faire exactement la même démarche de Paris vers Lyon avec les adresses IP adéquates
+Faire exactement la même démarche de Paris vers Lyon avec les adresses IP adéquates et ajouter la clé défnie plus haut.
 
 Créer une nouvelle règle pour activer le VPN : Firewall->Rules-IPsec puis cliquer sur Add
 
