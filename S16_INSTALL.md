@@ -41,3 +41,184 @@ Status->IPsec : established = opérationnel
 Vpn configuré, vérifier un ping entre machine clientes entre Paris et lyon : opérationnel.
 
 ![ping ](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/2f273ef0-4619-41bd-83c1-02831750e825)
+
+## Installation PRTG :
+
+PRTG est un outil de supervision qui sera installé sur un Windows Server 22 indépendant pour analyser le parc informatique du réseau Billu. l'hôte A sera renseigné dans le dns
+
+Pour l'installation aller sur internet et taper PRTG network monitor dans la barre de recherche et téléchargez le lien que vous trouver sur l'url suivant `https://www.paessler.com/fr/prtg`
+
+![img1]()
+
+Le logiciel téléchargé, installez le, sélectionner le langage :
+
+![img2]()
+
+Accepter les terme de la licence
+
+![img3]()
+
+Entrer un adresse Mail afin de recevoir les notification,
+
+![img4]()
+
+choisissez le mode d'installation, pour pas s'embeter prendre d'installation rapide
+
+![img5]()
+
+![img6]()
+
+Vous voila a la page de connection a PRTG les identifiant par défaut seront renseignées automatiquement a la premiere connection
+
+![img7]()
+
+Page d'accueil de PRTG :
+
+![img8]()
+
+## Utilisation de PRTG :
+
+
+
+## Installation FreePBX :
+
+Recuperer l'iso de FreePBX ici https://www.freepbx.org/downloads/ et l'installer dans une nouvelle VM en Linux RedHat l'iso télécharger
+
+Au démarrage de la VM, dans la liste, choisir la version recommandée.
+
+![img9]()
+
+Puis sélectionnez Graphical Installation - Output to VGA.
+
+![img10]()
+
+Enfin choisir FreePBX Standard
+
+![img11]()
+
+Pendant l'installation, il faut configurer le mot de passe root (Root password is not set s'affiche).
+
+![img12]()
+
+Cliquez sur ROOT PASSWORD et entrez un mot de passe pour le compte root.
+
+`Attention :` le clavier est en QWERTY du coup faire attention au mot de passe mis en place
+
+![img13]()
+
+le mot de passe renseigner, l'installation continue et se termine. Redémarrer la VM en enlevant l'ISO avant le redémarrage.
+
+Se connecter en root et mettre son clavier en Francais car au commande suivante :
+
+        localectl set-locale LANG=fr_FR.utf8
+        localectl set-keymap fr
+        localectl set-x11-keymap fr
+
+vérifier que le clavier est en francais avec la commande localectl
+
+![img14]()
+
+## Configuration et Mise à jour des Modules FreePBX :
+
+Par l'interface web accessible depuis un client, connecte-toi en root avec le mot de passe associé et cliquez sur Setup System
+
+Dans la fenêtre, clique sur FreePBX Administration et reconnecte-toi en root. Clique sur Skip pour sauter l'activation du serveur et toutes les offres commerciales qui s'affichent. Laisser les langages par défaut et à la fenêtre d'activation du firewall, cliquez sur Abort :
+
+![img15]()
+
+A la fenêtre de l'essai de SIP Station cliquez sur Not No. Arriver sur le tableau de bord, cliquez sur Apply Config (en rouge) pour valider tout ce que tu viens de faire
+
+![img16]()
+
+Ceci fait on va activer le serveur (cette activation n'est pas obligatoire), mais elle permet d'avoir accès à l'ensemble des fonctionnalités du serveur.
+Dans le menu Admin puis System Admin.
+
+Cliquez sur Activation puis Activate. Dans la fenêtre qui s'affiche, cliquez sur Activate
+
+![img17]()
+
+Entre une adresse email et attendre quelques instants. Dans la fenêtre qui s'affiche, renseignez les différentes informations, et :
+
+        - Pour Which best describes you mets I use your products and services with my Business(s) and do not want to resell it
+        - Pour Do you agree to receive product and marketing emails from Sangoma ? cochez No
+
+Clique sur Create
+
+![img18]()
+
+Dans la fenêtre d'activation, cliquez sur Activate et attendez que l'activation se fasse. Pour les fenêtres qui s'affichent, cliquez sur Skip.
+
+La fenêtre de mise-à-jour des modules va s'afficher automatiquement.
+Clique sur Update Now. Attendre la mise-à-jour de tous les modules.
+
+![img19]()
+
+Une fois que tout est terminé, clique sur Apply config.
+
+        Il peut y avoir des erreurs sur le serveurs suite à la mise-à-jour des modules et dans ce cas, l'accès au serveur ne se fait pas.
+        Les modules incriminés sont précisés et il faut les réinstaller et les activer.
+        Dans ce cas, sur le serveur en CLI, exécute les commandes suivantes :
+
+                fwconsole ma install <nom du module>
+                fwconsole ma upgradeall (pour mettre a jour les dernier module)
+
+Va sur le serveur en CLI et exécute la commande yum update pour faire la mise-à-jour du serveur. Répondre "y" lorsque cela sera demandé. Et Redémarrer le serveur
+
+## Création ligne utilisateur :
+
+Par l'interface web accessible depuis un client, Va dans le menu Applications puis Poste, tu arrives sur cette fenêtre :
+
+![img20]()
+
+Va sur sur l'onglet Poste SIP [chan_pjsip] et clique sur le bouton +Ajout nouveau Poste SIP [chan_pjsip] et La fenêtre suivante va s'afficher
+
+![img21]()
+
+Pour créer la 1ère ligne, celle de Marie Dupont, renseigne les informations suivante :
+
+        User Extension : 80100
+        Display Name : Camille Martin
+        Secret : Azerty1*
+        Password For New User : Azerty1*
+
+Tu dois avoir les informations comme ceci :
+
+![img22]()
+
+Clique sur le bouton Submit puis Apply Config pour enregistrer ton utilisateur.
+
+## Installation C3Xphone :
+
+Prendre la source ici. (https://3cxphone.software.informer.com/download/)
+
+Télécharge la version x86/x64 sur le site de et installe-là sur les 2 clients Windows (pour le test)
+
+## association ligne utilisateurs
+
+Sur le Client N°1 a l'écran du SIP phone, clique sur Set account pour avoir la fenêtre Accounts.
+
+![img23]()
+
+![img24]()
+
+En cliquant sur New, la fenêtre de création de compte Account settings apparaît :
+Pour configurer la ligne de l'utilisatrice Marie Dupont, rentre les informations comme ceci :
+
+    Account Name : Camille Martin
+    Caller ID : 80100
+    Extension : 80100
+    ID : 80100
+    Password : Azerty1*
+    I am in the office - local IP : l'adresse IP du serveur soit 172.18.1.204 (adresse serveur FreePBX)
+
+Cliquer sur Ok tu dois avoir cette fenêtre :
+
+![img25]()
+
+Faire de même avec un autre compte utilisateur pour le Clients 2
+
+## test Communication :
+
+Sur le client 1, tape sur le clavier du SIP phone le numéro 80101 et clique sur la touche d'appel (la touche verte). et sur le client 2 on voit l'appel arriver. On peut répondre en cliquant sur le bouton vert ou refuser l'appel en cliquant sur le bouton rouge
+
+[img26]()
