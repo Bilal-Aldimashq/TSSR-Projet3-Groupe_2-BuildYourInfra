@@ -39,3 +39,5 @@ Status->IPsec : established = opérationnel
 ![pfsense vpn 5](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/2dd18f6b-64d6-43ab-b580-9387136e4588)
 
 Vpn configuré, vérifier un ping entre machine clientes entre Paris et lyon : opérationnel.
+
+![ping ](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/2f273ef0-4619-41bd-83c1-02831750e825)
