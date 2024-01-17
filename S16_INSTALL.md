@@ -221,4 +221,4 @@ Faire de même avec un autre compte utilisateur pour le Clients 2
 
 Sur le client 1, tape sur le clavier du SIP phone le numéro 80101 et clique sur la touche d'appel (la touche verte). et sur le client 2 on voit l'appel arriver. On peut répondre en cliquant sur le bouton vert ou refuser l'appel en cliquant sur le bouton rouge
 
-[img26](https://github.com/michaelc31/Projet-image/blob/main/PRTG/Capture26.JPG?raw=true)
+![img26](https://github.com/michaelc31/Projet-image/blob/main/PRTG/Capture26.JPG?raw=true)
