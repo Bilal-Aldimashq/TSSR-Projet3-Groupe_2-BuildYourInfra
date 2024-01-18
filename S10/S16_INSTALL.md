@@ -33,12 +33,12 @@ Les rôles FSMO seront répartie comme ceci:
 
 Les adresses IP des nouveaux serveurs sont:
 
-| SERVEURS | ADRESSE IP |
+| Serveurs BillU | Adresse IP |
 |-------|------|
 | SRVWINC1 | 172.18.1.210 |
 | SRVWINC3 | 172.18.1.211 |
 | SRVRODC1 | 10.10.5.210 |
-| GLPI |   |
+| GLPI | 172.18.1.215 |
 | IredMail | |
 | PRTG | |
 | FreePBX | |
