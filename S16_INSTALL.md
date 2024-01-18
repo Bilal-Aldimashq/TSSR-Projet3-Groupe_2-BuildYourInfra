@@ -290,3 +290,71 @@ login : postmaster@billu.lan password : Azerty1*
 
 ![iredmail 10](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/08ff6657-b567-4447-bec9-8f229d6875cc)
 
+## Installation RAID1 sur Debian Pour le serveur GLPI
+
+Pour pouvoir initié le *RAID 1* sur l'ensemble de notre disque système nous devons préparer les disques lors du **partitionnement des disques** pendant l'installation de Debian
+
+![img1](https://github.com/michaelc31/Projet-image/blob/main/RAID%20GLPI/Capture1.JPG?raw=true)
+
+Pré-requis avant le lancement de l'installation :
+
+       - Avoir une Machine avec 2 Disque Dur de même capacité vierge (non formaté, non partitionné)
+
+Sur la fenêtre de partitionnement des disques choisissez la méthode `Manuel`, la fenêtre suivante vous affiche les disques détectés avec la table des partition et les point de montage qui si les disques sont vierge devrait être comme cela :
+
+![img2](https://github.com/michaelc31/Projet-image/blob/main/RAID%20GLPI/Capture2.JPG?raw=true)
+
+Sélectionner le Premier disque et crée la table de partition, faite de même pour le 2eme disque vous arriverez à une configuration comme celle ci :
+
+![img3](https://github.com/michaelc31/Projet-image/blob/main/RAID%20GLPI/Capture3.JPG?raw=true)
+
+Les table de partition créé on va maintenant utiliser la configuration du RAID par logiciel :
+
+![img4](https://github.com/michaelc31/Projet-image/blob/main/RAID%20GLPI/Capture4.JPG?raw=true)
+
+sélectionner Oui pour appliquer les changement au disque et configurer le RAID :
+
+![img5](https://github.com/michaelc31/Projet-image/blob/main/RAID%20GLPI/Capture5.JPG?raw=true)
+
+les fenêtres suivantes vont nous servir à configurer le RAID pour cela selection Créer un périphérique multidisque, sélectionne le Type de RAID voulu, le nombre de périphérique actif pour l'ensemble du RAID, le nombre de périphérique de réserve pour le RAID :
+
+![img6](https://github.com/michaelc31/Projet-image/blob/main/RAID%20GLPI/Capture6.JPG?raw=true)
+
+![img7](https://github.com/michaelc31/Projet-image/blob/main/RAID%20GLPI/Capture7.JPG?raw=true)
+
+![img8](https://github.com/michaelc31/Projet-image/blob/main/RAID%20GLPI/Capture8.JPG?raw=true)
+
+![img9](https://github.com/michaelc31/Projet-image/blob/main/RAID%20GLPI/Capture9.JPG?raw=true)
+
+les fenêtres suivantes vont vous permettre de sélectionner les disques prévu pour le RAID, et d'appliquer les changement et configurer le RAID :
+
+![img10](https://github.com/michaelc31/Projet-image/blob/main/RAID%20GLPI/Capture10.JPG?raw=true)
+
+![img11](https://github.com/michaelc31/Projet-image/blob/main/RAID%20GLPI/Capture11.JPG?raw=true)
+
+Ceci fait cliquez sur terminer pour appliquer et configurer le RAID et vous devriez arriver sur la page de partitionnement des disques comme ci :
+
+![img12](https://github.com/michaelc31/Projet-image/blob/main/RAID%20GLPI/Capture12.JPG?raw=true)
+
+Le RAID est maintenant Préparer nous allons préparer l'installation du systèmes, revenais sur partitionnement assisté, sélectionne Assisté utiliser un disque entier :
+
+![img13](https://github.com/michaelc31/Projet-image/blob/main/RAID%20GLPI/Capture13.JPG?raw=true)
+
+![img14](https://github.com/michaelc31/Projet-image/blob/main/RAID%20GLPI/Capture14.JPG?raw=true)
+
+Sélectionne le périphérique RAID créé
+
+![img15](https://github.com/michaelc31/Projet-image/blob/main/RAID%20GLPI/Capture15.JPG?raw=true)
+
+on peut garder tout dans une même partition
+
+![img16](https://github.com/michaelc31/Projet-image/blob/main/RAID%20GLPI/Capture16.JPG?raw=true)
+
+La fenêtre suivante s'affiche vous avez plus qu'à terminer le partitionnement et lancer l'installation.
+
+![img17](https://github.com/michaelc31/Projet-image/blob/main/RAID%20GLPI/Capture17.JPG?raw=true)
+
+le système installé vous trouverez en lançant la commande `lsblk` les informations suivantes :
+
+![img18](https://github.com/michaelc31/Projet-image/blob/main/RAID%20GLPI/Capture18.JPG?raw=true)
+
