@@ -439,7 +439,8 @@ __________________
 ## **Création d'un RAID 1 sur un serveur Core**
 Le serveur est déjà intégrer au domaine et est un serveur DC du domaine en réplication. 
 > **Afin de réaliser le RAID 1 de la machine, le disque de stockage doit être en GPT et non en MBR pour se faire.**
-Il a également un disque supplémentaire de stockage au moins aussi grand que celuui en place. 
+
+Un disque de stockage supplémentaire, de même capacité que l'éxistant, à été ajouter.  
 
 **Sur le serveur AD contrôleur de domaine:**
 Dans le menu _Server Manager_:  
@@ -485,3 +486,43 @@ ______________
 ___________________
 ___________________
   
+## **Répartir les rôles FSMO de L'AD sur les serveurs DC**
+
+Pour savoir quel rôles sont attrivués sur quel serveur:
+- Dans une console Powershell du serveur AD, taper `Cet -ADForest`et `Get-ADDomain`. Cela indiquera les 2 rôles du niveau de la forêt et les 3 du Domaine.
+**Maître de Noms:**
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20Transfer_r%C3%B4le/1_MasterNaming.png?raw=true)
+
+**Maître de schéma:**
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20Transfer_r%C3%B4le/2_SchemaMaster.png?raw=true)
+
+**Maître d'infrastructure:**
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20Transfer_r%C3%B4le/3_Ma%C3%AEtreInfra.png?raw=true)
+
+**Emulateur PDC:**
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20Transfer_r%C3%B4le/4_PDC.png?raw=true)
+
+**Maître RID:**
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20Transfer_r%C3%B4le/5_RIDMaster.png?raw=true)
+____________________
+
+Pour transférer les rôles:
+- Dans une console Powershell faire
+  ```bash
+  Move-ADDirectoryServerOperationMasterRole -Identity "NomDuServeur_Recevant_le_rôle" -OperationMasterRole <Role_Attribuer>
+  ```
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20Transfer_r%C3%B4le/7.0_Liste.png?raw=true)
+Dans cet exemple on change deux rôles:
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20Transfer_r%C3%B4le/6_Move-ad.png?raw=true)
+_________________
+
+Confirmer le changement:
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20Transfer_r%C3%B4le/7_Confirm.png?raw=true)
+
+____________________
+Vérifier avec `Get-ADForest`et `Get-ADDomain`, les transfert des rôles sur les serveurs:  
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20Transfer_r%C3%B4le/8_CheckC1.png?raw=true)
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20Transfer_r%C3%B4le/9_CheckC3.png?raw=true)
+
+_____________________
+_____________________
