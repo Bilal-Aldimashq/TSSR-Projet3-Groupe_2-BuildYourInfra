@@ -290,6 +290,18 @@ login : postmaster@billu.lan password : Azerty1*
 
 ![iredmail 10](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/08ff6657-b567-4447-bec9-8f229d6875cc)
 
+passer en mode admin pour créer des utilisateurs : 172.18.1.220/iredadmin
+
+Interface de création d'utilsateurs
+
+![iredmail 11](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/13594126-4ba5-4818-bdc1-cf37397d860d)
+
+ajout
+
+![iredmail 12](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/f1922d21-875f-433b-816f-d21f9799cb0f)
+
+
+
 ## Installation RAID1 sur Debian Pour le serveur GLPI
 
 Pour pouvoir initié le *RAID 1* sur l'ensemble de notre disque système nous devons préparer les disques lors du **partitionnement des disques** pendant l'installation de Debian
