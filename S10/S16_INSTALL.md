@@ -1,6 +1,52 @@
-## INSTALL GUIDE Infrastructure sécurisée pour BillU
+# **INSTALL GUIDE Infrastructure sécurisée pour BillU**
 
-Date de documentation: 17/01/2024
+## _Semaine_S10_
+
+_Date de documentation: 17/01/2024_
+__________
+
+## **Besoins initiaux : besoins du projet:**
+Cette semaine les serveurs AD core, Zimbra, Zabbix et GLPI sont tombés en panne et irrécupérables.
+Pour remplacer le matériel défectueux sera installé:
+- 2 serveurs DC en Windows CORE avec une configuration de stockage en RAID 1.
+- 1 Serveur GLPI sur Debian 11 en RAID 1 pour le stockage.
+- IredMail remplace le serveur de messagerie Zimbra à la demande de l'entreprise.
+- PRTG remplace le serveur de supervision Zabbix.
+Un serveur VoiP sera installé dans l'infrastructure, en y créant des comptes AD et permettent les appels entre les ordinateurs de l'entreprise.
+Les 5 rôles FSMO (Flexible Single Master Operation° seront réparties sur les 3 DC du parc.
+Si possible, un serveur RODC sera installé sur Lyon.  
+______________
+
+## **Choix techniques:**
+Les serveurs Core seront des Windows Server Core 2022 ainsi que le RODC de Lyon.  
+Le serveur Voip sera FreePBX qui correspond au besoin de l'entreprise.  
+Les rôles FSMO seront répartie comme ceci:
+ - Serveur AD SRVWIN1:
+   - Maître RID
+   - Contrôleur de schéma
+   - Emulateur PDC (Primary Domain Controller)
+ - Serveur DC SRVWINC1:
+   - Maître d'attribution
+ - Serveur DC SRVWINC3:
+   - Maître d'infrastructure
+
+Les adresses IP des nouveaux serveurs sont:
+
+| SERVEURS | ADRESSE IP |
+|-------|------|
+| SRVWINC1 | 172.18.1.210 |
+| SRVWINC3 | 172.18.1.211 |
+| SRVRODC1 | 10.10.5.210 |
+| GLPI |   |
+| IredMail | |
+| PRTG | |
+
+______________
+_______________
+
+# **Étapes d'installation et de configuration : instruction étape par étape:**
+___________________
+
 
 ## Configuration d'un VPN sur PFsense :
 
@@ -41,6 +87,8 @@ Status->IPsec : established = opérationnel
 Vpn configuré, vérifier un ping entre machine clientes entre Paris et lyon : opérationnel.
 
 ![ping ](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/2f273ef0-4619-41bd-83c1-02831750e825)
+_______________
+_______________
 
 ## Installation PRTG :
 
@@ -78,8 +126,8 @@ Page d'accueil de PRTG :
 
 ## Utilisation de PRTG :
 
-
-
+_______________
+________________
 ## Installation FreePBX :
 
 Recuperer l'iso de FreePBX ici https://www.freepbx.org/downloads/ et l'installer dans une nouvelle VM en Linux RedHat l'iso télécharger
@@ -187,6 +235,7 @@ Tu dois avoir les informations comme ceci :
 
 Clique sur le bouton Submit puis Apply Config pour enregistrer ton utilisateur.
 
+____________________
 ## Installation C3Xphone :
 
 Prendre la source ici. (https://3cxphone.software.informer.com/download/)
@@ -223,6 +272,8 @@ Sur le client 1, tape sur le clavier du SIP phone le numéro 80101 et clique sur
 
 ![img26](https://github.com/michaelc31/Projet-image/blob/main/PRTG/Capture26.JPG?raw=true)
 
+___________
+___________
 ## Installation et configuration Iredmail
 
 Prérequis : préparation de l'accueil du serveur dans notre DNS :
@@ -300,7 +351,8 @@ ajout
 
 ![iredmail 12](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/f1922d21-875f-433b-816f-d21f9799cb0f)
 
-
+_______________
+_______________
 
 ## Installation RAID1 sur Debian Pour le serveur GLPI
 
@@ -369,4 +421,5 @@ La fenêtre suivante s'affiche vous avez plus qu'à terminer le partitionnement 
 le système installé vous trouverez en lançant la commande `lsblk` les informations suivantes :
 
 ![img18](https://github.com/michaelc31/Projet-image/blob/main/RAID%20GLPI/Capture18.JPG?raw=true)
-
+__________________
+__________________
