@@ -435,3 +435,53 @@ le système installé vous trouverez en lançant la commande `lsblk` les informa
 ![img18](https://github.com/michaelc31/Projet-image/blob/main/RAID%20GLPI/Capture18.JPG?raw=true)
 __________________
 __________________
+
+## **Création d'un RAID 1 sur un serveur Core**
+Le serveur est déjà intégrer au domaine et est un serveur DC du domaine en réplication. 
+> **Afin de réaliser le RAID 1 de la machine, le disque de stockage doit être en GPT et non en MBR pour se faire.**
+Il a également un disque supplémentaire de stockage au moins aussi grand que celuui en place. 
+
+**Sur le serveur AD contrôleur de domaine:**
+Dans le menu _Server Manager_:  
+- Cliquer _All Servers_ dans la colonne de gauche.
+- Clic droit sur le serveur à manager.
+- Cliquer sur _Manage AS..._.
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20RAID1_Core/6_8.png?raw=true)
+_________________
+
+Rentrer le nom et le mot de passe du compte ayant les droit de gestion du serveur.     
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20RAID1_Core/7.png?raw=true)
+_______________
+De retour sur le menu _Server Manager_:  
+- Cliquer _All Servers_ dans la colonne de gauche.
+- Clic droit sur le serveur à manager.
+- Cliquer sur _Computer Management_.  
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20RAID1_Core/6_8.png?raw=true)
+
+______________
+
+**Sur le serveur Core:**
+- Aller sur la console powershell.
+- Taper la commande `diskpart`.
+- Taper `list disk`, afin de déterminer le numéro de disque qui a été ajouter. Il est possible de le voir en graphique sur le serveur AD dans _Disk Management_. Le 1 dans ce cas.  
+- `Select disk 1`
+- `convert dynamic`
+- En faisant `list part`, les partitions du disque s'affichent.
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20RAID1_Core/9.png?raw=true)
+____________
+
+**Sur le serveur AD graphique**
+Dans la console _Computer Management_:
+- Cliquer sur _Disk Management_.
+- Les disque doivent être en _Dynamic_ et _Online_. Si ce n'est pas le cas, faire un clic droit sur le nom du disque et les modifier.
+- Clic droit sur le disque à répliquer, puis cliquer _Add Mirror_.
+- Dans la fenêtre _Add Mirror_, sélectionner le disk de réplication de sauvegarde puis `Add Mirror`.
+**_Si une erreur apparaît, refermer la console Computer Management, et recommencer._**
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20RAID1_Core/10.png?raw=true)
+______________
+- Fermer la console _Computer Management_ et y revenir comme précédemment.
+- Les deux volumes en mirroir doivent apparaître avec un bandeaux rouge. Si ce n'est pas le cas, refermer la console et y revenir.
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20RAID1_Core/11.png?raw=true)
+___________________
+___________________
+  
