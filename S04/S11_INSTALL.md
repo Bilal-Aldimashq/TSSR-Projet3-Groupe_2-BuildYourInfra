@@ -93,7 +93,16 @@ Les GPO installées sont:
   - session.auto_start = 0
   - session.use_trans_sid = 0
 - Redémarrer la machine
-- Se connecter depuis le serveur AD, qui est sur la même plage d'adresse, via une page web en rentrant http://172.18.1.50/glpi/glpi
+- Se connecter depuis le serveur AD, qui est sur la même plage d'adresse, via une page web en rentrant http://172.18.1.50 ou http://172.18.1.50/glpi/
+- L'installation se fait en graphique.
+  - Mettre `Français`
+  - Accepter la licence GPL en cochant la case.
+  - Cliquer `Installer`
+  - Si tout est bon, cliquer sur `Continuer`
+  - Configurer la base de données SQL:
+    - Serveur SQL: 127.0.0.1
+    - Utilisateur: glpi
+    - Mot de passe renseigner lors de la configuration de la base de données.
 
 
 ### **Connexion du serveur GLPI au serveur AD**
