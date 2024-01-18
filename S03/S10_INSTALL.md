@@ -57,8 +57,8 @@ test :
 Get-ADDomainController -Identity <server_name>
 ```
 **Intégration du DC à l'AD avec la réplication:**  
- - Sur le serveur AD, aller dans _Server Manager_.
- - Cliquer sur _Manage_ puis _Add Servers.
+ - Sur le serveur AD, aller dans _Server Manager_.  
+ - Cliquer sur _Manage_ puis _Add Servers.  
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20DC_Core/0.1.png?raw=true)
 ____________
 Dans la fenêtre _Add Servers_:
