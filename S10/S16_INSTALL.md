@@ -490,19 +490,19 @@ ___________________
 
 Pour savoir quel rôles sont attrivués sur quel serveur:
 - Dans une console Powershell du serveur AD, taper `Cet -ADForest`et `Get-ADDomain`. Cela indiquera les 2 rôles du niveau de la forêt et les 3 du Domaine.
-**Maître de Noms:**
+**Maître de Noms:**  
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20Transfer_r%C3%B4le/1_MasterNaming.png?raw=true)
 
-**Maître de schéma:**
+**Maître de schéma:**  
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20Transfer_r%C3%B4le/2_SchemaMaster.png?raw=true)
 
-**Maître d'infrastructure:**
+**Maître d'infrastructure:**  
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20Transfer_r%C3%B4le/3_Ma%C3%AEtreInfra.png?raw=true)
 
-**Emulateur PDC:**
+**Emulateur PDC:**  
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20Transfer_r%C3%B4le/4_PDC.png?raw=true)
 
-**Maître RID:**
+**Maître RID:**  
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20Transfer_r%C3%B4le/5_RIDMaster.png?raw=true)
 ____________________
 
@@ -511,8 +511,8 @@ Pour transférer les rôles:
   ```bash
   Move-ADDirectoryServerOperationMasterRole -Identity "NomDuServeur_Recevant_le_rôle" -OperationMasterRole <Role_Attribuer>
   ```
-![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20Transfer_r%C3%B4le/7.0_Liste.png?raw=true)
-Dans cet exemple on change deux rôles:
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20Transfer_r%C3%B4le/7.0_Liste.png?raw=true)  
+Dans cet exemple on change deux rôles:  
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20Transfer_r%C3%B4le/6_Move-ad.png?raw=true)
 _________________
 
