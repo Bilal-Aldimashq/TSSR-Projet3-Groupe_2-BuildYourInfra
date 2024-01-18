@@ -51,6 +51,7 @@ ajout du contrôleur de domaine :
 ```batch
 Install-ADDSDomainController -DomainName "billu.lan" -Credential (Get-Credential)
 ```
+- Redémarrer le serveur.  
 
 test :
 ```batch
@@ -63,7 +64,42 @@ Get-ADDomainController -Identity <server_name>
 ____________
 Dans la fenêtre _Add Servers_:
 - Cliquer sur `Find Now`.
-- 
+- Sélectionner le serveur à ajouter et le passer dans la colonne de droite en cliquant sur la flèche au milieu.
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20DC_Core/0.2.png?raw=true)
+
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20DC_Core/0.3.png?raw=true)
+___________
+De retour dans le menu _Server Manager_:
+Cliquer sur le flag en haut puis _Promote this server to a domain controller_
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20DC_Core/0.4.png?raw=true)
+__________
+
+Cocher l'option de déploiement et le domaine, puuis cliquer `Next`  
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20DC_Core/1.png?raw=true)
+_________
+- Cocher les capacités du DC (GC ou RODC).
+- Si besoin définir le site du serveur.
+- Définir le mot de passe de restauration.
+- Cliquer `Next`
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20DC_Core/2.png?raw=true)
+
+__________
+Arriver à la fenêtre _Additional Options_, sélectionner le serveur à répliquer, puis `Next` 
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20DC_Core/3.png?raw=true)
+
+____________
+
+Arriver sur la fenêtre _Prerequisites Check_, si tout est bon, cliquer sur `Install` 
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20DC_Core/4.png?raw=true)
+
+_____________
+
+Un message confirme l'installation, appuyer sur `Close` 
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20DC_Core/5.png?raw=true)
+
+________________
+________________
+
 
 # **Script Powershell gestionad.ps1**
 
