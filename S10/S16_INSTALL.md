@@ -40,6 +40,7 @@ Les adresses IP des nouveaux serveurs sont:
 | GLPI |   |
 | IredMail | |
 | PRTG | |
+| FreePBX | |
 
 ______________
 _______________
