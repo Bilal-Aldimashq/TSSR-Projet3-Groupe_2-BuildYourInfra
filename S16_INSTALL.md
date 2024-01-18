@@ -1,8 +1,8 @@
-INSTALL GUIDE Infrastructure sécurisée pour BillU
+## INSTALL GUIDE Infrastructure sécurisée pour BillU
 
 Date de documentation: 17/01/2024
 
-Configuration d'un VPN sur PFsense :
+## Configuration d'un VPN sur PFsense :
 
 Objectif : établir une interconnexion de réseau entre notre site de Lyon et Paris.
 
@@ -222,3 +222,66 @@ Faire de même avec un autre compte utilisateur pour le Clients 2
 Sur le client 1, tape sur le clavier du SIP phone le numéro 80101 et clique sur la touche d'appel (la touche verte). et sur le client 2 on voit l'appel arriver. On peut répondre en cliquant sur le bouton vert ou refuser l'appel en cliquant sur le bouton rouge
 
 ![img26](https://github.com/michaelc31/Projet-image/blob/main/PRTG/Capture26.JPG?raw=true)
+
+## Installation et configuration Iredmail
+
+Prérequis : préparation de l'accueil du serveur dans notre DNS :
+
+créer un Host name A :  mail : 172.18.1.220
+Créer un MX : mail : 172.18.1.220
+
+Monter un conteneur de type serveur Debian 12 sur Proxmox.
+Faire les mises à jour update && upgrade
+
+Mettre en place la configuration réseau  Ip statique, passerelle, et DNS de notre environnement.
+
+Modifier le fichier /etc/hostname
+mettre le nom en FQDN : Full Qualified Domain Name
+nous mettons : mail.billu.lan
+
+Modifier le fichier /etc/hosts : 
+127.0.0.1 mail.billu.lan localhost
+
+### Installation de iRedMail
+
+commande :
+
+```shell
+wget https://github.com/iredmail/iRedMail/archive/refs/tags/1.6.8.tar.gz
+```
+
+Extraire avec la commande suivante :
+
+```shell
+tar -zxf 1.6.8.tar.gz
+```
+
+Se rendre dans le dossier "**iRedMail-1.6.8**" et lancer le script "**iRedMail.sh**".
+
+```shell
+cd iRedMail-1.6.8
+bash iRedMail.sh
+```
+
+Suivre indications du script en mode graphique :
+renseigner les champs importants :
+notamment le champs du nom de notre domaine comme extension mail  : billu.lan
+
+![iredmail 01](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/54b2da4b-192a-4170-8811-ed0e2a3e9d5b)
+
+![iredmail 02](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/f63bbbbc-729b-4d5a-afb3-56ff623b347e)
+
+![iredmail 03](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/ac3c3bb1-216c-42dc-8e48-fc00263c47f8)
+
+![iredmail 04](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/0509264e-0ecc-488c-a621-e3251c59e9da)
+
+![iredmail 05](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/edae8c40-7494-4fe2-9479-a9edf5a482b3)
+
+![iredmail 06](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/4f035af9-e36b-4e1d-866f-27cadc942871)
+
+![iredmail 07](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/f5b3d965-ef1c-4810-9e6d-8a680ff5949b)
+
+![iredmail 08](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/5aa264a9-25d6-4b54-89f7-eb555bc55a57)
+
+![iredmail 09](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/056f2467-49f9-4c21-b4a0-b4bf54dfc783)
+
