@@ -285,3 +285,8 @@ notamment le champs du nom de notre domaine comme extension mail  : billu.lan
 
 ![iredmail 09](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/056f2467-49f9-4c21-b4a0-b4bf54dfc783)
 
+Se connecter à l'interface graphique sur un client sur l'adresse 172.18.1.220
+login : postmaster@billu.lan password : Azerty1*
+
+![iredmail 10](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/08ff6657-b567-4447-bec9-8f229d6875cc)
+
