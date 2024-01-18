@@ -12,8 +12,9 @@ Pour remplacer le matériel défectueux sera installé:
 - 1 Serveur GLPI sur Debian 11 en RAID 1 pour le stockage.
 - IredMail remplace le serveur de messagerie Zimbra à la demande de l'entreprise.
 - PRTG remplace le serveur de supervision Zabbix.
-Un serveur VoiP sera installé dans l'infrastructure, en y créant des comptes AD et permettent les appels entre les ordinateurs de l'entreprise.
-Les 5 rôles FSMO (Flexible Single Master Operation° seront réparties sur les 3 DC du parc.
+
+Un serveur VoiP sera installé dans l'infrastructure, en y créant des comptes AD et permettent les appels entre les ordinateurs de l'entreprise.  
+Les 5 rôles FSMO (Flexible Single Master Operation seront réparties sur les 3 DC du parc.  
 Si possible, un serveur RODC sera installé sur Lyon.  
 ______________
 
