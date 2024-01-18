@@ -353,6 +353,16 @@ ajout
 
 ![iredmail 12](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/f1922d21-875f-433b-816f-d21f9799cb0f)
 
+Utilisation pour un client :
+![iredmail 13](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/264ded1f-cc25-440c-be0f-58709b4ea930)
+
+interface client pour rédaction et réception d'email
+
+![iredmail 14](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/assets/146104077/2f1eec2d-89c3-4779-9c05-bf2b73408218)
+
+
+
+
 _______________
 _______________
 
