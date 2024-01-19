@@ -96,7 +96,7 @@ _______________
 
 PRTG est un outil de supervision qui sera installé sur un Windows Server 22 indépendant pour analyser le parc informatique du réseau Billu. l'hôte A sera renseigné dans le dns
 
-Pour l'installation aller sur internet et taper PRTG network monitor dans la barre de recherche et téléchargez le lien que vous trouver sur l'url suivant `https://www.paessler.com/fr/prtg`
+Pour l'installation aller sur internet et taper PRTG network monitor dans la barre de recherche et télécharger le lien que vous trouvez sur l'url suivant `https://www.paessler.com/fr/prtg`
 
 ![img1](https://github.com/michaelc31/Projet-image/blob/main/PRTG/Capture1.JPG?raw=true)
 
@@ -104,21 +104,21 @@ Le logiciel téléchargé, installez le, sélectionner le langage :
 
 ![img2](https://github.com/michaelc31/Projet-image/blob/main/PRTG/Capture2.JPG?raw=true)
 
-Accepter les terme de la licence
+Accepter les termes de la licence
 
 ![img3](https://github.com/michaelc31/Projet-image/blob/main/PRTG/Capture3.JPG?raw=true)
 
-Entrer un adresse Mail afin de recevoir les notification,
+Entrer un adresse Mail afin de recevoir les notifications,
 
 ![img4](https://github.com/michaelc31/Projet-image/blob/main/PRTG/Capture4.JPG?raw=true)
 
-choisissez le mode d'installation, pour pas s'embeter prendre d'installation rapide
+Choisir le mode d'installation rapide.
 
 ![img5](https://github.com/michaelc31/Projet-image/blob/main/PRTG/Capture5.JPG?raw=true)
 
 ![img6](https://github.com/michaelc31/Projet-image/blob/main/PRTG/Capture6.JPG?raw=true)
 
-Vous voila a la page de connection a PRTG les identifiant par défaut seront renseignées automatiquement a la premiere connection
+Sur la page de connection PRTG les identifiants par défaut seront renseignés automatiquement à la premiere connection
 
 ![img7](https://github.com/michaelc31/Projet-image/blob/main/PRTG/Capture7.JPG?raw=true)
 
@@ -132,7 +132,7 @@ _______________
 ________________
 ## Installation FreePBX :
 
-Recuperer l'iso de FreePBX ici https://www.freepbx.org/downloads/ et l'installer dans une nouvelle VM en Linux RedHat l'iso télécharger
+Récuperer l'iso de FreePBX ici https://www.freepbx.org/downloads/ et l'installer dans une nouvelle VM en Linux RedHat.
 
 Au démarrage de la VM, dans la liste, choisir la version recommandée.
 
@@ -156,9 +156,9 @@ Cliquez sur ROOT PASSWORD et entrez un mot de passe pour le compte root.
 
 ![img13](https://github.com/michaelc31/Projet-image/blob/main/PRTG/Capture13.JPG?raw=true)
 
-le mot de passe renseigner, l'installation continue et se termine. Redémarrer la VM en enlevant l'ISO avant le redémarrage.
+le mot de passe renseigné, l'installation continue et se termine. Redémarrer la VM en enlevant l'ISO avant le redémarrage.
 
-Se connecter en root et mettre son clavier en Francais car au commande suivante :
+Se connecter en root et mettre son clavier en Francais :
 
         localectl set-locale LANG=fr_FR.utf8
         localectl set-keymap fr
