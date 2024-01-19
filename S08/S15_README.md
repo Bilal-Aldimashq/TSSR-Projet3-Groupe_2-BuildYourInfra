@@ -11,7 +11,7 @@ Réalisation d'une infrastructure sécurisée pour l'entreprise BillU. Un domain
 _________
 ## **Rôles par semaine:**
 
-### Semaine 7 
+### Semaine 8 
 | NOM | Rôles | Taches effectuées |
 | :-- |:----- | :---------- |
 | Valentin | Crew |  Mise en place, installation et configuration du serveur WSUS|
