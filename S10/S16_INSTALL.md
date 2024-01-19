@@ -7,14 +7,14 @@ __________
 
 ## **Besoins initiaux : besoins du projet:**
 Cette semaine les serveurs AD core, Zimbra, Zabbix et GLPI sont tombés en panne et irrécupérables.
-Pour remplacer le matériel défectueux sera installé:
+Remplacement du matériel défectueux par:
 - 2 serveurs DC en Windows CORE avec une configuration de stockage en RAID 1.
 - 1 Serveur GLPI sur Debian 11 en RAID 1 pour le stockage.
 - IredMail remplace le serveur de messagerie Zimbra à la demande de l'entreprise.
 - PRTG remplace le serveur de supervision Zabbix.
 
 Un serveur VoiP sera installé dans l'infrastructure, en y créant des comptes AD et permettent les appels entre les ordinateurs de l'entreprise.  
-Les 5 rôles FSMO (Flexible Single Master Operation seront réparties sur les 3 DC du parc.  
+Les 5 rôles FSMO (Flexible Single Master Operation) seront répartis sur les 3 DC du parc.  
 Si possible, un serveur RODC sera installé sur Lyon.  
 ______________
 
@@ -39,9 +39,9 @@ Les adresses IP des nouveaux serveurs sont:
 | SRVWINC3 | 172.18.1.211 |
 | SRVRODC1 | 10.10.5.210 |
 | GLPI | 172.18.1.215 |
-| IredMail | |
-| PRTG | |
-| FreePBX | |
+| IredMail |172.18.1220 |
+| PRTG |172.18.1.202 |
+| FreePBX |172.18.1.204|
 
 ______________
 _______________
