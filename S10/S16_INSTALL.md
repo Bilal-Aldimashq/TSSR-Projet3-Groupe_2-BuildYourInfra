@@ -474,21 +474,21 @@ ____________
 **Sur le serveur AD graphique**
 Dans la console _Computer Management_:
 - Cliquer sur _Disk Management_.
-- Les disque doivent être en _Dynamic_ et _Online_. Si ce n'est pas le cas, faire un clic droit sur le nom du disque et les modifier.
+- Les disques doivent être en _Dynamic_ et _Online_. Si ce n'est pas le cas, faire un clic droit sur le nom du disque et les modifier.
 - Clic droit sur le disque à répliquer, puis cliquer _Add Mirror_.
 - Dans la fenêtre _Add Mirror_, sélectionner le disk de réplication de sauvegarde puis `Add Mirror`.
 **_Si une erreur apparaît, refermer la console Computer Management, et recommencer._**
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20RAID1_Core/10.png?raw=true)
 ______________
 - Fermer la console _Computer Management_ et y revenir comme précédemment.
-- Les deux volumes en mirroir doivent apparaître avec un bandeaux rouge. Si ce n'est pas le cas, refermer la console et y revenir.
+- Les deux volumes en mirroir doivent apparaître avec un bandeau rouge. Si ce n'est pas le cas, refermer la console et y revenir.
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20RAID1_Core/11.png?raw=true)
 ___________________
 ___________________
   
 ## **Répartir les rôles FSMO de L'AD sur les serveurs DC**
 
-Pour savoir quel rôles sont attrivués sur quel serveur:
+Pour savoir quel rôles sont attribués sur quel serveur:
 - Dans une console Powershell du serveur AD, taper `Cet -ADForest`et `Get-ADDomain`. Cela indiquera les 2 rôles du niveau de la forêt et les 3 du Domaine.
 **Maître de Noms:**  
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20Transfer_r%C3%B4le/1_MasterNaming.png?raw=true)
