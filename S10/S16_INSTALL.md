@@ -442,7 +442,7 @@ Le serveur est déjà intégré au domaine et est un serveur DC du domaine en r�
 
 Un disque de stockage supplémentaire, de même capacité que l'éxistant, à été ajouté.  
 
-**Sur le serveur AD contrôleur de domaine:**
+**Sur le serveur AD contrôleur de domaine:**  
 Dans le menu _Server Manager_:  
 - Cliquer _All Servers_ dans la colonne de gauche.
 - Clic droit sur le serveur à manager.
@@ -489,8 +489,9 @@ ___________________
 ## **Répartir les rôles FSMO de L'AD sur les serveurs DC**
 
 Pour savoir quel rôles sont attribués sur quel serveur:
-- Dans une console Powershell du serveur AD, taper `Cet -ADForest`et `Get-ADDomain`. Cela indiquera les 2 rôles du niveau de la forêt et les 3 du Domaine.
-**Maître de Noms:**  
+- Dans une console Powershell du serveur AD, taper `Get-ADForest`et `Get-ADDomain`. Cela indiquera les 2 rôles du niveau de la forêt et les 3 du Domaine.  
+
+**Maître d'attributions:**  
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20Transfer_r%C3%B4le/1_MasterNaming.png?raw=true)
 
 **Maître de schéma:**  
@@ -520,7 +521,7 @@ Confirmer le changement:
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20Transfer_r%C3%B4le/7_Confirm.png?raw=true)
 
 ____________________
-Vérifier avec `Get-ADForest`et `Get-ADDomain`, les transfert des rôles sur les serveurs:  
+Vérifier avec `Get-ADForest`et `Get-ADDomain`, les transferts des rôles sur les serveurs:  
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20Transfer_r%C3%B4le/8_CheckC1.png?raw=true)
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20Transfer_r%C3%B4le/9_CheckC3.png?raw=true)
 
