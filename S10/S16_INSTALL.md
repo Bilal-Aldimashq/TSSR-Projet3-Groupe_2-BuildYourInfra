@@ -100,7 +100,7 @@ Pour l'installation aller sur internet et taper PRTG network monitor dans la bar
 
 ![img1](https://github.com/michaelc31/Projet-image/blob/main/PRTG/Capture1.JPG?raw=true)
 
-Le logiciel téléchargé, installez le, sélectionner le langage :
+Le logiciel téléchargé, installez le, sélectionner la langue :
 
 ![img2](https://github.com/michaelc31/Projet-image/blob/main/PRTG/Capture2.JPG?raw=true)
 
