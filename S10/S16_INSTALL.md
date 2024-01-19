@@ -170,17 +170,17 @@ vérifier que le clavier est en francais avec la commande localectl
 
 ## Configuration et Mise à jour des Modules FreePBX :
 
-Par l'interface web accessible depuis un client, connecte-toi en root avec le mot de passe associé et cliquez sur Setup System
+Par l'interface web accessible depuis un client, se connecter en root avec le mot de passe associé et cliquer sur Setup System
 
-Dans la fenêtre, clique sur FreePBX Administration et reconnecte-toi en root. Clique sur Skip pour sauter l'activation du serveur et toutes les offres commerciales qui s'affichent. Laisser les langages par défaut et à la fenêtre d'activation du firewall, cliquez sur Abort :
+Dans la fenêtre, cliquer sur FreePBX Administration et se reconnecter en root. Cliquer sur Skip pour sauter l'activation du serveur et toutes les offres commerciales qui s'affichent. Laisser la langue par défaut et à la fenêtre d'activation du firewall, cliquez sur Abort :
 
 ![img15](https://github.com/michaelc31/Projet-image/blob/main/PRTG/Capture15.JPG?raw=true)
 
-A la fenêtre de l'essai de SIP Station cliquez sur Not No. Arriver sur le tableau de bord, cliquez sur Apply Config (en rouge) pour valider tout ce que tu viens de faire
+A la fenêtre de l'essai de SIP Station cliquez sur Not No. Sur le tableau de bord, cliquez sur Apply Config (en rouge) pour valider tout ce qui a ét réalisé.
 
 ![img16](https://github.com/michaelc31/Projet-image/blob/main/PRTG/Capture16.JPG?raw=true)
 
-Ceci fait on va activer le serveur (cette activation n'est pas obligatoire), mais elle permet d'avoir accès à l'ensemble des fonctionnalités du serveur.
+Activation du serveur (cette activation n'est pas obligatoire), cela permet d'avoir accès à l'ensemble des fonctionnalités du serveur.
 Dans le menu Admin puis System Admin.
 
 Cliquez sur Activation puis Activate. Dans la fenêtre qui s'affiche, cliquez sur Activate
@@ -192,7 +192,7 @@ Entre une adresse email et attendre quelques instants. Dans la fenêtre qui s'af
         - Pour Which best describes you mets I use your products and services with my Business(s) and do not want to resell it
         - Pour Do you agree to receive product and marketing emails from Sangoma ? cochez No
 
-Clique sur Create
+Cliquer sur Create
 
 ![img18](https://github.com/michaelc31/Projet-image/blob/main/PRTG/Capture18.JPG?raw=true)
 
