@@ -374,25 +374,25 @@ Pour pouvoir initié le *RAID 1* sur l'ensemble de notre disque système nous de
 
 Pré-requis avant le lancement de l'installation :
 
-       - Avoir une Machine avec 2 Disque Dur de même capacité vierge (non formaté, non partitionné)
+       - Avoir une Machine avec 2 Disques Dur de même capacité vierge (non formaté, non partitionné)
 
-Sur la fenêtre de partitionnement des disques choisissez la méthode `Manuel`, la fenêtre suivante vous affiche les disques détectés avec la table des partition et les point de montage qui si les disques sont vierge devrait être comme cela :
+Sur la fenêtre de partitionnement des disques choisir la méthode `Manuel`, la fenêtre suivante affiche les disques détectés avec la table des partitions et les points de montage qui si les disques sont vierge devrait être comme cela :
 
 ![img2](https://github.com/michaelc31/Projet-image/blob/main/RAID%20GLPI/Capture2.JPG?raw=true)
 
-Sélectionner le Premier disque et crée la table de partition, faite de même pour le 2eme disque vous arriverez à une configuration comme celle ci :
+Sélectionner le premier disque et créé la table de partition, faire de même pour le 2eme disque. Configuration identique ci-dessous :
 
 ![img3](https://github.com/michaelc31/Projet-image/blob/main/RAID%20GLPI/Capture3.JPG?raw=true)
 
-Les table de partition créé on va maintenant utiliser la configuration du RAID par logiciel :
+Les tables de partitions créées, utiliser la configuration du RAID par logiciel :
 
 ![img4](https://github.com/michaelc31/Projet-image/blob/main/RAID%20GLPI/Capture4.JPG?raw=true)
 
-sélectionner Oui pour appliquer les changement au disque et configurer le RAID :
+sélectionner Oui pour appliquer les changements au disque et configurer le RAID :
 
 ![img5](https://github.com/michaelc31/Projet-image/blob/main/RAID%20GLPI/Capture5.JPG?raw=true)
 
-les fenêtres suivantes vont nous servir à configurer le RAID pour cela selection Créer un périphérique multidisque, sélectionne le Type de RAID voulu, le nombre de périphérique actif pour l'ensemble du RAID, le nombre de périphérique de réserve pour le RAID :
+les fenêtres suivantes vont nous servir à configurer le RAID, selectionner Créer un périphérique multidisque, sélectionner le Type de RAID souhaité, le nombre de périphériques actif pour l'ensemble du RAID, le nombre de périphériques de réserve pour le RAID :
 
 ![img6](https://github.com/michaelc31/Projet-image/blob/main/RAID%20GLPI/Capture6.JPG?raw=true)
 
@@ -402,27 +402,27 @@ les fenêtres suivantes vont nous servir à configurer le RAID pour cela selecti
 
 ![img9](https://github.com/michaelc31/Projet-image/blob/main/RAID%20GLPI/Capture9.JPG?raw=true)
 
-les fenêtres suivantes vont vous permettre de sélectionner les disques prévu pour le RAID, et d'appliquer les changement et configurer le RAID :
+les fenêtres suivantes vont vous permettre de sélectionner les disques prévus pour le RAID, et d'appliquer les changements et configurer le RAID :
 
 ![img10](https://github.com/michaelc31/Projet-image/blob/main/RAID%20GLPI/Capture10.JPG?raw=true)
 
 ![img11](https://github.com/michaelc31/Projet-image/blob/main/RAID%20GLPI/Capture11.JPG?raw=true)
 
-Ceci fait cliquez sur terminer pour appliquer et configurer le RAID et vous devriez arriver sur la page de partitionnement des disques comme ci :
+Cliquez sur terminer pour appliquer et configurer le RAID et vous devriez arriver sur la page de partitionnement des disques :
 
 ![img12](https://github.com/michaelc31/Projet-image/blob/main/RAID%20GLPI/Capture12.JPG?raw=true)
 
-Le RAID est maintenant Préparer nous allons préparer l'installation du systèmes, revenais sur partitionnement assisté, sélectionne Assisté utiliser un disque entier :
+Le RAID est maintenant prêt, nous allons préparer l'installation du système, revenir sur partitionnement assisté, sélectionner Assisté : utiliser un disque entier :
 
 ![img13](https://github.com/michaelc31/Projet-image/blob/main/RAID%20GLPI/Capture13.JPG?raw=true)
 
 ![img14](https://github.com/michaelc31/Projet-image/blob/main/RAID%20GLPI/Capture14.JPG?raw=true)
 
-Sélectionne le périphérique RAID créé
+Sélectionner le périphérique RAID créé
 
 ![img15](https://github.com/michaelc31/Projet-image/blob/main/RAID%20GLPI/Capture15.JPG?raw=true)
 
-on peut garder tout dans une même partition
+on peut garder tout dans une même partition.
 
 ![img16](https://github.com/michaelc31/Projet-image/blob/main/RAID%20GLPI/Capture16.JPG?raw=true)
 
@@ -437,10 +437,10 @@ __________________
 __________________
 
 ## **Création d'un RAID 1 sur un serveur Core**
-Le serveur est déjà intégrer au domaine et est un serveur DC du domaine en réplication. 
+Le serveur est déjà intégré au domaine et est un serveur DC du domaine en réplication. 
 > **Afin de réaliser le RAID 1 de la machine, le disque de stockage doit être en GPT et non en MBR pour se faire.**
 
-Un disque de stockage supplémentaire, de même capacité que l'éxistant, à été ajouter.  
+Un disque de stockage supplémentaire, de même capacité que l'éxistant, à été ajouté.  
 
 **Sur le serveur AD contrôleur de domaine:**
 Dans le menu _Server Manager_:  
@@ -450,7 +450,7 @@ Dans le menu _Server Manager_:
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20RAID1_Core/6_8.png?raw=true)
 _________________
 
-Rentrer le nom et le mot de passe du compte ayant les droit de gestion du serveur.     
+Rentrer le nom et le mot de passe du compte ayant les droits de gestion du serveur.     
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tuto%20RAID1_Core/7.png?raw=true)
 _______________
 De retour sur le menu _Server Manager_:  
@@ -464,7 +464,7 @@ ______________
 **Sur le serveur Core:**
 - Aller sur la console powershell.
 - Taper la commande `diskpart`.
-- Taper `list disk`, afin de déterminer le numéro de disque qui a été ajouter. Il est possible de le voir en graphique sur le serveur AD dans _Disk Management_. Le 1 dans ce cas.  
+- Taper `list disk`, afin de déterminer le numéro de disque qui a été ajouté. Il est possible de le voir en graphique sur le serveur AD dans _Disk Management_. Le 1 dans ce cas.  
 - `Select disk 1`
 - `convert dynamic`
 - En faisant `list part`, les partitions du disque s'affichent.
