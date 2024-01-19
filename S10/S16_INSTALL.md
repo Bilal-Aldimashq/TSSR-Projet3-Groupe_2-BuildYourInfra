@@ -216,37 +216,37 @@ Va sur le serveur en CLI et exécute la commande yum update pour faire la mise-�
 
 ## Création ligne utilisateur :
 
-Par l'interface web accessible depuis un client, Va dans le menu Applications puis Poste, tu arrives sur cette fenêtre :
+Par l'interface web accessible depuis un client, aller dans le menu Applications puis Poste, fenêtre ci-dessous :
 
 ![img20](https://github.com/michaelc31/Projet-image/blob/main/PRTG/Capture20.JPG?raw=true)
 
-Va sur sur l'onglet Poste SIP [chan_pjsip] et clique sur le bouton +Ajout nouveau Poste SIP [chan_pjsip] et La fenêtre suivante va s'afficher
+Aller sur l'onglet Poste SIP [chan_pjsip] et cliquer sur le bouton + Ajout nouveau Poste SIP [chan_pjsip] et La fenêtre suivante va s'afficher
 
 ![img21](https://github.com/michaelc31/Projet-image/blob/main/PRTG/Capture21.JPG?raw=true)
 
-Pour créer la 1ère ligne, celle de Marie Dupont, renseigne les informations suivante :
+Pour créer la 1ère ligne, celle de Marie Dupont, renseigner les informations suivantes :
 
         User Extension : 80100
         Display Name : Camille Martin
         Secret : Azerty1*
         Password For New User : Azerty1*
 
-Tu dois avoir les informations comme ceci :
+Informations comme ci-dessous :
 
 ![img22](https://github.com/michaelc31/Projet-image/blob/main/PRTG/Capture22.JPG?raw=true)
 
-Clique sur le bouton Submit puis Apply Config pour enregistrer ton utilisateur.
+Cliquer sur le bouton Submit puis Apply Config pour enregistrer ton utilisateur.
 
 ____________________
 ## Installation C3Xphone :
 
 Prendre la source ici. (https://3cxphone.software.informer.com/download/)
 
-Télécharge la version x86/x64 sur le site de et installe-là sur les 2 clients Windows (pour le test)
+Télécharger la version x86/x64 sur le site et l'installer sur les 2 clients Windows (pour le test)
 
 ## association ligne utilisateurs
 
-Sur le Client N°1 a l'écran du SIP phone, clique sur Set account pour avoir la fenêtre Accounts.
+Sur le Client N°1 a l'écran du SIP phone, cliquer sur Set account pour avoir la fenêtre Accounts.
 
 ![img23](https://github.com/michaelc31/Projet-image/blob/main/PRTG/Capture23.JPG?raw=true)
 
@@ -266,11 +266,11 @@ Cliquer sur Ok tu dois avoir cette fenêtre :
 
 ![img25](https://github.com/michaelc31/Projet-image/blob/main/PRTG/Capture25.JPG?raw=true)
 
-Faire de même avec un autre compte utilisateur pour le Clients 2
+Faire de même avec un autre compte utilisateur pour le client 2
 
 ## test Communication :
 
-Sur le client 1, tape sur le clavier du SIP phone le numéro 80101 et clique sur la touche d'appel (la touche verte). et sur le client 2 on voit l'appel arriver. On peut répondre en cliquant sur le bouton vert ou refuser l'appel en cliquant sur le bouton rouge
+Sur le client 1, taper sur le clavier du SIP phone le numéro 80101 et cliquer sur la touche d'appel (la touche verte). et sur le client 2 on voit l'appel arriver. Répondre en cliquant sur le bouton vert ou refuser l'appel en cliquant sur le bouton rouge
 
 ![img26](https://github.com/michaelc31/Projet-image/blob/main/PRTG/Capture26.JPG?raw=true)
 
