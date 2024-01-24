@@ -22,9 +22,11 @@ ___________________
 
 # Installation Purple knight:
 
-
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Pictures/Capture%20d%E2%80%99%C3%A9cran%202024-01-24%20%C3%A0%2014.26.09.png?raw=true)
 
 ______________
 ______________
 
 # Installation PingCastle:
+
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Pictures/Capture%20d%E2%80%99%C3%A9cran%202024-01-24%20%C3%A0%2014.26.36.png?raw=true)
