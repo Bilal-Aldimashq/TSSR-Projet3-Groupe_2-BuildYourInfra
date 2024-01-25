@@ -104,7 +104,7 @@ Pré-requis :
 
 Pour Microsoft jdk 11 Aller [ici](https://learn.microsoft.com/fr-fr/java/openjdk/download#openjdk-11) et sélectionner le fichier selon votre OS. lancer l'exécutable et suivre la procédure en sélectionnant la variable d'environnement pendant l'installation
 
-![img1]()
+![img1](https://github.com/michaelc31/Projet-image/blob/main/BloodHound/Capture1.JPG?raw=true)
 
 Pour NEO4J-Community edition aller [ici](https://neo4j.com/deployment-center/#community) sélectionner onglet community version 5.16 sélectionner votre OS et télécharger le fichier zip.
 
@@ -118,11 +118,11 @@ Pour BloodHound aller télécharger le fichier [ici](https://github.com/BloodHou
 
 Décompresser le fichier BloodHound et lancer l'exécutable.
 
-![img2]()
+![img2](https://github.com/michaelc31/Projet-image/blob/main/BloodHound/Capture2.JPG?raw=true)
 
 connectez vous à la base de données de neo4j et attendre le chargement de BloodHound
 
-![img3]()
+![img3](https://github.com/michaelc31/Projet-image/blob/main/BloodHound/Capture3.JPG?raw=true)
 
 lors de notre 1ere connexion à BloodHound il ne nous trouve rien du coup on va aller chercher le fichier ShapE up.ps1 fourni dans le github de BloodHound afin d'effectuer une analyse.
 
@@ -132,8 +132,8 @@ le fichier Sharp Hound.ps1 sur notre ordinateur nous éditons en powershell afin
 
 revenir sur BloodHound afin de charger le fichier créé. cliquer sur Upload data sélectionner votre fichier attendre la fin du chargement et vérifier les données récupérées.
 
-![img4]()
+![img4](https://github.com/michaelc31/Projet-image/blob/main/BloodHound/Capture4.JPG?raw=true)
 
-![img5]()
+![img5](https://github.com/michaelc31/Projet-image/blob/main/BloodHound/Capture5.JPG?raw=true)
 
-![img6]()
+![img6](https://github.com/michaelc31/Projet-image/blob/main/BloodHound/Capture6.JPG?raw=true)
