@@ -1,0 +1,19 @@
+|Nom des Machines|Logiciel ou appliance|Statut Doc Install|Statut Doc Utilisation|
+|:---:|:---:|:---:|:---:|
+|PARIS-SRVBITWARDEN||||
+|mail.billu.lan||||
+|PARIS-SRVWIN1||||
+|PARIS-FREEPBX||||
+|PARIS-GLPI01||||
+|PARIS-pfsense-V2||||
+|PARIS-SNORT||||
+|PARIS-BACKUP||||
+|PARIS-WSUS||||
+|LYON-pfsense-V2||||
+|PARIS-CLIWIN002||||
+|PARIS-SrvCore1||||
+|PARIS-SrvCore2||||
+|PARIS-KALI||||
+|PARIS-CLIWIN003||||
+|PARIS-PRTG||||
+|LYON-RODC1||||
