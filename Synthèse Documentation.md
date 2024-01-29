@@ -17,3 +17,11 @@
 |PARIS-CLIWIN003||||
 |PARIS-PRTG||||
 |LYON-RODC1||||
+
+
+### Légende
+* Statut Documentation ( installation et utilisation ):
+* 1 : A jour
+* 2 : A mettre à jour
+* 3 : Non-utilisable
+* 4 : Inexistante
