@@ -31,4 +31,4 @@ LYON-RODC1 ==> Même documentation que les Server-Core
 
 PARIS-KALI ==> Installation éffectué par Dominique Colleville
 
-PARIS-BackUP ==> Doc d'install non nécessaire (juste 2 paquet à installer)
+PARIS-BackUP ==> Doc d'install non nécessaire (juste 2 paquets à installer)
