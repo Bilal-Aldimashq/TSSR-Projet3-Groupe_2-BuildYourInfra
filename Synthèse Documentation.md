@@ -7,7 +7,7 @@
 |PARIS-GLPI01|GLPI|1|1|
 |PARIS-pfsense-V2|Pfsense|1|1|
 |PARIS-SNORT|SNORT|2|2|
-|PARIS-BACKUP||||
+|PARIS-BACKUP|Server SSH,Rsync|4|1|
 |PARIS-WSUS|WSUS|1|1|
 |LYON-pfsense-V2|Pfsense|1|1|
 |PARIS-CLIWIN002|3CX|1|1|
@@ -30,3 +30,5 @@
 LYON-RODC1 ==> Même documentation que les Server-Core
 
 PARIS-KALI ==> Installation éffectué par Dominique Colleville
+
+PARIS-BackUP ==> Doc d'install non nécessaire (juste 2 paquet à installer)
