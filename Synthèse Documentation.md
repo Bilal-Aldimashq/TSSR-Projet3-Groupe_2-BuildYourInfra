@@ -28,4 +28,5 @@
 
 
 LYON-RODC1 ==> Même documentation que les Server-Core
+
 PARIS-KALI ==> Installation éffectué par Dominique Colleville
