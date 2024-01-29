@@ -25,3 +25,5 @@
 * 2 : A mettre à jour
 * 3 : Non-utilisable
 * 4 : Inexistante
+LYON-RODC1 ==> Même documentation que les Server-Core
+PARIS-KALI ==> Installation éffectué par Dominique Colleville
