@@ -68,6 +68,21 @@ ______________
 L'utilisation de Medusa se fait par un terminale. Avant de commencer le test, s'assurer d'être dans le même emplacement que les fichiers qui seront utilisés lors de l'attaque.
 Dans cette exemple, l'emplacement est le **Desktop**:
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tutos_S12/Desk_Kali.png?raw=true)
-Lancer la commande sous le format : >medusa -h <AdresseIP_cible> -U <Fichiers_txtUsers> -P <Fichier_txtMotDePasse> -M ssh
+Lancer la commande sous le format : `medusa -h <AdresseIP_cible> -U <Fichiers_txtUsers> -P <Fichier_txtMotDePasse> -M ssh`
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tutos_S12/Cmd_medusa.png?raw=true)
+Le logiciel traitera les 2 fichiers en faisant une combinaison de chaque noms du fichier des utilisateurs à chaque mot de passe du fichier.  
+Quand la bonne combinaison est trouvé, la ligne`ACCOUNT FOUND` avec les logins s'affiche:
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tutos_S12/Result_medusa.png?raw=true)
 ______________
 ______________
+
+# **Snort**
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tutos_S12/Snort.png?raw=true)
+_____________
+
+## **_Présentation_**
+
+**Snort:** Logiciel permettant l'exploitation d'agents IDS/IPS pouvant être installé sur une machine ou un pare-feu PFSense.  
+**Pré-requis**: Avoir une carte réseau en **Promiscuite** afin de pouvoir utilisé l'IDS en NIDS pour le réseau.
+_____________
+### **_Utilisation_**
