@@ -16,7 +16,7 @@
 |PARIS-KALI|Null|4|2|
 |PARIS-CLIWIN003|3CX|1|1|
 |PARIS-PRTG|PRTG|1|1|
-|LYON-RODC1|Null|4|4|
+
 
 
 ### Légende
@@ -27,7 +27,6 @@
 * 4 : Inexistante
 
 
-LYON-RODC1 ==> Même documentation que les Server-Core
 
 PARIS-KALI ==> Installation éffectué par Dominique Colleville
 
