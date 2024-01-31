@@ -16,4 +16,4 @@
 |PARIS-KALI|VM|Linux-Kali|Test-Sécurité|172.18.1.11/24|32Gio/50%|4Gio/25%|
 |PARIS-CLIWIN003|VM|Windows10|Client|172.18.1.75/24|50Gio/40%|8Gio/90%|
 |PARIS-PRTG|VM|Windows-server2022|Supervision Réseau|172.18.1.202|50Gio/60%|4Gio/75%|
-|LYON-RODC1|VM|Windows-Server2022|Domaine-Controller|10.10.5.210/24|32Gio/75%|2Gio/72%|
+
