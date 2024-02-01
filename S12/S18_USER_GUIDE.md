@@ -85,4 +85,39 @@ _____________
 **Snort:** Logiciel permettant l'exploitation d'agents IDS/IPS pouvant être installé sur une machine ou un pare-feu PFSense.  
 **Pré-requis**: Avoir une carte réseau en **Promiscuite** afin de pouvoir utilisé l'IDS en NIDS pour le réseau.
 _____________
+
+### **_Installation_**
+
+Installation se fait très simplement nous utiliserons un système OS Ubuntu 22.04 :
+    
+    -   mettre à jour son système avec la commande `sudo apt update && sudo apt upgrade -y`
+    -   Installer snort avec la commande `sudo apt install snort -y`
+
+au cours de l'installation de snort le logiciel vous demandera sur quel réseau il travaillera. indiquer le réseau sur lequel votre domaine est actif.
+
+![img1](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier/Capture.JPG?raw=true)
+
+l'installation fini nous allons vérifier les configurations sur le fichier `/etc/snort/snort.conf`, et changer le paramètre `any` de la ligne `IPvar HOME_NET any` par `IPvar HOME_NET @Reseau`
+
+![img2](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier/Capture2.JPG?raw=true)
+
+puis nous allons créer nos 1ères règles. Pour ceci nous utiliserons le fichier local.rules qui se situe dans /etc/snort/rules/local.rules et le modifier afin que snort puisse utiliser nos règles.
+
+exemple : 
+  
+  - création d'une alerte pour tentative de ping : alert tcp $EXTERNAL_NET any -> $HOME_NET any (msg:"tentative de ping"; sid:000001; rev:1;)
+  - création d'une alerte pour tentative de connexion ssh : alert tcp $EXTERNAL_NET any -> $HOME_NET 22 (msg:"tentative de connexion SSH"; sid:000002; rev:1;)
+
+![img3](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier/Capture3.JPG?raw=true)
+
 ### **_Utilisation_**
+
+Une fois les règles rédigées dans le fichier `local.rules` nous allons lancer la console snort afin de voir se qui se passe sur notre réseau.
+
+Utiliser la commande sudo snort -C /etc/snort/snort.conf -A console le logiciel se lance 
+
+![img4](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier/Capture4.JPG?raw=true)
+
+test de ping d'un client vers un autre client sur le réseau, Snort nous affiche notre alerte de tentative de ping créée précédemment.
+
+![img5](https://github.com/michaelc31/Projet-image/blob/main/Nouveau%20dossier/Capture5.JPG?raw=true)
