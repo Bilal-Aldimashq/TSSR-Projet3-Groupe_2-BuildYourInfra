@@ -13,7 +13,8 @@ ______________
 **Snort** est installé sur le réseau en NIDS comme comme système de détection d'introduction.   
 **Kali Linux** est utilisé afin de réaliser les différent tests d'intrusion sur les machines ou le réseau.  
 **Nmap** est l'outil utilisé afin de réaliser l'attaque _Scan de ports_.  
-**Medusa** est utilisé pour l'_Attaque force brute_ sur un serveur Debian.  
+**Medusa** est utilisé pour l'_Attaque force brute_ sur un serveur Debian.    
+**Ettercap & Wireshark** seront utilisés pour une attaque _Man In The Middle_.
 
 ______________
 ______________
@@ -61,7 +62,7 @@ ______________
 ## **_Présentation_**
 
 **Medusa** : Outils permettent de forcer une connexion ssh en craquant le mot de passe et un nom de session à partir de listes dictionnaire.
-**Pré-requis:** Utilisation d'une machine Kali Linux. Medusa est installé de base sur cette distribution. Dans ce lab, la machine de tests d'intrusiion est dans le réseau des machines cibles afin de tester la sécurté de connexion ssh de celles-ci.
+**Pré-requis:** Utilisation d'une machine Kali Linux. Medusa est installé de base sur cette distribution. Dans ce lab, la machine de tests d'intrusion est dans le réseau des machines cibles afin de tester la sécurté de connexion ssh de celles-ci.
 Une liste au format txt de noms d'utilisateurs aléatoire est généré ainsi qu'une list de mots de passe.
 ______________
 ### **_Utilisation_**
@@ -75,6 +76,45 @@ Quand la bonne combinaison est trouvé, la ligne`ACCOUNT FOUND` avec les logins 
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tutos_S12/Result_medusa.png?raw=true)
 ______________
 ______________
+
+# **Ettercap**
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tutos_S12/Eter_1.png?raw=true)
+_____________
+
+## **_Présentation_**
+
+**Ettercap** est un outil de type sniffer, il permet de récupérer les paquet transitant sur un réseaux, notemment les paquets http contenant des logins.
+**Pré-requis:** Utilisation d'une machine Kali Linux. Ettercap est installé de base sur cette distribution. Dans ce lab, la machine de tests d'intrusion est dans le réseau des machines cibles afin de tester la sécurté de connexion login d'un site. Pour cette exemple, la machine 10.10.10.150 servira de victime, elle sera en écoute afin de récupérer ses logins.
+_______________
+### **_Utilisation_**
+Ettercap est un logiciel graphique. Pour l'utiliser, cliquer sur l'onglet _Applications_ dans la barre de tâches du bureau.  
+Cliquer sur le menu `09-Sniffing & Spoofing`, puis cliquer sur `ettercap graphical`.  
+Sur la page d'acceuil, une fenêtre de configuration de la carte réseau est ouverte. L'option _Sniffing at startup_ est activé et une carte réseau est selectionnée; si ce n'est pas la bonne, cliquer sur le menu déroulant et choisir celle ui convient.
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tutos_S12/Eter_2.png?raw=true)
+_____________
+- Cliquer sur le boutton _Options_ en haut de la fenêtre.
+- Si ce n'est pas fait, cocher l'option _Promisc mode_ (Option permettant la remonter d'informations sur la carte réseau)
+- Valider le tout en cliquant sur la coche en haut, à côté du boutton Options.
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tutos_S12/Eter_3.png?raw=true)
+_____________
+- Scanner le réseau en cliquant sur l'icône de la loupe en haut de la fenêtre. La console du bas indiquera le résultat de la recherche.
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tutos_S12/Eter_4.png?raw=true)
+______________
+- Pour affiche la liste des machines trouvées, cliquer sur l'icône _Hosts Lists_ se trouvant à côté de la loupe.
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tutos_S12/Eter_5.png?raw=true)
+_____________
+- Cliquer sur la machine _Victime_, 10.10.10.150 dans cette exemple, puis cliquer sur `Add to Target 1`. _Target 1 est le ou les victimes, Target 2 est le ou les destinations des paquets de la victime_. Nous allons écouter les login de la victime vers tout le réseau, donc il n'y a pas de _Target 2_. Dans la console, un message de validation s'affiche.
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tutos_S12/Eter_6.png?raw=true)
+____________
+- Cliquer sur le _MITM Menu_ en haut de la fenêtre.
+- Cliquer sur _ARP Poisoning_.
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tutos_S12/Eter_7.png?raw=true)
+___________
+- Dans la fenêtre qui s'ouvre l'option _Sniff remote connections_ doit être cocher
+- Cliquer sur `OK`
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tutos_S12/Eter_8.png?raw=true)
+
+
 
 # **Snort**
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tutos_S12/Snort.png?raw=true)
