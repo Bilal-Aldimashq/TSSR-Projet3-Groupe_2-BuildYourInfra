@@ -84,12 +84,12 @@ _____________
 ## **_Présentation_**
 
 **Ettercap** est un outil de type sniffer, il permet de récupérer les paquet transitant sur un réseaux, notemment les paquets http contenant des logins.
-**Pré-requis:** Utilisation d'une machine Kali Linux. Ettercap est installé de base sur cette distribution. Dans ce lab, la machine de tests d'intrusion est dans le réseau des machines cibles afin de tester la sécurté de connexion login d'un site. Pour cette exemple, la machine 10.10.10.150 servira de victime, elle sera en écoute afin de récupérer ses logins.
+**Pré-requis:** Utilisation d'une machine Kali Linux. Ettercap est installé de base sur cette distribution. Dans ce lab, la machine de tests d'intrusion est dans le réseau des machines cibles afin de tester la sécurté de connexion loggin d'un site. Pour cette exemple, la machine 10.10.10.150 servira de victime, elle sera en écoute afin de récupérer ses logins.
 _______________
 ### **_Utilisation_**
 Ettercap est un logiciel graphique. Pour l'utiliser, cliquer sur l'onglet _Applications_ dans la barre de tâches du bureau.  
 Cliquer sur le menu `09-Sniffing & Spoofing`, puis cliquer sur `ettercap graphical`.  
-Sur la page d'acceuil, une fenêtre de configuration de la carte réseau est ouverte. L'option _Sniffing at startup_ est activé et une carte réseau est selectionnée; si ce n'est pas la bonne, cliquer sur le menu déroulant et choisir celle ui convient.
+Sur la page d'accueil, une fenêtre de configuration de la carte réseau est ouverte. L'option _Sniffing at startup_ est activé et une carte réseau est selectionnée; si ce n'est pas la bonne, cliquer sur le menu déroulant et choisir celle ui convient.
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tutos_S12/Eter_2.png?raw=true)
 _____________
 - Cliquer sur le boutton _Options_ en haut de la fenêtre.
@@ -125,8 +125,33 @@ _____________
 ____________
 _____________
 
+# **Wireshark**
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tutos_S12/WS_0.png?raw=true)
+____________
 
+## **_Présentation_**
 
+**Wireshark** est un outil de type sniffer, il permet de récupérer les paquet transitant sur un réseaux, notemment les paquets http contenant des logins.  
+**Pré-requis:** Utilisation d'une machine Kali Linux. wireshark est installé de base sur cette distribution. Dans ce lab, la machine de tests d'intrusion est dans le réseau des machines cibles afin de tester la sécurté de connexion loggin d'un site. Pour cette exemple, la machine 192.168.1.40 servira de victime, elle sera en écoute afin de récupérer ses logins.
+_______________
+### **_Utilisation_**
+Wireshark est un logiciel graphique. Pour l'utiliser, cliquer sur l'onglet _Applications_ dans la barre de tâches du bureau.  
+Cliquer sur le menu `09-Sniffing & Spoofing`, puis cliquer sur `wireshark`.  
+- Sur la page d'accueil, sélectionner le périphérique réseau utilisé pour écouter le réseau, **eth1** dans cette exemple.
+- Démarrer la capture en cliquant sur l'icône bleu, en forme d'aileron de requin, en haut de la fenêtre.
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tutos_S12/WS_1.png?raw=true)
+______
+- L'écran de capture s'affiche.
+- Sur la machine Victime, un logging de test est réalisé:
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tutos_S12/Login.png?raw=true)
+- Arrêter la capture en cliquant sur l'icône carré rouge en haut de la fenêtre.
+_______
+- Dans les trames, chercher celle contenant en adresse source la victime, 192.168.1.40, et dans la colonne **Info** doit être afficher **POST**.
+- Sélectionner la en cliquant dessus.
+- Dans la fenêtre du bas, cliquer sur `HTML Form URL Encoded: application....`, on retrouve le nom et mot de passe.
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tutos_S12/WS_2.png?raw=true)
+___________
+___________
 
 
 # **Snort**
