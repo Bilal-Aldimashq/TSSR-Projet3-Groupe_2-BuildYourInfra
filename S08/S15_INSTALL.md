@@ -158,11 +158,11 @@ Répondre "OUI" à toutes les questions sauf install zimbra-dnscache ; install z
 
 ![img 14](https://github.com/michaelc31/Projet-image/blob/main/LAPS%20-%20Zimbra/IMG14.JPG?raw=true)
 
-Afin de finlaiser l'insatllation il reste la dernière phase de configuration avant de pouvoir accéder à l'interface graphique de Zimbra. il faut régler le mot de passe admin de zimbra : option 6 et option 4 afin de changer le mot de passe.
+Afin de finaliser l'installation il reste la dernière phase de configuration avant de pouvoir accéder à l'interface graphique de Zimbra. il faut régler le mot de passe admin de zimbra : option 6 et option 4 afin de changer le mot de passe.
 
 Suite à cette modifictaion de mot de passe, finir l'installation en revenant en arrière avec "r" et en appliquant les changements avec "a" répondre "Oui" à la 1ere question et "Non" à la dernière.
 
-La configuration est terminée, on va rebooter le serveur.
+La configuration est terminée, redémarrer le serveur.
 
 ### 2eme partie : Utilisation
 
