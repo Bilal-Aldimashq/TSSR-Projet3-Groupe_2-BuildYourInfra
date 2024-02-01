@@ -45,3 +45,15 @@ ____________
 - Répartition des rôles FSMO de l'AD
 ___________
 ___________
+### **S11:**
+- Purple knight
+- Ping Castle
+- BloodHound
+___________
+___________
+### **S12:**
+- Nmap
+- Medusa
+- Ettercap
+- Wireshark
+- Snort
