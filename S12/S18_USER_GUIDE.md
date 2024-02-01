@@ -103,7 +103,7 @@ ______________
 - Pour affiche la liste des machines trouvées, cliquer sur l'icône _Hosts Lists_ se trouvant à côté de la loupe.
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tutos_S12/Eter_5.png?raw=true)
 _____________
-- Cliquer sur la machine _Victime_, 10.10.10.150 dans cette exemple, puis cliquer sur `Add to Target 1`. _Target 1 est le ou les victimes, Target 2 est le ou les destinations des paquets de la victime_. Nous allons écouter les login de la victime vers tout le réseau, donc il n'y a pas de _Target 2_. Dans la console, un message de validation s'affiche.
+- Cliquer sur la machine _Victime_, 10.10.10.150 dans cette exemple, puis cliquer sur `Add to Target 1`. _Target 1 est le ou les victimes, Target 2 est le ou les destinations des paquets de la victime_. Nous allons écouter les loggins de la victime vers tout le réseau, donc il n'y a pas de _Target 2_. Dans la console, un message de validation s'affiche.
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tutos_S12/Eter_6.png?raw=true)
 ____________
 - Cliquer sur le _MITM Menu_ en haut de la fenêtre.
@@ -113,6 +113,19 @@ ___________
 - Dans la fenêtre qui s'ouvre l'option _Sniff remote connections_ doit être cocher
 - Cliquer sur `OK`
 ![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tutos_S12/Eter_8.png?raw=true)
+
+Un récapitulatif de l'attaque et des cibles s'affiche dans la console.  
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tutos_S12/Etter_9.png?raw=true)
+_____________
+- Sur la machine Victime, un logging de test est réalisé:
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tutos_S12/Login.png?raw=true)
+- Sur la console d' Ettercap on voit apparaître ce login contenant le protocole, le nom d'utilisateur, le mot de passe et la page web utilisé par ce loggin.  
+![](https://github.com/Bilal-Aldimashq/TSSR-Projet3-Groupe_2-BuildYourInfra/blob/main/Resources/Tutos_S12/Etter_10.png?raw=true)
+
+____________
+_____________
+
+
 
 
 
