@@ -17,7 +17,7 @@ _________
 ### Semaine 12 
 | NOM | Rôles | Taches effectuées |
 | :-- |:----- | :---------- |
-| Valentin | Scrum Master | Réalisation des tableaux de synthèse. Configuration et tes de l'agent NIDS Snort |
+| Valentin | Scrum Master | Réalisation des tableaux de synthèse. Configuration et test de l'agent NIDS Snort |
 | Jérôme  | Crew | Installation des machines machines Snort et Kali. Test des outils Kali |
 | Bilal | Product Owner | Prise en ain de la machine Kali, test des outils d'intrusion |
 | Michael | Crew | Test des outils Kali. Installation et configuration de Snort |
